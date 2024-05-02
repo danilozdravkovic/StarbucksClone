@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name":"Menu",
+        "href":"menu"
+    },
+    {
+        "id":2,
+        "name":"Rewards",
+        "href":"rewards"
+    },
+    {
+        "id":3,
+        "name":"Gift Cards",
+        "href":"gift-cards"
+    }
+]

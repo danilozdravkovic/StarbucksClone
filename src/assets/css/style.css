@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yanone+Kaffeesatz&display=swap');
+
+*{
+    font-family: "Kanit", sans-serif;
+}
+
+.starbucks-green:hover{
+    color:#00754a !important;
+}
+.fntw-bold {
+    font-weight: 500;
+}
+
+.ml-small{
+    margin-left: 0.5em;
+}
+
+.active-class{
+    border-bottom: 5px solid #00754a;
+}

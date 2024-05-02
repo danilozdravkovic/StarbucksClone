@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './main-layout/main-layout/main-layout.component';
-import { MainLayoutModule } from './main-layout/main-layout.module';
 import { SharedModule } from './shared/shared.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { MainLayoutModule } from './main-layout/main-layout.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes = [
   {
@@ -27,6 +28,10 @@ const routes : Routes = [
       {
         path:"menu",
         loadChildren: ()=> import("./menu/menu.module").then(m=>m.MenuModule)
+      },
+      {
+        path:"rewards",
+        loadChildren: ()=> import("./rewards/rewards.module").then(m=>m.RewardsModule)
       }
     ]
   },
@@ -45,7 +50,9 @@ const routes : Routes = [
     BrowserAnimationsModule,
     NgbModule,
     RouterModule.forRoot(routes),
-    SharedModule
+    SharedModule,
+    MainLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
