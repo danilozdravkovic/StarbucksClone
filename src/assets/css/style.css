@@ -18,3 +18,10 @@
 .active-class{
     border-bottom: 5px solid #00754a;
 }
+
+
+@media screen and (max-width:992px) {
+    .active-class{
+        border-bottom: none;
+    }
+}
