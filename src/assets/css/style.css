@@ -4,6 +4,15 @@
     font-family: "Kanit", sans-serif;
 }
 
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .starbucks-green:hover{
     color:#00754a !important;
 }

@@ -32,12 +32,17 @@ const routes : Routes = [
       {
         path:"rewards",
         loadChildren: ()=> import("./rewards/rewards.module").then(m=>m.RewardsModule)
+      },
+      {
+        path:"**",
+        component:PageNotFoundComponent
       }
     ]
   },
   {
     path:"**",
-    component:PageNotFoundComponent
+    redirectTo:"main/",
+    pathMatch:"full"
   }
 ]
 
