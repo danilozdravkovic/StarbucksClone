@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/header/components/logo/logo.component';
 import { NavbarComponent } from './components/header/components/navbar/navbar.component';
 import { AuthFormComponent } from './components/header/components/auth-form/auth-form.component';
+import { SvgIconsComponent } from './components/footer/components/svg-icons/svg-icons.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AuthFormComponent } from './components/header/components/auth-form/auth
     FooterComponent,
     LogoComponent,
     NavbarComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    SvgIconsComponent
   ],
   imports: [
     CommonModule,
