@@ -19,6 +19,10 @@
     border-bottom: 5px solid #00754a;
 }
 
+.bg-starbucks-color {
+    background-color: #00754a !important;
+}
+
 
 @media screen and (max-width:992px) {
     .active-class{

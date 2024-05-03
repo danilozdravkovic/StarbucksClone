@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { NavbarItem } from '../interfaces/navbar-item';
+import { ApiService } from 'src/app/shared/services/api.service';
+import { apis } from 'src/app/constants/apis';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NavbarService {
+export class NavbarService extends ApiService {
 
-  constructor(private http :HttpClient) { }
-
-  getAll() : Observable<any>{
-    return this.http.get("assets/jsons/navbar-items.json");
+  constructor(http :HttpClient) { 
+    super(http,apis.navbarItems);
   }
 }

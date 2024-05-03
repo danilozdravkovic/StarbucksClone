@@ -1,0 +1,11 @@
+<ng-container *ngFor="let section of sections">
+    <div class="col-6 col-sm-4 mb-3">
+        <h5>{{section.name}}</h5>
+        <ul class="nav flex-column">
+            <ng-container *ngFor="let link of section.children">
+                <li class="nav-item mb-2 mt-2"><a routerLink="{{link.href}}" class="nav-link p-0 text-body-secondary">{{link.name}}</a></li>
+            </ng-container>
+        </ul>
+    </div>
+</ng-container>
+

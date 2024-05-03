@@ -1,0 +1,90 @@
+[
+    {
+        "id":1,
+        "name":"About Us",
+        "children":[
+            {
+                "id":2,
+                "name":"Our Company",
+                "href":""
+            },
+            {
+                "id":3,
+                "name":"Our Coffee",
+                "href":""
+            },
+            {
+                "id":4,
+                "name":"Stories and News",
+                "href":""
+            },
+            {
+                "id":5,
+                "name":"Starbucks Archive",
+                "href":""
+            },
+            {
+                "id":6,
+                "name":"Customer Service",
+                "href":""
+            },
+            {
+                "id":7,
+                "name":"Contact Us",
+                "href":""
+            }
+        ]
+    },
+    {
+        "id":8,
+        "name":"Careers",
+        "children":[
+            {
+                "id":9,
+                "name":"Culture and Values",
+                "href":""
+            },
+            {
+                "id":10,
+                "name":"Inclusion ,Diversity, and Equity",
+                "href":""
+            },
+            {
+                "id":11,
+                "name":"College Achievement Plan",
+                "href":""
+            },
+            {
+                "id":12,
+                "name":"Alumni Community",
+                "href":""
+            },
+            {
+                "id":13,
+                "name":"International Careers",
+                "href":""
+            }
+        ]
+    },
+    {
+        "id":14,
+        "name":"Social Impact",
+        "children":[
+            {
+                "id":15,
+                "name":"People",
+                "href":""
+            },
+            {
+                "id":16,
+                "name":"Planet",
+                "href":""
+            },
+            {
+                "id":17,
+                "name":"Enviromental and Social Impact Reporting",
+                "href":""
+            }
+        ]
+    }
+]

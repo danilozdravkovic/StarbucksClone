@@ -9,6 +9,8 @@ import { LogoComponent } from './components/header/components/logo/logo.componen
 import { NavbarComponent } from './components/header/components/navbar/navbar.component';
 import { AuthFormComponent } from './components/header/components/auth-form/auth-form.component';
 import { SvgIconsComponent } from './components/footer/components/svg-icons/svg-icons.component';
+import { LinksSectionComponent } from './components/footer/components/links-section/links-section.component';
+import { NewsletterComponent } from './components/footer/components/newsletter/newsletter.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { SvgIconsComponent } from './components/footer/components/svg-icons/svg-
     LogoComponent,
     NavbarComponent,
     AuthFormComponent,
-    SvgIconsComponent
+    SvgIconsComponent,
+    LinksSectionComponent,
+    NewsletterComponent
   ],
   imports: [
     CommonModule,
