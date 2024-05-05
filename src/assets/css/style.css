@@ -24,8 +24,12 @@ ul {
     margin-left: 0.5em;
 }
 
-.active-class{
+.active-class-green{
     border-bottom: 5px solid #00754a;
+}
+
+.active-class-black{
+    border-bottom: 1px solid black;
 }
 
 .bg-starbucks-color {

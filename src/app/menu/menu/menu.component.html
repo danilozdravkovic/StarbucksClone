@@ -1,1 +1,15 @@
-<p>menu works!</p>
+<div class="container-fluid ">
+    <div class="row bottomBorder">
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+            <ul class="d-flex flex-row justify-content-around ml-5 .text-secondary">
+                <li routerLinkActive="active-class-black" [routerLinkActiveOptions]="{exact:
+                    true}"><a class="text-secondary" routerLink="../../main/menu">Menu</a></li>
+                <li routerLinkActive="active-class-black" [routerLinkActiveOptions]="{exact:
+                    true}"><a class="text-secondary"routerLink="previous">Previous</a></li>
+                <li routerLinkActive="active-class-black" [routerLinkActiveOptions]="{exact:
+                    true}"><a class="text-secondary" routerLink="favorites">Favorites</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

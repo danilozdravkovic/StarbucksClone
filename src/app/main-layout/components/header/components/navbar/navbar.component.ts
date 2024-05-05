@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarItem } from 'src/app/main-layout/interfaces/navbar-item';
+import { INavbarItem } from 'src/app/main-layout/interfaces/i-navbar-item';
 import { NavbarService } from 'src/app/main-layout/services/navbar.service';
 
 @Component({
@@ -12,10 +12,10 @@ export class NavbarComponent implements OnInit {
     private navbarService : NavbarService
   ){}
 
-  navbarItems: NavbarItem[] = [];
+  navbarItems: INavbarItem[] = [];
 
   ngOnInit () : void {
-    this.navbarService.getAll().subscribe({
+    this.navbarService.getAll().subscribe({ 
       next : (data) =>{
         this.navbarItems=data;
       },

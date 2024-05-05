@@ -1,0 +1,284 @@
+[
+    {
+        "id":1,
+        "name":"Drinks",
+        "href":null,
+        "parentId":null
+    },
+    {
+        "id":2,
+        "name":"Hot Coffees",
+        "href":"",
+        "parentId":1
+    },
+    {
+        "id":3,
+        "name":"Americanos",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":4,
+        "name":"Brewed Coffees",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":5,
+        "name":"Cappuccinos",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":6,
+        "name":"Espresso Shots",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":7,
+        "name":"Lattes",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":8,
+        "name":"Macchiatos",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":9,
+        "name":"Mochas",
+        "href":null,
+        "parentId":2
+    },
+    {
+        "id":10,
+        "name":"Cold Coffees",
+        "href":"",
+        "parentId":1
+    },
+    {
+        "id":11,
+        "name":"Cold Brews",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":12,
+        "name":"Nitro Cold Brews",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":13,
+        "name":"Iced Americano",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":14,
+        "name":"Iced Coffees",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":15,
+        "name":"Iced Flat Whites",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":16,
+        "name":"Iced Lattes",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":17,
+        "name":"Iced Macchiatos",
+        "href":null,
+        "parentId":10
+    },
+    {
+        "id":18,
+        "name":"Starbucks Refreshers Beverages",
+        "href":null,
+        "parentId":1
+    },
+    {
+        "id":19,
+        "name":"Spicy Lemonades",
+        "href":null,
+        "parentId":18
+    },
+    {
+        "id":20,
+        "name":"Lemonades and Frozen",
+        "href":null,
+        "parentId":18
+    },
+    {
+        "id":21,
+        "name":"Coconutmilk Collection",
+        "href":null,
+        "parentId":18
+    },
+    {
+        "id":22,
+        "name":"Classics",
+        "href":null,
+        "parentId":18
+    },
+    {
+        "id":23,
+        "name":"Frappuccino Blended Beverages",
+        "href":"",
+        "parentId":1
+    },
+    {
+        "id":24,
+        "name":"Coffee Frappuccino",
+        "href":null,
+        "parentId":23
+    },
+    {
+        "id":25,
+        "name":"Creme Frappuccino",
+        "href":null,
+        "parentId":23
+    },
+    {
+        "id":26,
+        "name":"Food",
+        "href":null,
+        "parentId":null
+    },
+    {
+        "id":27,
+        "name":"Hot Breakfast",
+        "href":null,
+        "parentId":26
+    },
+    {
+        "id":28,
+        "name":"Breakfast Sandwiches & Wraps",
+        "href":null,
+        "parentId":27
+    },
+    {
+        "id":29,
+        "name":"Bakes & Egg Bites",
+        "href":null,
+        "parentId":27
+    },
+    {
+        "id":30,
+        "name":"Oatmeal & Yogurt",
+        "href":"",
+        "parentId":26
+    },
+    {
+        "id":31,
+        "name":"Bakery",
+        "href":"",
+        "parentId":26
+    },
+    {
+        "id":32,
+        "name":"Bagels",
+        "href":null,
+        "parentId":31
+    },
+    {
+        "id":33,
+        "name":"Cake Pops",
+        "href":null,
+        "parentId":31
+    },
+    {
+        "id":34,
+        "name":"Cookies, Brownies & Bars",
+        "href":null,
+        "parentId":31
+    },
+    {
+        "id":35,
+        "name":"Lunch",
+        "href":"",
+        "parentId":26
+    },
+    {
+        "id":36,
+        "name":"Warm Sandwiches",
+        "href":null,
+        "parentId":35
+    },
+    {
+        "id":37,
+        "name":"Protein Boxes",
+        "href":null,
+        "parentId":35
+    },
+    {
+        "id":38,
+        "name":"At Home Coffee",
+        "href":null,
+        "parentId":null
+    },
+    {
+        "id":39,
+        "name":"Whole Bean",
+        "href":"",
+        "parentId":38
+    },
+    {
+        "id":40,
+        "name":"Starbucks Reserve",
+        "href":null,
+        "parentId":39
+    },
+    {
+        "id":41,
+        "name":"Blonde Roast",
+        "href":null,
+        "parentId":39
+    },
+    {
+        "id":42,
+        "name":"Medium Roast",
+        "href":null,
+        "parentId":39
+    },
+    {
+        "id":43,
+        "name":"VIA Instant",
+        "href":"",
+        "parentId":38
+    },
+    {
+        "id":44,
+        "name":"Flavored",
+        "href":null,
+        "parentId":43
+    },
+    {
+        "id":45,
+        "name":"Blonde Roast",
+        "href":null,
+        "parentId":43
+    },
+    {
+        "id":46,
+        "name":"Medium Roast",
+        "href":null,
+        "parentId":43
+    },
+    {
+        "id":47,
+        "name":"Dark Roast",
+        "href":null,
+        "parentId":43
+    }
+]

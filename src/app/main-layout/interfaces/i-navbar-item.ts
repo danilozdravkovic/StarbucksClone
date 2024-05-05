@@ -1,4 +1,4 @@
-export interface NavbarItem {
+export interface INavbarItem {
     id:number,
     name:string,
     href:string

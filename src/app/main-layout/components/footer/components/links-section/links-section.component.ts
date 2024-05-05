@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-links-section',
@@ -8,7 +8,4 @@ import { AfterViewInit, Component, Input } from '@angular/core';
 export class LinksSectionComponent  {
   @Input() sections: any;
   
-  ngAfterViewChecked() : void{
-    console.log(this.sections);
-  }
 }
