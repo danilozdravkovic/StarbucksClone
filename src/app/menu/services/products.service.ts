@@ -6,10 +6,9 @@ import { ApiService } from 'src/app/shared/services/api.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductCategoriesService extends ApiService {
+export class ProductsService extends ApiService {
 
   constructor(http : HttpClient) {
-    super(http,apis.productCategories)
-    
+    super(http,apis.products)
    }
 }
