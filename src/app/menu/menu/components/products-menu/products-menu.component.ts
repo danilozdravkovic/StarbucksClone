@@ -40,7 +40,7 @@ export class ProductsMenuComponent implements OnInit {
     })
   }
   //Method creates array of categories that contains array of child categories
-  //so it is easier to print them in ngFor
+  //so it is easier to print them in ngFor because there is no nesting in json file
   filterForPrintCategories(data:IProductCategory[]) :void{
     let dataToPrint:IProductCategoryPrint[]=[];
     let mainCategories = data.filter((x:IProductCategory)=>x.parentId==null);
@@ -52,7 +52,7 @@ export class ProductsMenuComponent implements OnInit {
     this.categories=dataToPrint;
   }
   //Method creates array of categories that contains array of child categories that contains array of child products
-  //so it is easier to print them in ngFor
+  //so it is easier to print them in ngFor because there is no nesting in json file
   filterForPrintCategoriesWithProducts(products:IProduct[],categories:IProductCategory[]){
     let dataToPrint:any[]=[];
     let mainCategories = categories.filter((x:IProductCategory)=>x.parentId==null);
