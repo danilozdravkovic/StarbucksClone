@@ -1,4 +1,5 @@
 export const apis = {
     navbarItems:"navbar-items.json",
-    footerLinks:"footer-links.json"
+    footerLinks:"footer-links.json",
+    productCategories:"product-categories.json"
 }
