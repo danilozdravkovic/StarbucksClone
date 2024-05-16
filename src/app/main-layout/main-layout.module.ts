@@ -7,10 +7,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/header/components/logo/logo.component';
 import { NavbarComponent } from './components/header/components/navbar/navbar.component';
-import { AuthFormComponent } from './components/header/components/auth-form/auth-form.component';
 import { SvgIconsComponent } from './components/footer/components/svg-icons/svg-icons.component';
 import { LinksSectionComponent } from './components/footer/components/links-section/links-section.component';
 import { NewsletterComponent } from './components/footer/components/newsletter/newsletter.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,14 +20,14 @@ import { NewsletterComponent } from './components/footer/components/newsletter/n
     FooterComponent,
     LogoComponent,
     NavbarComponent,
-    AuthFormComponent,
     SvgIconsComponent,
     LinksSectionComponent,
     NewsletterComponent
   ],
   imports: [
     CommonModule,
-    MainLayoutRoutingModule
+    MainLayoutRoutingModule,
+    SharedModule
   ]
 })
 export class MainLayoutModule { }

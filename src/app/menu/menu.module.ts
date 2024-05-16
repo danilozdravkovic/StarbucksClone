@@ -6,7 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PreviousComponent } from './menu/components/previous/previous.component';
 import { FavoritesComponent } from './menu/components/favorites/favorites.component';
 import { ProductsMenuComponent } from './menu/components/products-menu/products-menu.component';
-import { MainLayoutModule } from '../main-layout/main-layout.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import { MainLayoutModule } from '../main-layout/main-layout.module';
   imports: [
     CommonModule,
     MenuRoutingModule,
+    SharedModule
   ]
 })
 export class MenuModule { }
