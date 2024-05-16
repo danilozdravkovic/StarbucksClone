@@ -1,3 +1,25 @@
 li:hover{
     cursor: pointer;
 }
+
+.productImg{
+    width: 10em;
+    height: 10em;
+    margin: 0px auto;
+}
+
+.productImg img {
+    width: 100%;
+    border-radius:50%;
+}
+
+h3 {
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 1.5em;
+        padding: 0.5em;
+}
+
+.productName{
+    font-size: 1.3em;
+    color:#000c;
+}

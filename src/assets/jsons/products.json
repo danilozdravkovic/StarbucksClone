@@ -1,321 +1,321 @@
 [
     {
         "id":1,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Cafee Americano",
         "calories":15,
         "categoryId":3
     },
     {
         "id":2,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Featured Blonde Roast",
         "calories":5,
         "categoryId":4
     },
     {
         "id":3,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Featured Medium Roast Pike Place Roast",
         "calories":5,
         "categoryId":4
     },
     {
         "id":4,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Featured Dark Roast",
         "calories":5,
         "categoryId":4
     },
     {
         "id":5,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Featured Decaf Roast Decaf Pike Place Roast",
         "calories":5,
         "categoryId":4
     },
     {
         "id":6,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Veranda Blend Clover Vertica",
         "calories":5,
         "categoryId":4
     },
     {
         "id":7,
-        "src":"",
+        "src":"drinks/caffeAmericano.avif",
         "name":"Featured Dark Roast Caffe Verona",
         "calories":10,
         "categoryId":4
     },
     {
         "id":8,
-        "src":"",
+        "src":"drinks/cappuccino.avif",
         "name":"Cappuccino",
         "calories":140,
         "categoryId":5
     },
     {
         "id":9,
-        "src":"",
+        "src":"drinks/espressoSingle.avif",
         "name":"Espresso",
         "calories":10,
         "categoryId":6
     },
     {
         "id":10,
-        "src":"",
+        "src":"drinks/espressoConPanna.avif",
         "name":"Espresso Con Panna",
         "calories":35,
         "categoryId":6
     },
     {
         "id":11,
-        "src":"",
+        "src":"drinks/lavenderOatmilkLatte.avif",
         "name":"Lavander Oatmilk Latte",
         "calories":260,
         "categoryId":7
     },
     {
         "id":12,
-        "src":"",
+        "src":"drinks/pistachioLatte.avif",
         "name":"Pistachio Latte",
         "calories":260,
         "categoryId":7
     },
     {
         "id":13,
-        "src":"",
+        "src":"drinks/caramelMacchiato.avif",
         "name":"Caramel Macchiato",
         "calories":250,
         "categoryId":8
     },
     {
         "id":14,
-        "src":"",
+        "src":"drinks/espressoMacchiato.avif",
         "name":"Espresso Macchiato",
         "calories":15,
         "categoryId":8
     },
     {
         "id":15,
-        "src":"",
+        "src":"drinks/caffeMocha.avif",
         "name":"Caffe Mocha",
         "calories":370,
         "categoryId":9
     },
     {
         "id":16,
-        "src":"",
+        "src":"drinks/whiteChocolateMocha.avif",
         "name":"White Chocolate Mocha",
         "calories":390,
         "categoryId":9
     },
     {
         "id":17,
-        "src":"",
+        "src":"drinks/pistachioCreamColdBrew.avif",
         "name":"Pistachio Cream Cold Brew",
         "calories":250,
         "categoryId":11
     },
     {
         "id":18,
-        "src":"",
+        "src":"drinks/cinnamonCaramelCreamNitroColdBrew.avif",
         "name":"Cinnamon Caramel Cream Nitro Cold Brew",
         "calories":260,
         "categoryId":12
     },
     {
         "id":19,
-        "src":"",
+        "src":"drinks/icedCaffeAmericano.avif",
         "name":"Iced Caffe Americano",
         "calories":15,
         "categoryId":13
     },
     {
         "id":20,
-        "src":"",
+        "src":"drinks/icedCoffee.avif",
         "name":"Starbucks Iced Coffee Blend",
         "calories":15,
         "categoryId":14
     },
     {
         "id":21,
-        "src":"",
+        "src":"drinks/icedFlatWhite.avif",
         "name":"Iced Flat White",
         "calories":110,
         "categoryId":15
     },
     {
         "id":22,
-        "src":"",
+        "src":"drinks/icedLavenderOatmilkLatte.avif",
         "name":"Iced Lavander Oatmilk Latte",
         "calories":210,
         "categoryId":16
     },
     {
         "id":23,
-        "src":"",
+        "src":"drinks/icedCaramelMacchiato.avif",
         "name":"Iced Caramel Macchiato",
         "calories":250,
         "categoryId":17
     },
     {
         "id":24,
-        "src":"",
+        "src":"drinks/spicyPineapple.avif",
         "name":"Spicy Pineaplle",
         "calories":200,
         "categoryId":19
     },
     {
         "id":25,
-        "src":"",
+        "src":"drinks/spicyMango.avif",
         "name":"Spicy Dragonfruit",
         "calories":200,
         "categoryId":19
     },
     {
         "id":26,
-        "src":"",
+        "src":"drinks/strawberryAcaiLemonadeRefreshers.avif",
         "name":"Strawberry Acai Lemonade Starbucks Refreshers Beverage",
         "calories":140,
         "categoryId":20
     },
     {
         "id":27,
-        "src":"",
+        "src":"drinks/pinkDrink.avif",
         "name":"Pink Drink Starbucks Refreshers Beverage",
         "calories":140,
         "categoryId":21
     },
     {
         "id":28,
-        "src":"",
+        "src":"drinks/pineapplePassionfruitRefreshers.avif",
         "name":"Pineapple Passionfruit Starbucks Refreshers Beverage",
         "calories":140,
         "categoryId":22
     },
     {
         "id":29,
-        "src":"",
+        "src":"drinks/pistachioFrapp.avif",
         "name":"Pistachipo Frappuccino Blended Beverage",
         "calories":380,
         "categoryId":24
     },
     {
         "id":30,
-        "src":"",
+        "src":"drinks/lavenderCremeFrappuccino.avif",
         "name":"Lavander Creme Frappuccino Blended Beverage",
         "calories":370,
         "categoryId":25
     },
     {
         "id":31,
-        "src":"",
+        "src":"food/chickenMapleButterSandwich.avif",
         "name":"Chicken, Maple Butter & Egg Sandwich",
         "calories":450,
         "categoryId":28
     },
     {
         "id":32,
-        "src":"",
+        "src":"food/baconSausageCageFreeEggWrap.avif",
         "name":"Bacon, Sausage & Egg Wrap",
         "calories":640,
         "categoryId":28
     },
     {
         "id":33,
-        "src":"",
+        "src":"food/potatoCheddarChiveBakes.avif",
         "name":"Potato, Cheddar & Chive Bakes",
         "calories":210,
         "categoryId":29
     },
     {
         "id":34,
-        "src":"",
+        "src":"food/oatmeal.avif",
         "name":"Rolled & Steel-Cut Oatmeal",
         "calories":160,
-        "categoryId":30
+        "categoryId":48
     },
     {
         "id":35,
-        "src":"",
+        "src":"food/plainBagel.avif",
         "name":"Plain Bagel",
         "calories":290,
         "categoryId":32
     },
     {
         "id":36,
-        "src":"",
+        "src":"food/cookiesAndCreamCakePop.avif",
         "name":"Cookies & Cream Cake Pop",
         "calories":140,
         "categoryId":33
     },
     {
         "id":37,
-        "src":"",
+        "src":"food/doubleChocolateChunkBrownie.avif",
         "name":"Double Chocolate Brownie",
         "calories":480,
         "categoryId":34
     },
     {
         "id":38,
-        "src":"",
+        "src":"food/grilledCheeseOnSourdough.avif",
         "name":"Crispy Grilled Cheese on Sourdough",
         "calories":520,
         "categoryId":36
     },
     {
         "id":39,
-        "src":"",
+        "src":"food/eggsGoudaProteinBox.avif",
         "name":"Eggs & Gouda Protein Box",
         "calories":530,
         "categoryId":37
     },
     {
         "id":40,
-        "src":"",
+        "src":"atHomeCoffe/guatemalaHuehuetenango.avif",
         "name":"Guatemala Huehuetenango Starbucks Reserve",
         "calories":null,
         "categoryId":40
     },
     {
         "id":41,
-        "src":"",
+        "src":"atHomeCoffe/greenApronBlend.avif",
         "name":"Starbucks Green Apron Blend",
         "calories":null,
         "categoryId":41
     },
     {
         "id":42,
-        "src":"",
+        "src":"atHomeCoffe/odysseyBlend.avif",
         "name":"Starbucks Odyssey Blend 2024",
         "calories":null,
         "categoryId":42
     },
     {
         "id":43,
-        "src":"",
+        "src":"atHomeCoffe/viaInstantSweetenedIcedCoffee.avif",
         "name":"VIA Sweetened Iced Coffee",
         "calories":null,
         "categoryId":44
     },
     {
         "id":44,
-        "src":"",
+        "src":"atHomeCoffe/viaInstantBlondeVerandaBlend.avif",
         "name":"VIA Veranda Blend",
         "calories":null,
         "categoryId":45
     },
     {
         "id":45,
-        "src":"",
+        "src":"atHomeCoffe/viaInstantPikePlaceRoast.avif",
         "name":"Starbucks VIA Instant Pike Place Roast",
         "calories":null,
         "categoryId":46
     },{
         "id":46,
-        "src":"",
+        "src":"atHomeCoffe/viaInstantItalianRoast.avif",
         "name":"VIA Italian Roast",
         "calories":null,
         "categoryId":47

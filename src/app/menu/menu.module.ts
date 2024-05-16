@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PreviousComponent } from './menu/components/previous/previous.component';
 import { FavoritesComponent } from './menu/components/favorites/favorites.component';
 import { ProductsMenuComponent } from './menu/components/products-menu/products-menu.component';
+import { MainLayoutModule } from '../main-layout/main-layout.module';
 
 
 @NgModule({
@@ -13,11 +14,11 @@ import { ProductsMenuComponent } from './menu/components/products-menu/products-
     MenuComponent,
     PreviousComponent,
     FavoritesComponent,
-    ProductsMenuComponent
+    ProductsMenuComponent,
   ],
   imports: [
     CommonModule,
-    MenuRoutingModule
+    MenuRoutingModule,
   ]
 })
 export class MenuModule { }
