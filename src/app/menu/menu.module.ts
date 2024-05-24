@@ -7,6 +7,7 @@ import { PreviousComponent } from './menu/components/previous/previous.component
 import { FavoritesComponent } from './menu/components/favorites/favorites.component';
 import { ProductsMenuComponent } from './menu/components/products-menu/products-menu.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductComponent } from './menu/components/product/product.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     PreviousComponent,
     FavoritesComponent,
     ProductsMenuComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,

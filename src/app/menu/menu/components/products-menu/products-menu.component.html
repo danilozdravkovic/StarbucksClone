@@ -22,10 +22,12 @@
                     <h3 class="mt-5">{{child.name}}</h3>
                     <ng-container *ngFor="let product of child.childProducts">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column mt-3 ">
-                            <div class="productImg ">
-                                <img  src="/assets/img/products/{{product.src}}" alt="{{product.name}}"/>
-                            </div>
-                            <p class="text-center productName mt-2">{{product.name}}</p>
+                            <a [routerLink]="['product', product.id]">
+                                <div class="productImg ">
+                                    <img  src="/assets/img/products/{{product.src}}" alt="{{product.name}}"/>
+                                </div>
+                                <p class="text-center productName mt-2">{{product.name}}</p>
+                            </a>
                         </div>
                     </ng-container>
                     </ng-container>

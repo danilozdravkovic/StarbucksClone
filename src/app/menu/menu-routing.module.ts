@@ -4,6 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PreviousComponent } from './menu/components/previous/previous.component';
 import { FavoritesComponent } from './menu/components/favorites/favorites.component';
 import { ProductsMenuComponent } from './menu/components/products-menu/products-menu.component';
+import { ProductComponent } from './menu/components/product/product.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:"favorites",
         component:FavoritesComponent
+      },
+      {
+        path:"product/:id",
+        component:ProductComponent
       }
     ]
   }
