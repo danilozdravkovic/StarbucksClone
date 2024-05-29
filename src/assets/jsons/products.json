@@ -25,21 +25,82 @@
         "src":"drinks/caffeAmericano.avif",
         "name":"Featured Dark Roast",
         "calories":5,
-        "categoryId":4
+        "categoryId":4,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":5,
         "src":"drinks/caffeAmericano.avif",
         "name":"Featured Decaf Roast Decaf Pike Place Roast",
         "calories":5,
-        "categoryId":4
+        "categoryId":4,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":6,
         "src":"drinks/caffeAmericano.avif",
         "name":"Veranda Blend Clover Vertica",
         "calories":5,
-        "categoryId":4
+        "categoryId":4,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":7,
@@ -53,21 +114,82 @@
         "src":"drinks/cappuccino.avif",
         "name":"Cappuccino",
         "calories":140,
-        "categoryId":5
+        "categoryId":5,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":9,
         "src":"drinks/espressoSingle.avif",
         "name":"Espresso",
         "calories":10,
-        "categoryId":6
+        "categoryId":6,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            }
+        ]
     },
     {
         "id":10,
         "src":"drinks/espressoConPanna.avif",
         "name":"Espresso Con Panna",
         "calories":35,
-        "categoryId":6
+        "categoryId":6,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":11,
@@ -81,28 +203,111 @@
         "src":"drinks/pistachioLatte.avif",
         "name":"Pistachio Latte",
         "calories":260,
-        "categoryId":7
+        "categoryId":7,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":13,
         "src":"drinks/caramelMacchiato.avif",
         "name":"Caramel Macchiato",
         "calories":250,
-        "categoryId":8
+        "categoryId":8,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":14,
         "src":"drinks/espressoMacchiato.avif",
         "name":"Espresso Macchiato",
         "calories":15,
-        "categoryId":8
+        "categoryId":8,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":15,
         "src":"drinks/caffeMocha.avif",
         "name":"Caffe Mocha",
         "calories":370,
-        "categoryId":9
+        "categoryId":9,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            }
+        ]
     },
     {
         "id":16,
@@ -130,21 +335,144 @@
         "src":"drinks/icedCaffeAmericano.avif",
         "name":"Iced Caffe Americano",
         "calories":15,
-        "categoryId":13
+        "categoryId":13,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":20,
         "src":"drinks/icedCoffee.avif",
         "name":"Starbucks Iced Coffee Blend",
         "calories":15,
-        "categoryId":14
+        "categoryId":14,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":21,
         "src":"drinks/icedFlatWhite.avif",
         "name":"Iced Flat White",
         "calories":110,
-        "categoryId":15
+        "categoryId":15,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ],
+        "includedAddIns":[
+            {
+                "name":"Milk",
+                "children":[
+                    {
+                        "name":"Heavy Cream",
+                        "pump":null
+                    },
+                    {
+                        "name":"Vanilla Sweet Cream",
+                        "pump":null
+                    },
+                    {
+                        "name":"Nonfat Milk",
+                        "pump":null
+                    },
+                    {
+                        "name":"Whole Milk",
+                        "pump":null,
+                        "selected":true
+                    }
+                ]
+            },
+            {
+                "name":"Espresso & Shot Options",
+                "children":[
+                    {
+                        "name":"Shots",
+                        "pump":1
+                    },
+                    {
+                        "name":"Espresso Roast",
+                        "pump":null,
+                        "children":[
+                            {
+                                "name":"Signature Espresso Roast",
+                                "pump":null
+                            },
+                            {
+                                "name":"Blonde Espresso Roast",
+                                "pump":null
+                            },
+                            {
+                                "name":"Decaf Espresso Roast",
+                                "pump":null,
+                                "selected":true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name":"Blended Options",
+                "pump":null,
+                "children":[
+                    {
+                        "name":"Frappuccino Roast pumps",
+                        "pump": 2
+                    }
+                ]
+            }
+        ]
     },
     {
         "id":22,
@@ -158,14 +486,53 @@
         "src":"drinks/icedCaramelMacchiato.avif",
         "name":"Iced Caramel Macchiato",
         "calories":250,
-        "categoryId":17
+        "categoryId":17,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":24,
         "src":"drinks/spicyPineapple.avif",
         "name":"Spicy Pineaplle",
         "calories":200,
-        "categoryId":19
+        "categoryId":19,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            }
+        ]
     },
     {
         "id":25,
@@ -179,7 +546,29 @@
         "src":"drinks/strawberryAcaiLemonadeRefreshers.avif",
         "name":"Strawberry Acai Lemonade Starbucks Refreshers Beverage",
         "calories":140,
-        "categoryId":20
+        "categoryId":20,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":27,
@@ -193,14 +582,53 @@
         "src":"drinks/pineapplePassionfruitRefreshers.avif",
         "name":"Pineapple Passionfruit Starbucks Refreshers Beverage",
         "calories":140,
-        "categoryId":22
+        "categoryId":22,
+        "sizes":[
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":29,
         "src":"drinks/pistachioFrapp.avif",
         "name":"Pistachipo Frappuccino Blended Beverage",
         "calories":380,
-        "categoryId":24
+        "categoryId":24,
+        "sizes":[
+            {
+                "name":"tall",
+                "size":16,
+                "additionallCalories":null
+            },
+            {
+                "name":"grande",
+                "size":16,
+                "additionallCalories":50
+            },
+            {
+                "name":"venti",
+                "size":24,
+                "additionallCalories":80
+            },
+            {
+                "name":"trenta",
+                "size":30,
+                "additionallCalories":100
+            }
+        ]
     },
     {
         "id":30,

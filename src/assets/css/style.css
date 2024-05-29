@@ -36,6 +36,9 @@ ul {
     background-color: #00754a !important;
 }
 
+.bg-product-color {
+    background-color:#1f3933;
+}
 
 @media screen and (max-width:992px) {
     .active-class{

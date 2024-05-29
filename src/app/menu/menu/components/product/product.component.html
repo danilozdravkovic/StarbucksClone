@@ -1,1 +1,43 @@
-<p>product works!</p>
+<div class="container-fluid bg-product-color">
+    <div class="row d-flex-lg justify-content-start">
+        <div class="col-10 col-sm-6 col-lg-11 col-xxl-9 product-container">
+            <div class="row d-flex justify-content-around">
+                <div class="col-12 col-lg-4 col-xl-3">
+                    <img src="assets/img/products/{{productToDisplay.src}}" alt="{{productToDisplay.name}}" />
+                </div>
+                <div class="col-12 col-lg-5 col-xl-4 d-flex flex-column pt-5 product-text-container">
+                    <h1 class="text-white">{{productToDisplay.name}}</h1>
+                    <ng-container *ngIf="productToDisplay.calories">
+                        <p style="color: #ffffffb3; font-size: 1.5em;">{{caloriesToDisplay}} calories</p>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngIf="productToDisplay.sizes">
+            <div class="col-4 sizeOptions">
+                <div class="row">
+                    <div class="col-10 mb-4">
+                        <h2>Size Options</h2>
+                    </div>
+                    <div class="col-10 d-flex flex-row justify-content-center">
+                        <ng-container *ngFor="let size of productToDisplay.sizes">
+                            <div class="col-2 text-center">
+                                <div #dynamicDiv class="{{size.name}}-size cupSize" (click)="isActive(dynamicDiv,size.additionallCalories,productToDisplay.sizes)">
+                                </div>
+                                <p>{{size.name.substring(0,1).toUpperCase()}}{{size.name.substring(1)}}</p>
+                                <p>{{size.size}} fl oz</p>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="col-3">
+
+        </div>
+    </div>
+</div>
