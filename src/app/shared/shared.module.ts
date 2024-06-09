@@ -6,6 +6,7 @@ import { AuthFormComponent } from './components/auth-form/auth-form.component';
 
 
 
+
 @NgModule({
   declarations: [
     PageNotFoundComponent,
@@ -13,10 +14,10 @@ import { AuthFormComponent } from './components/auth-form/auth-form.component';
   ],
   imports: [
     CommonModule,
-    RouterLink
+    RouterLink,
   ],
   exports:[
-    AuthFormComponent
+    AuthFormComponent,
   ]
 })
 export class SharedModule { }

@@ -391,21 +391,25 @@
         "categoryId":15,
         "sizes":[
             {
+                "id:":1,
                 "name":"tall",
                 "size":16,
                 "additionallCalories":null
             },
             {
+                "id:":2,
                 "name":"grande",
                 "size":16,
                 "additionallCalories":50
             },
             {
+                "id:":3,
                 "name":"venti",
                 "size":24,
                 "additionallCalories":80
             },
             {
+                "id:":4,
                 "name":"trenta",
                 "size":30,
                 "additionallCalories":100
@@ -413,21 +417,40 @@
         ],
         "includedAddIns":[
             {
+                "id":1,
                 "name":"Milk",
+                "pump":null,
                 "children":[
                     {
+                        "id":2,
                         "name":"Heavy Cream",
-                        "pump":null
+                        "pump":2
                     },
                     {
+                        "id":3,
                         "name":"Vanilla Sweet Cream",
-                        "pump":null
+                        "pump":null,
+                        "children":[
+                            {
+                                "id":4,
+                                "name":"Nonfat Milk",
+                                "pump":null
+                            },
+                            {
+                                "id":5,
+                                "name":"Whole Milk",
+                                "pump":null,
+                                "selected":true
+                            }
+                        ]
                     },
                     {
+                        "id":4,
                         "name":"Nonfat Milk",
                         "pump":null
                     },
                     {
+                        "id":5,
                         "name":"Whole Milk",
                         "pump":null,
                         "selected":true
@@ -435,40 +458,59 @@
                 ]
             },
             {
+                "id":6,
                 "name":"Espresso & Shot Options",
+                "pump":null,
                 "children":[
                     {
+                        "id":9,
                         "name":"Shots",
-                        "pump":1
+                        "pump":null
                     },
                     {
+                        "id":8,
                         "name":"Espresso Roast",
                         "pump":null,
                         "children":[
                             {
+                                "id":9,
                                 "name":"Signature Espresso Roast",
                                 "pump":null
                             },
                             {
+                                "id":10,
                                 "name":"Blonde Espresso Roast",
                                 "pump":null
                             },
                             {
+                                "id":11,
                                 "name":"Decaf Espresso Roast",
                                 "pump":null,
                                 "selected":true
+                            },
+                            {
+                                "id":11,
+                                "name":"Decaf Espresso Roast",
+                                "pump":3
                             }
                         ]
                     }
                 ]
             },
             {
+                "id":12,
                 "name":"Blended Options",
                 "pump":null,
                 "children":[
                     {
+                        "id":13,
                         "name":"Frappuccino Roast pumps",
                         "pump": 2
+                    },
+                    {
+                        "id":14,
+                        "name":"dsadasdasd",
+                        "pump": null
                     }
                 ]
             }

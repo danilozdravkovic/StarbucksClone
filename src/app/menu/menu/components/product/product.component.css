@@ -55,11 +55,15 @@ img {
     margin-left: 10em;
 }
 
-.sizeOptions h2 {
+h2 {
     font-weight: 500;
     font-size: 1.7em;
     padding-bottom: 0.8em;
     border-bottom: 4px solid #d4e9e2;
+}
+
+.cupSize{
+    cursor: pointer;
 }
 
 @media screen and (max-width:992px) {

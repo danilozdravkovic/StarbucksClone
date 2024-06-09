@@ -28,7 +28,6 @@ export class ProductsMenuComponent implements OnInit {
         console.log(err);
       }
     });
-
     this.productsService.getAll().subscribe({
       next:(data)=>{
         this.categoriesWithProducts=data;
@@ -37,7 +36,7 @@ export class ProductsMenuComponent implements OnInit {
       error:(err)=>{
         console.log(err);
       }
-    })
+    });
   }
   //function creates array of categories that contains array of child categories
   //so it is easier to print them in ngFor because there is no nesting in json file

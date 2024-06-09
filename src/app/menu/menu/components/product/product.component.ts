@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/menu/services/products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -35,6 +36,8 @@ export class ProductComponent implements OnInit {
       const selectedSize = document.getElementsByClassName("cupSize")[0];
        this.isActive(selectedSize,this.productToDisplay.sizes[0].additionallCalories,this.productToDisplay.sizes);
      }
+
+     
 
 //function first removes all active links from cupSize divs and then checks on witch div is clicked so it can give it active class
   isActive(div:HTMLDivElement | Element,additionallCalories:number,allSizes: any[]):void{
