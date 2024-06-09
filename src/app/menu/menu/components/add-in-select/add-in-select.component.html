@@ -1,8 +1,5 @@
-<!--This code filters addIns and print select tags if addIn has children and add those children to rendered selected tag.
-If addIn doesn't have children it just add's that addIn to select tag.If addIn has pump value it is printed with parent's name
-outside of select tag because pumps need to be flexible for incrementation and decrementation -->
 <ng-container *ngFor="let addIn of addIns">
-    <ng-container *ngIf="addIn.children ; else addInHasNoChildren">
+    <ng-container *ngIf="addIn.children && hasChildrenForSelect(addIn.children); else addInHasNoChildren">
         <label class="mt-5">{{addIn.name}}</label>
         <select>
             <ng-container *ngFor="let subchild of addIn.children">
@@ -13,15 +10,21 @@ outside of select tag because pumps need to be flexible for incrementation and d
                 </ng-container>
             </ng-container>
         </select>
-        <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
     </ng-container>
+    <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
     <ng-template #addInHasNoChildren>
         <ng-container *ngIf="!hasSubchildPump(addIn)">
-            <label class="mt-5">{{parentName}}</label>
-            <p>{{addIn.name}}</p>
+            <p class="mt-5">{{parentName}}</p>
+            <div>
+                <p>{{addIn.name}}</p>
+                <p>{{addIn.pump}}</p>
+                <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
+                <i class="fas fa-minus" (click)="decrementPump(addIn)"></i>
+            </div>
         </ng-container>
     </ng-template>
 </ng-container>
+
 
 
 

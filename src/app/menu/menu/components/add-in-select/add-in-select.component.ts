@@ -12,4 +12,20 @@ export class AddInSelectComponent {
   hasSubchildPump(addIn: any): boolean {
     return addIn.pump == null;
   }
+
+  hasChildrenForSelect(array: any[]): boolean {
+    return array.some(subchild => !subchild.children && this.hasSubchildPump(subchild));
+  }
+
+  incrementPump(addIn: any): void {
+    if(addIn.pump<12){
+      addIn.pump++;
+    }
+  }
+
+  decrementPump(addIn: any): void {
+    if (addIn.pump > 0) {
+      addIn.pump--;
+    }
+  }
   }

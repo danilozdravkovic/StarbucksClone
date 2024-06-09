@@ -424,25 +424,12 @@
                     {
                         "id":2,
                         "name":"Heavy Cream",
-                        "pump":2
+                        "pump":null
                     },
                     {
                         "id":3,
                         "name":"Vanilla Sweet Cream",
-                        "pump":null,
-                        "children":[
-                            {
-                                "id":4,
-                                "name":"Nonfat Milk",
-                                "pump":null
-                            },
-                            {
-                                "id":5,
-                                "name":"Whole Milk",
-                                "pump":null,
-                                "selected":true
-                            }
-                        ]
+                        "pump":null
                     },
                     {
                         "id":4,
@@ -465,7 +452,7 @@
                     {
                         "id":9,
                         "name":"Shots",
-                        "pump":null
+                        "pump":2
                     },
                     {
                         "id":8,
@@ -487,11 +474,6 @@
                                 "name":"Decaf Espresso Roast",
                                 "pump":null,
                                 "selected":true
-                            },
-                            {
-                                "id":11,
-                                "name":"Decaf Espresso Roast",
-                                "pump":3
                             }
                         ]
                     }
@@ -506,11 +488,6 @@
                         "id":13,
                         "name":"Frappuccino Roast pumps",
                         "pump": 2
-                    },
-                    {
-                        "id":14,
-                        "name":"dsadasdasd",
-                        "pump": null
                     }
                 ]
             }
