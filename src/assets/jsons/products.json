@@ -381,6 +381,114 @@
                 "size":30,
                 "additionallCalories":100
             }
+        ],
+        "includedAddIns":[
+            {
+                "id":20,
+                "name":"Milk",
+                "pump":null,
+                "selected":false,
+                "children":[
+                    {
+                        "id":21,
+                        "name":"Heavy Cream",
+                        "pump":null,
+                        "selected":false
+                    },
+                    {
+                        "id":22,
+                        "name":"2% Milk",
+                        "pump":null,
+                        "selected":true
+                    },
+                    {
+                        "id":23,
+                        "name":"Nonfat Milk",
+                        "pump":null,
+                        "selected":false
+                    }
+                ]
+            },
+            {
+                "id":56,
+                "name":"Flavors",
+                "pump":null,
+                "selected":false,
+                "children":[
+                    {
+                        "id":57,
+                        "name":"Brown Sugar Syrup pumps",
+                        "pump":5,
+                        "selected":false
+                    }
+                ]
+            },
+            {
+                "id":58,
+                "name":"Toppings",
+                "pump":null,
+                "selected":false,
+                "children":[
+                    {
+                        "id":59,
+                        "name":"Cinnamon Powder",
+                        "pump":null,
+                        "selected":true
+                    },
+                    {
+                        "id":60,
+                        "name":"Extra Cinnamon Powder",
+                        "pump":null,
+                        "selected":false
+                    },
+                    {
+                        "id":61,
+                        "name":"No Cinnamon Powder",
+                        "pump":null,
+                        "selected":false
+                    }
+                ]
+            },
+            {
+                "id":6,
+                "name":"Espresso & Shot Options",
+                "pump":null,
+                "selected":false,
+                "children":[
+                    {
+                        "id":9,
+                        "name":"Shots",
+                        "pump":2,
+                        "selected":false
+                    },
+                    {
+                        "id":8,
+                        "name":"Espresso Roast",
+                        "pump":null,
+                        "selected":false,
+                        "children":[
+                            {
+                                "id":9,
+                                "name":"Signature Espresso Roast",
+                                "pump":null,
+                                "selected":false
+                            },
+                            {
+                                "id":10,
+                                "name":"Blonde Espresso Roast",
+                                "pump":null,
+                                "selected":true
+                            },
+                            {
+                                "id":11,
+                                "name":"Decaf Espresso Roast",
+                                "pump":null,
+                                "selected":false
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
     },
     {
@@ -420,6 +528,7 @@
                 "id":1,
                 "name":"Milk",
                 "pump":null,
+                "selected":false,
                 "children":[
                     {
                         "id":2,
@@ -430,17 +539,20 @@
                     {
                         "id":3,
                         "name":"Vanilla Sweet Cream",
-                        "pump":null
+                        "pump":null,
+                        "selected":false
                     },
                     {
                         "id":4,
                         "name":"Nonfat Milk",
-                        "pump":null
+                        "pump":null,
+                        "selected":false
                     },
                     {
                         "id":5,
                         "name":"Whole Milk",
-                        "pump":null
+                        "pump":null,
+                        "selected":false
                     }
                 ]
             },
@@ -448,21 +560,25 @@
                 "id":6,
                 "name":"Espresso & Shot Options",
                 "pump":null,
+                "selected":false,
                 "children":[
                     {
                         "id":9,
                         "name":"Shots",
-                        "pump":2
+                        "pump":2,
+                        "selected":false
                     },
                     {
                         "id":8,
                         "name":"Espresso Roast",
                         "pump":null,
+                        "selected":false,
                         "children":[
                             {
                                 "id":9,
                                 "name":"Signature Espresso Roast",
-                                "pump":null
+                                "pump":null,
+                                "selected":false
                             },
                             {
                                 "id":10,
@@ -473,7 +589,8 @@
                             {
                                 "id":11,
                                 "name":"Decaf Espresso Roast",
-                                "pump":null
+                                "pump":null,
+                                "selected":false
                             }
                         ]
                     }
@@ -483,11 +600,13 @@
                 "id":12,
                 "name":"Blended Options",
                 "pump":null,
+                "selected":false,
                 "children":[
                     {
                         "id":13,
                         "name":"Frappuccino Roast pumps",
-                        "pump": 2
+                        "pump": 2,
+                        "selected":false
                     }
                 ]
             }

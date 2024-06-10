@@ -80,4 +80,16 @@ h2 {
     .product-text-container h1{
         text-align: center;
     }
+    .includedAddIns{
+        margin-left: 10em;
+    }
+    .sizeOptions,.includedAddIns{
+        margin-left:0em;
+    }
+    .flexCenter {
+        display: flex;
+        justify-content: center;
+    }
 }
+
+

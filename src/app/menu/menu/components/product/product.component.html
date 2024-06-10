@@ -16,16 +16,16 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row flexCenter">
         <ng-container *ngIf="productToDisplay.sizes">
-            <div class="col-4 sizeOptions">
-                <div class="row">
-                    <div class="col-10 mb-4">
+            <div class="col-12 col-sm-10 col-lg-4 sizeOptions ">
+                <div class="row flexCenter">
+                    <div class="col-12 col-sm-10 mb-4">
                         <h2>Size Options</h2>
                     </div>
-                    <div class="col-10 d-flex flex-row justify-content-center">
+                    <div class="col-12 col-sm-10 d-flex flex-row justify-content-center">
                         <ng-container *ngFor="let size of productToDisplay.sizes">
-                            <div class="col-2 text-center">
+                            <div class="col-3 col-sm-2 col-lg-3 col-x-2 text-center">
                                 <div #dynamicDiv class="{{size.name}}-size cupSize" (click)="isActive(dynamicDiv,size.additionallCalories,productToDisplay.sizes)">
                                 </div>
                                 <p>{{size.name.substring(0,1).toUpperCase()}}{{size.name.substring(1)}}</p>
@@ -37,12 +37,12 @@
             </div>
         </ng-container>
         <ng-container *ngIf="productToDisplay.includedAddIns">
-            <div class="col-4 includedAddIns">
-                <div class="row">
-                    <div class="col-10 mb-4">
+            <div class="col-12 col-sm-10 col-lg-4 includedAddIns">
+                <div class="row flexCenter">
+                    <div class="col-12 col-sm-10 mb-4">
                         <h2>What's included</h2>
                     </div>
-                    <div class="col-10 d-flex flex-row justify-content-center">
+                    <div class="col-12 col-sm-10 d-flex flex-row justify-content-center">
                         <form style="width: 100%;">
                             <app-add-in-select [addIns]="productToDisplay.includedAddIns"></app-add-in-select>
                         </form>

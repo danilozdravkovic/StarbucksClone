@@ -16,12 +16,16 @@
     <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
     <ng-template #addInHasNoChildren>
         <ng-container *ngIf="!hasSubchildPump(addIn)">
-            <div>
-                <p>{{parentName}}</p>
-                <p>{{addIn.name}}</p>
-                <p>{{addIn.pump}}</p>
-                <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
-                <i class="fas fa-minus" (click)="decrementPump(addIn)"></i>
+            <div id="addInsWithPumpWrapper">
+                <p class="parentName">{{parentName}}</p>
+                <div class="d-flex justify-content-between">
+                    <p  class="addInName" style="margin-top: 3px;">{{addIn.name}}</p>
+                    <div class="d-flex flex-row-reverse" style="width: 30%;">
+                        <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
+                        <p class="addInPumps">{{addIn.pump}}</p>
+                        <i class="fas fa-minus" (click)="decrementPump(addIn)"></i>
+                    </div>
+                </div>
             </div>
         </ng-container>
     </ng-template>
