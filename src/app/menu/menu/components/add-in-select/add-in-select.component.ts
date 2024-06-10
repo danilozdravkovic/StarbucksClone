@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class AddInSelectComponent {
   @Input() addIns: any ;
   @Input() parentName: string = '';
+  subchildId : number=3;
 
   hasSubchildPump(addIn: any): boolean {
     return addIn.pump == null;
@@ -27,5 +28,10 @@ export class AddInSelectComponent {
     if (addIn.pump > 0) {
       addIn.pump--;
     }
+  }
+
+  getSelectedSubchildId(children: any[]): string {
+    const selectedSubchild = children.find(subchild => subchild.selected);
+    return selectedSubchild ? selectedSubchild.id : null;
   }
   }

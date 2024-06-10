@@ -37,13 +37,13 @@
             </div>
         </ng-container>
         <ng-container *ngIf="productToDisplay.includedAddIns">
-            <div class="col-3">
+            <div class="col-4 includedAddIns">
                 <div class="row">
                     <div class="col-10 mb-4">
                         <h2>What's included</h2>
                     </div>
                     <div class="col-10 d-flex flex-row justify-content-center">
-                        <form>
+                        <form style="width: 100%;">
                             <app-add-in-select [addIns]="productToDisplay.includedAddIns"></app-add-in-select>
                         </form>
                     </div>

@@ -424,7 +424,8 @@
                     {
                         "id":2,
                         "name":"Heavy Cream",
-                        "pump":null
+                        "pump":null,
+                        "selected":true
                     },
                     {
                         "id":3,
@@ -439,8 +440,7 @@
                     {
                         "id":5,
                         "name":"Whole Milk",
-                        "pump":null,
-                        "selected":true
+                        "pump":null
                     }
                 ]
             },
@@ -467,13 +467,13 @@
                             {
                                 "id":10,
                                 "name":"Blonde Espresso Roast",
-                                "pump":null
+                                "pump":null,
+                                "selected":true
                             },
                             {
                                 "id":11,
                                 "name":"Decaf Espresso Roast",
-                                "pump":null,
-                                "selected":true
+                                "pump":null
                             }
                         ]
                     }

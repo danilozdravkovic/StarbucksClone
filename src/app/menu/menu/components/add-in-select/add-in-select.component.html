@@ -1,21 +1,23 @@
 <ng-container *ngFor="let addIn of addIns">
     <ng-container *ngIf="addIn.children && hasChildrenForSelect(addIn.children); else addInHasNoChildren">
-        <label class="mt-5">{{addIn.name}}</label>
-        <select>
+        <mat-form-field style="width: 100%;">
+            <mat-label style="color: #00754a;">{{addIn.name}}</mat-label>
+            <mat-select [value]="getSelectedSubchildId(addIn.children)" id="{{addIn.name}}ID" class="addInSelect">
             <ng-container *ngFor="let subchild of addIn.children">
                 <ng-container *ngIf="!subchild.children">
                     <ng-container *ngIf="hasSubchildPump(subchild)">
-                        <option>{{subchild.name}}</option>
+                            <mat-option  [value]="subchild.id">{{subchild.name}}</mat-option >
                     </ng-container>
                 </ng-container>
             </ng-container>
-        </select>
+        </mat-select>
+    </mat-form-field>
     </ng-container>
     <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
     <ng-template #addInHasNoChildren>
         <ng-container *ngIf="!hasSubchildPump(addIn)">
-            <p class="mt-5">{{parentName}}</p>
             <div>
+                <p>{{parentName}}</p>
                 <p>{{addIn.name}}</p>
                 <p>{{addIn.pump}}</p>
                 <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
@@ -24,6 +26,7 @@
         </ng-container>
     </ng-template>
 </ng-container>
+
 
 
 

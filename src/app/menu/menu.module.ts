@@ -11,6 +11,8 @@ import { ProductComponent } from './menu/components/product/product.component';
 import { AddInSelectComponent } from './menu/components/add-in-select/add-in-select.component';
 
 
+
+
 @NgModule({
   declarations: [
     MenuComponent,
