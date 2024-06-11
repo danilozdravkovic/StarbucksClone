@@ -3,15 +3,15 @@
         <mat-form-field style="width: 100%;">
             <mat-label style="color: #00754a;">{{addIn.name}}</mat-label>
             <mat-select [value]="getSelectedSubchildId(addIn.children)" id="{{addIn.name}}ID" class="addInSelect">
-            <ng-container *ngFor="let subchild of addIn.children">
-                <ng-container *ngIf="!subchild.children">
-                    <ng-container *ngIf="hasSubchildPump(subchild)">
-                            <mat-option  [value]="subchild.id">{{subchild.name}}</mat-option >
+                <ng-container *ngFor="let subchild of addIn.children">
+                    <ng-container *ngIf="!subchild.children">
+                        <ng-container *ngIf="hasSubchildPump(subchild)">
+                            <mat-option [value]="subchild.id">{{subchild.name}}</mat-option>
+                        </ng-container>
                     </ng-container>
                 </ng-container>
-            </ng-container>
-        </mat-select>
-    </mat-form-field>
+            </mat-select>
+        </mat-form-field>
     </ng-container>
     <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
     <ng-template #addInHasNoChildren>
@@ -19,7 +19,7 @@
             <div id="addInsWithPumpWrapper">
                 <p class="parentName">{{parentName}}</p>
                 <div class="d-flex justify-content-between">
-                    <p  class="addInName" style="margin-top: 3px;">{{addIn.name}}</p>
+                    <p class="addInName" style="margin-top: 3px;">{{addIn.name}}</p>
                     <div class="d-flex flex-row-reverse" style="width: 30%;">
                         <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
                         <p class="addInPumps">{{addIn.pump}}</p>
@@ -30,9 +30,3 @@
         </ng-container>
     </ng-template>
 </ng-container>
-
-
-
-
-
-

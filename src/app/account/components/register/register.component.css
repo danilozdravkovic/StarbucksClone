@@ -1,0 +1,13 @@
+span,mat-label{
+    color:#00754a
+}
+.formField{
+    width: 90%;
+    margin: 0px auto;
+}
+.formField button{
+    border:none;
+    background-color: transparent;
+    color: #00000094;
+}
+  

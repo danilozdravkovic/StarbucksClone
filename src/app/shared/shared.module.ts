@@ -10,6 +10,8 @@ import {
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -22,7 +24,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   imports: [
     CommonModule,
     RouterLink,
-    MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatInputModule
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   exports:[
     AuthFormComponent,
@@ -30,7 +38,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

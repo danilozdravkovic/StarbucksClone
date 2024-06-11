@@ -1,0 +1,41 @@
+<section class="mb-5 mt-5">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <h2 class=" text-center mb-5">Sign in</h2>
+                    <div  style="border-radius: 15px; box-shadow: 0 2px 4px #00000012, 0 4px 5px #0000000f, 0 1px 10px #0000001a;">
+                        <div class="card-body p-5">
+                            <p><span>*</span> indicates required field</p>
+                            <form>
+                                <h5 class="mt-5 mb-3">Sing in credentials</h5>
+                                <mat-form-field class="formField">
+                                    <mat-label>Email address</mat-label>
+                                    <input matInput required>
+                                </mat-form-field>
+                                <mat-form-field class="formField">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput required [type]="hide ? 'password' : 'text'">
+                                    <button mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                  </mat-form-field>
+
+
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Sign in</button>
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">Do not have an account? <a routerLink="/main/account/register" 
+                                        class="fw-bold text-body"><u>Register here</u></a></p>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

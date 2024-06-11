@@ -8,8 +8,7 @@ import { FavoritesComponent } from './menu/components/favorites/favorites.compon
 import { ProductsMenuComponent } from './menu/components/products-menu/products-menu.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './menu/components/product/product.component';
-import { AddInSelectComponent } from './menu/components/add-in-select/add-in-select.component';
-
+import { AddInSelectComponent } from './menu/components/product/components/add-in-select/add-in-select.component';
 
 
 
@@ -20,7 +19,7 @@ import { AddInSelectComponent } from './menu/components/add-in-select/add-in-sel
     FavoritesComponent,
     ProductsMenuComponent,
     ProductComponent,
-    AddInSelectComponent,
+    AddInSelectComponent
   ],
   imports: [
     CommonModule,

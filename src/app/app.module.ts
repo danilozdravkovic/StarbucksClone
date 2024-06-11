@@ -30,8 +30,8 @@ const routes : Routes = [
         loadChildren: ()=> import("./menu/menu.module").then(m=>m.MenuModule)
       },
       {
-        path:"rewards",
-        loadChildren: ()=> import("./rewards/rewards.module").then(m=>m.RewardsModule)
+        path:"account",
+        loadChildren: ()=> import("./account/account.module").then(m=>m.AccountModule)
       },
       {
         path:"**",

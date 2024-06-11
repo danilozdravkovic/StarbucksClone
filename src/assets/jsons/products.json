@@ -1,889 +1,1204 @@
 [
     {
-        "id":1,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Cafee Americano",
-        "calories":15,
-        "categoryId":3
+        "id": 1,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Cafee Americano",
+        "calories": 15,
+        "categoryId": 3
     },
     {
-        "id":2,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Featured Blonde Roast",
-        "calories":5,
-        "categoryId":4
+        "id": 2,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Featured Blonde Roast",
+        "calories": 5,
+        "categoryId": 4
     },
     {
-        "id":3,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Featured Medium Roast Pike Place Roast",
-        "calories":5,
-        "categoryId":4
+        "id": 3,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Featured Medium Roast Pike Place Roast",
+        "calories": 5,
+        "categoryId": 4
     },
     {
-        "id":4,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Featured Dark Roast",
-        "calories":5,
-        "categoryId":4,
-        "sizes":[
+        "id": 4,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Featured Dark Roast",
+        "calories": 5,
+        "categoryId": 4,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":5,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Featured Decaf Roast Decaf Pike Place Roast",
-        "calories":5,
-        "categoryId":4,
-        "sizes":[
+        "id": 5,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Featured Decaf Roast Decaf Pike Place Roast",
+        "calories": 5,
+        "categoryId": 4,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":6,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Veranda Blend Clover Vertica",
-        "calories":5,
-        "categoryId":4,
-        "sizes":[
+        "id": 6,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Veranda Blend Clover Vertica",
+        "calories": 5,
+        "categoryId": 4,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":7,
-        "src":"drinks/caffeAmericano.avif",
-        "name":"Featured Dark Roast Caffe Verona",
-        "calories":10,
-        "categoryId":4
+        "id": 7,
+        "src": "drinks/caffeAmericano.avif",
+        "name": "Featured Dark Roast Caffe Verona",
+        "calories": 10,
+        "categoryId": 4
     },
     {
-        "id":8,
-        "src":"drinks/cappuccino.avif",
-        "name":"Cappuccino",
-        "calories":140,
-        "categoryId":5,
-        "sizes":[
+        "id": 8,
+        "src": "drinks/cappuccino.avif",
+        "name": "Cappuccino",
+        "calories": 140,
+        "categoryId": 5,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":9,
-        "src":"drinks/espressoSingle.avif",
-        "name":"Espresso",
-        "calories":10,
-        "categoryId":6,
-        "sizes":[
+        "id": 9,
+        "src": "drinks/espressoSingle.avif",
+        "name": "Espresso",
+        "calories": 10,
+        "categoryId": 6,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             }
         ]
     },
     {
-        "id":10,
-        "src":"drinks/espressoConPanna.avif",
-        "name":"Espresso Con Panna",
-        "calories":35,
-        "categoryId":6,
-        "sizes":[
+        "id": 10,
+        "src": "drinks/espressoConPanna.avif",
+        "name": "Espresso Con Panna",
+        "calories": 35,
+        "categoryId": 6,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":11,
-        "src":"drinks/lavenderOatmilkLatte.avif",
-        "name":"Lavander Oatmilk Latte",
-        "calories":260,
-        "categoryId":7
+        "id": 11,
+        "src": "drinks/lavenderOatmilkLatte.avif",
+        "name": "Lavander Oatmilk Latte",
+        "calories": 260,
+        "categoryId": 7
     },
     {
-        "id":12,
-        "src":"drinks/pistachioLatte.avif",
-        "name":"Pistachio Latte",
-        "calories":260,
-        "categoryId":7,
-        "sizes":[
+        "id": 12,
+        "src": "drinks/pistachioLatte.avif",
+        "name": "Pistachio Latte",
+        "calories": 260,
+        "categoryId": 7,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":13,
-        "src":"drinks/caramelMacchiato.avif",
-        "name":"Caramel Macchiato",
-        "calories":250,
-        "categoryId":8,
-        "sizes":[
+        "id": 13,
+        "src": "drinks/caramelMacchiato.avif",
+        "name": "Caramel Macchiato",
+        "calories": 250,
+        "categoryId": 8,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":14,
-        "src":"drinks/espressoMacchiato.avif",
-        "name":"Espresso Macchiato",
-        "calories":15,
-        "categoryId":8,
-        "sizes":[
+        "id": 14,
+        "src": "drinks/espressoMacchiato.avif",
+        "name": "Espresso Macchiato",
+        "calories": 15,
+        "categoryId": 8,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":15,
-        "src":"drinks/caffeMocha.avif",
-        "name":"Caffe Mocha",
-        "calories":370,
-        "categoryId":9,
-        "sizes":[
+        "id": 15,
+        "src": "drinks/caffeMocha.avif",
+        "name": "Caffe Mocha",
+        "calories": 370,
+        "categoryId": 9,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             }
         ]
     },
     {
-        "id":16,
-        "src":"drinks/whiteChocolateMocha.avif",
-        "name":"White Chocolate Mocha",
-        "calories":390,
-        "categoryId":9
-    },
-    {
-        "id":17,
-        "src":"drinks/pistachioCreamColdBrew.avif",
-        "name":"Pistachio Cream Cold Brew",
-        "calories":250,
-        "categoryId":11
-    },
-    {
-        "id":18,
-        "src":"drinks/cinnamonCaramelCreamNitroColdBrew.avif",
-        "name":"Cinnamon Caramel Cream Nitro Cold Brew",
-        "calories":260,
-        "categoryId":12
-    },
-    {
-        "id":19,
-        "src":"drinks/icedCaffeAmericano.avif",
-        "name":"Iced Caffe Americano",
-        "calories":15,
-        "categoryId":13,
-        "sizes":[
+        "id": 16,
+        "src": "drinks/whiteChocolateMocha.avif",
+        "name": "White Chocolate Mocha",
+        "calories": 390,
+        "categoryId": 9,
+        "includedAddIns": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
-            },
-            {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
-            },
-            {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
-            },
-            {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
-            }
-        ]
-    },
-    {
-        "id":20,
-        "src":"drinks/icedCoffee.avif",
-        "name":"Starbucks Iced Coffee Blend",
-        "calories":15,
-        "categoryId":14,
-        "sizes":[
-            {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
-            },
-            {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
-            },
-            {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
-            }
-        ],
-        "includedAddIns":[
-            {
-                "id":20,
-                "name":"Milk",
-                "pump":null,
-                "selected":false,
-                "children":[
+                "id": 101,
+                "name": "Milk",
+                "pump": null,
+                "selected": false,
+                "children": [
                     {
-                        "id":21,
-                        "name":"Heavy Cream",
-                        "pump":null,
-                        "selected":false
+                        "id": 102,
+                        "name": "Almond Milk",
+                        "pump": null,
+                        "selected": true
                     },
                     {
-                        "id":22,
-                        "name":"2% Milk",
-                        "pump":null,
-                        "selected":true
-                    },
-                    {
-                        "id":23,
-                        "name":"Nonfat Milk",
-                        "pump":null,
-                        "selected":false
+                        "id": 103,
+                        "name": "Soy Milk",
+                        "pump": null,
+                        "selected": false
                     }
                 ]
             },
             {
-                "id":56,
-                "name":"Flavors",
-                "pump":null,
-                "selected":false,
-                "children":[
+                "id": 201,
+                "name": "Sweeteners",
+                "pump": null,
+                "selected": false,
+                "children": [
                     {
-                        "id":57,
-                        "name":"Brown Sugar Syrup pumps",
-                        "pump":5,
-                        "selected":false
-                    }
-                ]
-            },
-            {
-                "id":58,
-                "name":"Toppings",
-                "pump":null,
-                "selected":false,
-                "children":[
-                    {
-                        "id":59,
-                        "name":"Cinnamon Powder",
-                        "pump":null,
-                        "selected":true
+                        "id": 202,
+                        "name": "Vanilla Syrup",
+                        "pump": 3,
+                        "selected": false
                     },
                     {
-                        "id":60,
-                        "name":"Extra Cinnamon Powder",
-                        "pump":null,
-                        "selected":false
-                    },
-                    {
-                        "id":61,
-                        "name":"No Cinnamon Powder",
-                        "pump":null,
-                        "selected":false
-                    }
-                ]
-            },
-            {
-                "id":6,
-                "name":"Espresso & Shot Options",
-                "pump":null,
-                "selected":false,
-                "children":[
-                    {
-                        "id":9,
-                        "name":"Shots",
-                        "pump":2,
-                        "selected":false
-                    },
-                    {
-                        "id":8,
-                        "name":"Espresso Roast",
-                        "pump":null,
-                        "selected":false,
-                        "children":[
-                            {
-                                "id":9,
-                                "name":"Signature Espresso Roast",
-                                "pump":null,
-                                "selected":false
-                            },
-                            {
-                                "id":10,
-                                "name":"Blonde Espresso Roast",
-                                "pump":null,
-                                "selected":true
-                            },
-                            {
-                                "id":11,
-                                "name":"Decaf Espresso Roast",
-                                "pump":null,
-                                "selected":false
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id":21,
-        "src":"drinks/icedFlatWhite.avif",
-        "name":"Iced Flat White",
-        "calories":110,
-        "categoryId":15,
-        "sizes":[
-            {
-                "id:":1,
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
-            },
-            {
-                "id:":2,
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
-            },
-            {
-                "id:":3,
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
-            },
-            {
-                "id:":4,
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
-            }
-        ],
-        "includedAddIns":[
-            {
-                "id":1,
-                "name":"Milk",
-                "pump":null,
-                "selected":false,
-                "children":[
-                    {
-                        "id":2,
-                        "name":"Heavy Cream",
-                        "pump":null,
-                        "selected":true
-                    },
-                    {
-                        "id":3,
-                        "name":"Vanilla Sweet Cream",
-                        "pump":null,
-                        "selected":false
-                    },
-                    {
-                        "id":4,
-                        "name":"Nonfat Milk",
-                        "pump":null,
-                        "selected":false
-                    },
-                    {
-                        "id":5,
-                        "name":"Whole Milk",
-                        "pump":null,
-                        "selected":false
-                    }
-                ]
-            },
-            {
-                "id":6,
-                "name":"Espresso & Shot Options",
-                "pump":null,
-                "selected":false,
-                "children":[
-                    {
-                        "id":9,
-                        "name":"Shots",
-                        "pump":2,
-                        "selected":false
-                    },
-                    {
-                        "id":8,
-                        "name":"Espresso Roast",
-                        "pump":null,
-                        "selected":false,
-                        "children":[
-                            {
-                                "id":9,
-                                "name":"Signature Espresso Roast",
-                                "pump":null,
-                                "selected":false
-                            },
-                            {
-                                "id":10,
-                                "name":"Blonde Espresso Roast",
-                                "pump":null,
-                                "selected":true
-                            },
-                            {
-                                "id":11,
-                                "name":"Decaf Espresso Roast",
-                                "pump":null,
-                                "selected":false
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "id":12,
-                "name":"Blended Options",
-                "pump":null,
-                "selected":false,
-                "children":[
-                    {
-                        "id":13,
-                        "name":"Frappuccino Roast pumps",
+                        "id": 203,
+                        "name": "Caramel Syrup",
                         "pump": 2,
-                        "selected":false
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 301,
+                "name": "Toppings",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 302,
+                        "name": "Chocolate Powder",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 303,
+                        "name": "Extra Chocolate Powder",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 304,
+                        "name": "No Chocolate Powder",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 401,
+                "name": "Add-ins",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 402,
+                        "name": "Whipped Cream",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 403,
+                        "name": "Honey",
+                        "pump": 1,
+                        "selected": false
                     }
                 ]
             }
         ]
     },
     {
-        "id":22,
-        "src":"drinks/icedLavenderOatmilkLatte.avif",
-        "name":"Iced Lavander Oatmilk Latte",
-        "calories":210,
-        "categoryId":16
+        "id": 17,
+        "src": "drinks/pistachioCreamColdBrew.avif",
+        "name": "Pistachio Cream Cold Brew",
+        "calories": 250,
+        "categoryId": 11
     },
     {
-        "id":23,
-        "src":"drinks/icedCaramelMacchiato.avif",
-        "name":"Iced Caramel Macchiato",
-        "calories":250,
-        "categoryId":17,
-        "sizes":[
+        "id": 18,
+        "src": "drinks/cinnamonCaramelCreamNitroColdBrew.avif",
+        "name": "Cinnamon Caramel Cream Nitro Cold Brew",
+        "calories": 260,
+        "categoryId": 12
+    },
+    {
+        "id": 19,
+        "src": "drinks/icedCaffeAmericano.avif",
+        "name": "Iced Caffe Americano",
+        "calories": 15,
+        "categoryId": 13,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ],
+        "includedAddIns": [
+            {
+                "id": 501,
+                "name": "Drizzle",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 502,
+                        "name": "Caramel Drizzle",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 503,
+                        "name": "Mocha Drizzle",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 601,
+                "name": "Sauces",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 602,
+                        "name": "White Chocolate Mocha Sauce",
+                        "pump": 2,
+                        "selected": false
+                    },
+                    {
+                        "id": 603,
+                        "name": "Dark Chocolate Sauce",
+                        "pump": 3,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 701,
+                "name": "Extras",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 702,
+                        "name": "Espresso Shot",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 703,
+                        "name": "Extra Ice",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
             }
         ]
     },
     {
-        "id":24,
-        "src":"drinks/spicyPineapple.avif",
-        "name":"Spicy Pineaplle",
-        "calories":200,
-        "categoryId":19,
-        "sizes":[
+        "id": 20,
+        "src": "drinks/icedCoffee.avif",
+        "name": "Starbucks Iced Coffee Blend",
+        "calories": 15,
+        "categoryId": 14,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ],
+        "includedAddIns": [
+            {
+                "id": 20,
+                "name": "Milk",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 21,
+                        "name": "Heavy Cream",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 22,
+                        "name": "2% Milk",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 23,
+                        "name": "Nonfat Milk",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 56,
+                "name": "Flavors",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 57,
+                        "name": "Brown Sugar Syrup pumps",
+                        "pump": 5,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 58,
+                "name": "Toppings",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 59,
+                        "name": "Cinnamon Powder",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 60,
+                        "name": "Extra Cinnamon Powder",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 61,
+                        "name": "No Cinnamon Powder",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Espresso & Shot Options",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 9,
+                        "name": "Shots",
+                        "pump": 2,
+                        "selected": false
+                    },
+                    {
+                        "id": 8,
+                        "name": "Espresso Roast",
+                        "pump": null,
+                        "selected": false,
+                        "children": [
+                            {
+                                "id": 9,
+                                "name": "Signature Espresso Roast",
+                                "pump": null,
+                                "selected": false
+                            },
+                            {
+                                "id": 10,
+                                "name": "Blonde Espresso Roast",
+                                "pump": null,
+                                "selected": true
+                            },
+                            {
+                                "id": 11,
+                                "name": "Decaf Espresso Roast",
+                                "pump": null,
+                                "selected": false
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
     {
-        "id":25,
-        "src":"drinks/spicyMango.avif",
-        "name":"Spicy Dragonfruit",
-        "calories":200,
-        "categoryId":19
-    },
-    {
-        "id":26,
-        "src":"drinks/strawberryAcaiLemonadeRefreshers.avif",
-        "name":"Strawberry Acai Lemonade Starbucks Refreshers Beverage",
-        "calories":140,
-        "categoryId":20,
-        "sizes":[
+        "id": 21,
+        "src": "drinks/icedFlatWhite.avif",
+        "name": "Iced Flat White",
+        "calories": 110,
+        "categoryId": 15,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "id:": 1,
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "id:": 2,
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "id:": 3,
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "id:": 4,
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ],
+        "includedAddIns": [
+            {
+                "id": 1,
+                "name": "Milk",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 2,
+                        "name": "Heavy Cream",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 3,
+                        "name": "Vanilla Sweet Cream",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 4,
+                        "name": "Nonfat Milk",
+                        "pump": null,
+                        "selected": false
+                    },
+                    {
+                        "id": 5,
+                        "name": "Whole Milk",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Espresso & Shot Options",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 9,
+                        "name": "Shots",
+                        "pump": 2,
+                        "selected": false
+                    },
+                    {
+                        "id": 8,
+                        "name": "Espresso Roast",
+                        "pump": null,
+                        "selected": false,
+                        "children": [
+                            {
+                                "id": 9,
+                                "name": "Signature Espresso Roast",
+                                "pump": null,
+                                "selected": false
+                            },
+                            {
+                                "id": 10,
+                                "name": "Blonde Espresso Roast",
+                                "pump": null,
+                                "selected": true
+                            },
+                            {
+                                "id": 11,
+                                "name": "Decaf Espresso Roast",
+                                "pump": null,
+                                "selected": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "name": "Blended Options",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 13,
+                        "name": "Frappuccino Roast pumps",
+                        "pump": 2,
+                        "selected": false
+                    }
+                ]
             }
         ]
     },
     {
-        "id":27,
-        "src":"drinks/pinkDrink.avif",
-        "name":"Pink Drink Starbucks Refreshers Beverage",
-        "calories":140,
-        "categoryId":21
+        "id": 22,
+        "src": "drinks/icedLavenderOatmilkLatte.avif",
+        "name": "Iced Lavander Oatmilk Latte",
+        "calories": 210,
+        "categoryId": 16
     },
     {
-        "id":28,
-        "src":"drinks/pineapplePassionfruitRefreshers.avif",
-        "name":"Pineapple Passionfruit Starbucks Refreshers Beverage",
-        "calories":140,
-        "categoryId":22,
-        "sizes":[
+        "id": 23,
+        "src": "drinks/icedCaramelMacchiato.avif",
+        "name": "Iced Caramel Macchiato",
+        "calories": 250,
+        "categoryId": 17,
+        "sizes": [
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
+            },
+            {
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
             }
         ]
     },
     {
-        "id":29,
-        "src":"drinks/pistachioFrapp.avif",
-        "name":"Pistachipo Frappuccino Blended Beverage",
-        "calories":380,
-        "categoryId":24,
-        "sizes":[
+        "id": 24,
+        "src": "drinks/spicyPineapple.avif",
+        "name": "Spicy Pineaplle",
+        "calories": 200,
+        "categoryId": 19,
+        "sizes": [
             {
-                "name":"tall",
-                "size":16,
-                "additionallCalories":null
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
             },
             {
-                "name":"grande",
-                "size":16,
-                "additionallCalories":50
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
             },
             {
-                "name":"venti",
-                "size":24,
-                "additionallCalories":80
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
+            }
+        ],
+        "includedAddIns": [
+            {
+                "id": 701,
+                "name": "Milk Alternatives",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 702,
+                        "name": "Coconut Milk",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 703,
+                        "name": "Cashew Milk",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
             },
             {
-                "name":"trenta",
-                "size":30,
-                "additionallCalories":100
+                "id": 801,
+                "name": "Syrups",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 802,
+                        "name": "Peppermint Syrup",
+                        "pump": 4,
+                        "selected": false
+                    },
+                    {
+                        "id": 803,
+                        "name": "Raspberry Syrup",
+                        "pump": 2,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 901,
+                "name": "Seasonings",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 902,
+                        "name": "Nutmeg",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 903,
+                        "name": "Pumpkin Spice",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 1001,
+                "name": "Garnishes",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 1002,
+                        "name": "Mint Leaves",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 1003,
+                        "name": "Lemon Zest",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 1101,
+                "name": "Foams",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 1102,
+                        "name": "Cold Foam",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 1103,
+                        "name": "Vanilla Sweet Cream Foam",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
             }
         ]
     },
     {
-        "id":30,
-        "src":"drinks/lavenderCremeFrappuccino.avif",
-        "name":"Lavander Creme Frappuccino Blended Beverage",
-        "calories":370,
-        "categoryId":25
+        "id": 25,
+        "src": "drinks/spicyMango.avif",
+        "name": "Spicy Dragonfruit",
+        "calories": 200,
+        "categoryId": 19,
+        "includedAddIns": [
+            {
+                "id": 701,
+                "name": "Milk Alternatives",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 702,
+                        "name": "Coconut Milk",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 703,
+                        "name": "Cashew Milk",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 801,
+                "name": "Syrups",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 802,
+                        "name": "Peppermint Syrup",
+                        "pump": 4,
+                        "selected": false
+                    },
+                    {
+                        "id": 803,
+                        "name": "Raspberry Syrup",
+                        "pump": 2,
+                        "selected": false
+                    }
+                ]
+            },
+            {
+                "id": 901,
+                "name": "Seasonings",
+                "pump": null,
+                "selected": false,
+                "children": [
+                    {
+                        "id": 902,
+                        "name": "Nutmeg",
+                        "pump": null,
+                        "selected": true
+                    },
+                    {
+                        "id": 903,
+                        "name": "Pumpkin Spice",
+                        "pump": null,
+                        "selected": false
+                    }
+                ]
+            }
+        ]
     },
     {
-        "id":31,
-        "src":"food/chickenMapleButterSandwich.avif",
-        "name":"Chicken, Maple Butter & Egg Sandwich",
-        "calories":450,
-        "categoryId":28
+        "id": 26,
+        "src": "drinks/strawberryAcaiLemonadeRefreshers.avif",
+        "name": "Strawberry Acai Lemonade Starbucks Refreshers Beverage",
+        "calories": 140,
+        "categoryId": 20,
+        "sizes": [
+            {
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
+            },
+            {
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
+            },
+            {
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
+            },
+            {
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ]
     },
     {
-        "id":32,
-        "src":"food/baconSausageCageFreeEggWrap.avif",
-        "name":"Bacon, Sausage & Egg Wrap",
-        "calories":640,
-        "categoryId":28
+        "id": 27,
+        "src": "drinks/pinkDrink.avif",
+        "name": "Pink Drink Starbucks Refreshers Beverage",
+        "calories": 140,
+        "categoryId": 21
     },
     {
-        "id":33,
-        "src":"food/potatoCheddarChiveBakes.avif",
-        "name":"Potato, Cheddar & Chive Bakes",
-        "calories":210,
-        "categoryId":29
+        "id": 28,
+        "src": "drinks/pineapplePassionfruitRefreshers.avif",
+        "name": "Pineapple Passionfruit Starbucks Refreshers Beverage",
+        "calories": 140,
+        "categoryId": 22,
+        "sizes": [
+            {
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
+            },
+            {
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
+            },
+            {
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ]
     },
     {
-        "id":34,
-        "src":"food/oatmeal.avif",
-        "name":"Rolled & Steel-Cut Oatmeal",
-        "calories":160,
-        "categoryId":48
+        "id": 29,
+        "src": "drinks/pistachioFrapp.avif",
+        "name": "Pistachipo Frappuccino Blended Beverage",
+        "calories": 380,
+        "categoryId": 24,
+        "sizes": [
+            {
+                "name": "tall",
+                "size": 16,
+                "additionallCalories": null
+            },
+            {
+                "name": "grande",
+                "size": 16,
+                "additionallCalories": 50
+            },
+            {
+                "name": "venti",
+                "size": 24,
+                "additionallCalories": 80
+            },
+            {
+                "name": "trenta",
+                "size": 30,
+                "additionallCalories": 100
+            }
+        ]
     },
     {
-        "id":35,
-        "src":"food/plainBagel.avif",
-        "name":"Plain Bagel",
-        "calories":290,
-        "categoryId":32
+        "id": 30,
+        "src": "drinks/lavenderCremeFrappuccino.avif",
+        "name": "Lavander Creme Frappuccino Blended Beverage",
+        "calories": 370,
+        "categoryId": 25
     },
     {
-        "id":36,
-        "src":"food/cookiesAndCreamCakePop.avif",
-        "name":"Cookies & Cream Cake Pop",
-        "calories":140,
-        "categoryId":33
+        "id": 31,
+        "src": "food/chickenMapleButterSandwich.avif",
+        "name": "Chicken, Maple Butter & Egg Sandwich",
+        "calories": 450,
+        "categoryId": 28
     },
     {
-        "id":37,
-        "src":"food/doubleChocolateChunkBrownie.avif",
-        "name":"Double Chocolate Brownie",
-        "calories":480,
-        "categoryId":34
+        "id": 32,
+        "src": "food/baconSausageCageFreeEggWrap.avif",
+        "name": "Bacon, Sausage & Egg Wrap",
+        "calories": 640,
+        "categoryId": 28
     },
     {
-        "id":38,
-        "src":"food/grilledCheeseOnSourdough.avif",
-        "name":"Crispy Grilled Cheese on Sourdough",
-        "calories":520,
-        "categoryId":36
+        "id": 33,
+        "src": "food/potatoCheddarChiveBakes.avif",
+        "name": "Potato, Cheddar & Chive Bakes",
+        "calories": 210,
+        "categoryId": 29
     },
     {
-        "id":39,
-        "src":"food/eggsGoudaProteinBox.avif",
-        "name":"Eggs & Gouda Protein Box",
-        "calories":530,
-        "categoryId":37
+        "id": 34,
+        "src": "food/oatmeal.avif",
+        "name": "Rolled & Steel-Cut Oatmeal",
+        "calories": 160,
+        "categoryId": 48
     },
     {
-        "id":40,
-        "src":"atHomeCoffe/guatemalaHuehuetenango.avif",
-        "name":"Guatemala Huehuetenango Starbucks Reserve",
-        "calories":null,
-        "categoryId":40
+        "id": 35,
+        "src": "food/plainBagel.avif",
+        "name": "Plain Bagel",
+        "calories": 290,
+        "categoryId": 32
     },
     {
-        "id":41,
-        "src":"atHomeCoffe/greenApronBlend.avif",
-        "name":"Starbucks Green Apron Blend",
-        "calories":null,
-        "categoryId":41
+        "id": 36,
+        "src": "food/cookiesAndCreamCakePop.avif",
+        "name": "Cookies & Cream Cake Pop",
+        "calories": 140,
+        "categoryId": 33
     },
     {
-        "id":42,
-        "src":"atHomeCoffe/odysseyBlend.avif",
-        "name":"Starbucks Odyssey Blend 2024",
-        "calories":null,
-        "categoryId":42
+        "id": 37,
+        "src": "food/doubleChocolateChunkBrownie.avif",
+        "name": "Double Chocolate Brownie",
+        "calories": 480,
+        "categoryId": 34
     },
     {
-        "id":43,
-        "src":"atHomeCoffe/viaInstantSweetenedIcedCoffee.avif",
-        "name":"VIA Sweetened Iced Coffee",
-        "calories":null,
-        "categoryId":44
+        "id": 38,
+        "src": "food/grilledCheeseOnSourdough.avif",
+        "name": "Crispy Grilled Cheese on Sourdough",
+        "calories": 520,
+        "categoryId": 36
     },
     {
-        "id":44,
-        "src":"atHomeCoffe/viaInstantBlondeVerandaBlend.avif",
-        "name":"VIA Veranda Blend",
-        "calories":null,
-        "categoryId":45
+        "id": 39,
+        "src": "food/eggsGoudaProteinBox.avif",
+        "name": "Eggs & Gouda Protein Box",
+        "calories": 530,
+        "categoryId": 37
     },
     {
-        "id":45,
-        "src":"atHomeCoffe/viaInstantPikePlaceRoast.avif",
-        "name":"Starbucks VIA Instant Pike Place Roast",
-        "calories":null,
-        "categoryId":46
-    },{
-        "id":46,
-        "src":"atHomeCoffe/viaInstantItalianRoast.avif",
-        "name":"VIA Italian Roast",
-        "calories":null,
-        "categoryId":47
+        "id": 40,
+        "src": "atHomeCoffe/guatemalaHuehuetenango.avif",
+        "name": "Guatemala Huehuetenango Starbucks Reserve",
+        "calories": null,
+        "categoryId": 40
+    },
+    {
+        "id": 41,
+        "src": "atHomeCoffe/greenApronBlend.avif",
+        "name": "Starbucks Green Apron Blend",
+        "calories": null,
+        "categoryId": 41
+    },
+    {
+        "id": 42,
+        "src": "atHomeCoffe/odysseyBlend.avif",
+        "name": "Starbucks Odyssey Blend 2024",
+        "calories": null,
+        "categoryId": 42
+    },
+    {
+        "id": 43,
+        "src": "atHomeCoffe/viaInstantSweetenedIcedCoffee.avif",
+        "name": "VIA Sweetened Iced Coffee",
+        "calories": null,
+        "categoryId": 44
+    },
+    {
+        "id": 44,
+        "src": "atHomeCoffe/viaInstantBlondeVerandaBlend.avif",
+        "name": "VIA Veranda Blend",
+        "calories": null,
+        "categoryId": 45
+    },
+    {
+        "id": 45,
+        "src": "atHomeCoffe/viaInstantPikePlaceRoast.avif",
+        "name": "Starbucks VIA Instant Pike Place Roast",
+        "calories": null,
+        "categoryId": 46
+    },
+    {
+        "id": 46,
+        "src": "atHomeCoffe/viaInstantItalianRoast.avif",
+        "name": "VIA Italian Roast",
+        "calories": null,
+        "categoryId": 47
     }
 ]

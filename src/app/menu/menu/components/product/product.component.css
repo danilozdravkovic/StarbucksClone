@@ -50,14 +50,11 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 }
-.sizeOptions{
+.sizeOptions,.includedAddIns{
     margin-top:2em;
     margin-left: 10em;
 }
 
-.includedAddIns{
-    margin-top:2em;
-}
 
 h2 {
     font-weight: 500;
