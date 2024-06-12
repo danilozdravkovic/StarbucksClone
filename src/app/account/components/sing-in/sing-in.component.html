@@ -7,23 +7,26 @@
                     <div  style="border-radius: 15px; box-shadow: 0 2px 4px #00000012, 0 4px 5px #0000000f, 0 1px 10px #0000001a;">
                         <div class="card-body p-5">
                             <p><span>*</span> indicates required field</p>
-                            <form>
+                            <form [formGroup]="signInUserForm">
                                 <h5 class="mt-5 mb-3">Sing in credentials</h5>
                                 <mat-form-field class="formField">
                                     <mat-label>Email address</mat-label>
-                                    <input matInput required>
+                                    <input matInput required formControlName="email">
+                                    <mat-error *ngIf="signInUserForm.value.email">Email is in wrong format.</mat-error>
                                 </mat-form-field>
                                 <mat-form-field class="formField">
                                     <mat-label>Password</mat-label>
-                                    <input matInput required [type]="hide ? 'password' : 'text'">
+                                    <input matInput required [type]="hide ? 'password' : 'text'" formControlName="password">
+                                    <mat-error *ngIf="signInUserForm.value.password">Password must be at least 8 characters long, must contain one uppercase  letter,one lowercase letter and one number.</mat-error>
                                     <button mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                                     </button>
                                   </mat-form-field>
 
 
-                                <div class="d-flex justify-content-center mt-3">
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                <div class="d-flex justify-content-center mt-5">
+                                    <button type="button" data-mdb-button-init data-mdb-ripple-init (click)="sendData()"
+                                    [disabled]="signInUserForm.invalid"
                                         class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Sign in</button>
                                 </div>
 

@@ -12,6 +12,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -30,7 +31,8 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatInputModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ],
   exports:[
     AuthFormComponent,
@@ -40,7 +42,8 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatInputModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ]
 })
 export class SharedModule { }

@@ -16,7 +16,7 @@
         </div>
         <div class=" col-12 col-lg-9">
             <div class="row">
-                <ng-container *ngFor="let categoryOrProduct of categoriesWithProducts">
+                <ng-container *ngFor="let categoryOrProduct of paginatedCategories">
                     <h2 class="mt-3">{{categoryOrProduct.name}}</h2>
                     <ng-container *ngFor="let child of categoryOrProduct.childCategories">
                     <h3 class="mt-5">{{child.name}}</h3>
@@ -36,3 +36,9 @@
         </div>
     </div>
 </div>
+
+<mat-paginator [length]="totalItems"
+               [pageSize]="perPage"
+               [pageIndex]="currentPage"
+               (page)="pageChanged($event)">
+            </mat-paginator>

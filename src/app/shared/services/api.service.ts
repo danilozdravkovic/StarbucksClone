@@ -14,7 +14,7 @@ export abstract class ApiService {
     @Inject("apiPath") protected apiPath : string
   ) { }
 
-private apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : config.SERVER;
+ protected apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : config.SERVER;
 
   getAll() : Observable<any>{
     return this.http.get(this.apiPrefix +this.apiPath);
@@ -23,5 +23,9 @@ private apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : con
   getOne(id:number) : Observable<any>{
     return this.http.get<any[]>(this.apiPrefix+this.apiPath).pipe(
     map(products=>products.find((product:any)=>product.id===id)));
+  }
+
+  post(dataToSend:any) : Observable<any>{
+    return this.http.post(this.apiPrefix+this.apiPath,dataToSend);
   }
 }
