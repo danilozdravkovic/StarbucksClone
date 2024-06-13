@@ -30,11 +30,15 @@ export class ProductsMenuComponent implements OnInit {
       next: (data) => {
         this.filterForPrintCategories(data);
         this.originalCategories = data;
+        this.getProductsAfterCategories();
       },
       error: (err) => {
         console.log(err);
       }
     });
+  }
+
+  getProductsAfterCategories():void{
     this.productsService.getAll().subscribe({
       next: (data) => {
         this.categoriesWithProducts = data;
@@ -46,6 +50,7 @@ export class ProductsMenuComponent implements OnInit {
       }
     });
   }
+
 //this code paginates final category children, not products
   paginateData(): void {
     const startIndex = this.currentPage * this.perPage;

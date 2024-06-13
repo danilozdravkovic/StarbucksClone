@@ -22,7 +22,7 @@
                                 <mat-form-field class="formField">
                                     <mat-label>Username</mat-label>
                                     <input matInput required formControlName="username">
-                                    <mat-error *ngIf="registerForm.value.username">Username can't contain _ or . and must be between 3 and 20 chatacters long</mat-error>
+                                    <mat-error *ngIf="registerForm.value.username">Username can't start or finish with . or _ and must be between 3 and 20 characters long</mat-error>
                                 </mat-form-field>
 
                                 <h5 class="mt-5 mb-3">Account Security</h5>

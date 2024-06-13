@@ -14,7 +14,7 @@ export class SingInComponent {
 
   signInUserForm = new FormGroup({
     email:new FormControl("",[Validators.required,Validators.email]),
-    password:new FormControl("",[Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$')]),
+    password:new FormControl("",Validators.required),
   });
 
   prepareDataToSend() : ISignInUser{

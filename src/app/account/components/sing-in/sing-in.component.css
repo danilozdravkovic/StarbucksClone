@@ -11,9 +11,3 @@ span{
     color: #00000094;
 }
 
-
-@media screen and (max-width:450px) {
-    .signInButton {
-        margin-top: 5em !important;
-    }
-}
