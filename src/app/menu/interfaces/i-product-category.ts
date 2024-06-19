@@ -6,5 +6,5 @@ export interface IProductCategory {
 }
 
 export interface IProductCategoryPrint extends IProductCategory{
-    childCategories:IProductCategory[]
+    children:IProductCategory[]
 }

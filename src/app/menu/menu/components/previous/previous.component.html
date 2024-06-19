@@ -5,7 +5,12 @@
             <img src="/assets/img/gifs/moon-phases.webp"/>
             <h4>When history repeats itself</h4>
             <p>Previous orders will appear here to quickly order again</p>
-            <app-auth-form></app-auth-form>
+            <ng-container *ngIf="currentUser; else noLoggedInUser">
+                <app-logout></app-logout>
+              </ng-container>
+              <ng-template #noLoggedInUser>
+                <app-auth-form></app-auth-form>
+              </ng-template>
         </div>
     </div>
 </div>

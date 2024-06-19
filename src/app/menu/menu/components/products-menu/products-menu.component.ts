@@ -28,8 +28,8 @@ export class ProductsMenuComponent implements OnInit {
   ngOnInit(): void {
     this.productCategoriesService.getAll().subscribe({
       next: (data) => {
-        this.filterForPrintCategories(data);
-        this.originalCategories = data;
+        this.originalCategories=data;
+        this.filterForPrintCategories(data)
         this.getProductsAfterCategories();
       },
       error: (err) => {
@@ -70,8 +70,8 @@ export class ProductsMenuComponent implements OnInit {
     let dataToPrint: IProductCategoryPrint[] = [];
     let mainCategories = data.filter((x: IProductCategory) => x.parentId == null);
     mainCategories.forEach((element: any) => {
-      let childCategories = data.filter((x: IProductCategory) => x.parentId == element.id);
-      element.childCategories = childCategories;
+      let children = data.filter((x: IProductCategory) => x.parentId == element.id);
+      element.children = children;
       dataToPrint.push(element);
     });
     this.categories = dataToPrint;

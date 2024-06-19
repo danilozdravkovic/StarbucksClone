@@ -41,13 +41,12 @@ export class RegisterComponent {
     let dataToSend = this.prepareDataToSend();
     this.userService.post(dataToSend).subscribe({
       next:(data)=>{
-        console.log("ok");
+        console.log(data);
       },
       error:(err)=>{
-        console.log(err);
+        console.log(err.error);
       }
     });
-    window.location.reload();
   }
 
   clickEvent(event: MouseEvent) {

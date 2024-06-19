@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 
@@ -20,7 +21,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
     PageNotFoundComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     MatCheckboxModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    LogoutComponent
   ]
 })
 export class SharedModule { }

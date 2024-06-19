@@ -5,7 +5,12 @@
             <img src="/assets/img/gifs/fav-tapes.webp"/>
             <h4 class="mt-5">Save your favorite mixes</h4>
             <p>Use the heart to save customizations. Your favorites will appear here to order again.</p>
-            <app-auth-form></app-auth-form>
+            <ng-container *ngIf="currentUser; else noLoggedInUser">
+                <app-logout></app-logout>
+              </ng-container>
+              <ng-template #noLoggedInUser>
+                <app-auth-form></app-auth-form>
+              </ng-template>
         </div>
     </div>
 </div>

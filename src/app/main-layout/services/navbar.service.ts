@@ -9,6 +9,6 @@ import { apis } from 'src/app/constants/apis';
 export class NavbarService extends ApiService {
 
   constructor(http :HttpClient) { 
-    super(http,apis.navbarItems);
+    super(http,apis.jsons.navbarItems);
   }
 }

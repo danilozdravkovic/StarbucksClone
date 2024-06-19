@@ -9,7 +9,8 @@ import { MainLayoutComponent } from './main-layout/main-layout/main-layout.compo
 import { SharedModule } from './shared/shared.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { MainLayoutModule } from './main-layout/main-layout.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { MainInterceptor } from './shared/interceptors/main.interceptor';
 
 const routes : Routes = [
   {
@@ -59,7 +60,13 @@ const routes : Routes = [
     MainLayoutModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MainInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

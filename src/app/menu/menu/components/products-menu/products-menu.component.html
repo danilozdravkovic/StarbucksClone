@@ -6,7 +6,7 @@
                     <div class="col-12">
                         <h2 class="h5">{{category.name}}</h2>
                         <ul>
-                        <ng-container *ngFor="let childCat of category.childCategories">
+                        <ng-container *ngFor="let childCat of category.children">
                             <li #currentCat class="mt-3 text-secondary" data-id="{{childCat.id}}" (click)="filterData(currentCat.id)">{{childCat.name}}</li>
                         </ng-container>
                         </ul>

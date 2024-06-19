@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/shared/services/api.service';
 export class FooterLinksService extends ApiService {
 
   constructor(http :HttpClient) { 
-    super(http,apis.footerLinks);
+    super(http,apis.jsons.footerLinks);
   }
 
   

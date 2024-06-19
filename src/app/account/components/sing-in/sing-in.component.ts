@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ISignInUser } from '../../interfaces/i-register-user';
+import { jwtDecode } from "jwt-decode";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sing-in',
@@ -9,7 +11,7 @@ import { ISignInUser } from '../../interfaces/i-register-user';
   styleUrls: ['./sing-in.component.css']
 })
 export class SingInComponent {
-  constructor(private userService : UserService){}
+  constructor(private userService : UserService, private router:Router){}
   hide:boolean = true;
 
   signInUserForm = new FormGroup({
@@ -17,25 +19,23 @@ export class SingInComponent {
     password:new FormControl("",Validators.required),
   });
 
+
   prepareDataToSend() : ISignInUser{
     let formValue = this.signInUserForm.value;
     return {
       email:formValue.email,
       password:formValue.password
-    }
+    } 
   }
-
+  
   sendData() : void{
     let dataToSend = this.prepareDataToSend();
     this.userService.signInUser(dataToSend).subscribe({
-      next:(data)=>{
-        console.log("ok");
-      },
+      next:(data)=>{},
       error:(err)=>{
         console.log(err);
       }
     });
-    window.location.reload();
   }
 
   clickEvent(event: MouseEvent) {
