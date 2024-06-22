@@ -16,8 +16,13 @@ export class NavbarComponent implements OnInit {
   ){}
 
   navbarItems: INavbarItem[] = [];
-  currentUser = localStorage.getItem("user");
+  currentUser: any;
   ngOnInit () : void {
+
+    const userLoggedIn = localStorage.getItem("user");
+    if(userLoggedIn){
+      this.currentUser=JSON.parse(userLoggedIn);
+    }
     
     this.userService.loggedIn$.subscribe(isLoggedIn => {
       if (isLoggedIn) {
@@ -28,6 +33,7 @@ export class NavbarComponent implements OnInit {
       } else {
         this.currentUser = null;
       }
+    
     });
 
     this.navbarService.getAll().subscribe({ 
@@ -39,6 +45,9 @@ export class NavbarComponent implements OnInit {
         console.log(err);
       }
     });
+
+    console.log(this.currentUser);
   }
+
 
 }

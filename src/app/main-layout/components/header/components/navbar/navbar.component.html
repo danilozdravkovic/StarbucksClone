@@ -13,6 +13,9 @@
           </ng-container>
         </ul>
         <ng-container *ngIf="currentUser; else noLoggedInUser">
+          <ng-container *ngIf="currentUser.Role=='Admin'">
+            <a routerLink="../adminPanel">Admin panel</a>
+          </ng-container>
           <app-logout></app-logout>
         </ng-container>
         <ng-template #noLoggedInUser>

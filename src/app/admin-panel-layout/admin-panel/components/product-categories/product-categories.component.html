@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-template #recursiveTable let-categories let-level="level">
+                    <ng-container *ngFor="let category of categories">
+                      <tr>
+                        <td [ngStyle]="{'padding-left': level * 20 + 'px'}">{{ category.name }}</td>
+                        <td><p style="width: 0.7em;" click="edit()">Edit</p></td>
+                        <td><p style="width: 0.7em;">Delete</p></td>
+                      </tr>
+                      <ng-container *ngIf="category.children.length > 0">
+                        <ng-container *ngTemplateOutlet="recursiveTable; context:{ $implicit: category.children, level: level + 1 }"></ng-container>
+                      </ng-container>
+                    </ng-container>
+                  </ng-template>
+              
+                  <ng-container *ngTemplateOutlet="recursiveTable; context:{ $implicit: categories, level: 1 }"></ng-container>
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</div>

@@ -12,6 +12,8 @@ import { MainLayoutModule } from './main-layout/main-layout.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MainInterceptor } from './shared/interceptors/main.interceptor';
 
+
+
 const routes : Routes = [
   {
     path:"",
@@ -41,6 +43,10 @@ const routes : Routes = [
     ]
   },
   {
+    path:"adminPanel",
+    loadChildren: ()=> import("./admin-panel-layout/admin-panel-layout.module").then(m=>m.AdminPanelLayoutModule)
+  },
+  {
     path:"**",
     redirectTo:"main/",
     pathMatch:"full"
@@ -49,7 +55,7 @@ const routes : Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

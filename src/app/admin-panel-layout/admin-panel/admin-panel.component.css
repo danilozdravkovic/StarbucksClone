@@ -1,0 +1,9 @@
+.adminNavbar {
+    min-height: 100vh;
+    background-color: #222e3c;
+}
+
+.adminDashboard{
+    background-color:#f5f7fb;
+    min-height: 93vh;
+}
