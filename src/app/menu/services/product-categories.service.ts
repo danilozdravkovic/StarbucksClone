@@ -10,6 +10,6 @@ export class ProductCategoriesService extends ApiService {
 
   constructor(http : HttpClient) {
     super(http,apis.server.productCategories)
-    
-   }
+        
+   }  
 }

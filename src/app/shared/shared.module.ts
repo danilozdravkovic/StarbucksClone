@@ -14,6 +14,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LogoutComponent } from './components/logout/logout.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -34,7 +35,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     MatInputModule,
     MatCheckboxModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule
   ],
   exports:[
     AuthFormComponent,
@@ -46,7 +48,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     MatCheckboxModule,
     MatIconModule,
     MatPaginatorModule,
-    LogoutComponent
+    LogoutComponent,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
