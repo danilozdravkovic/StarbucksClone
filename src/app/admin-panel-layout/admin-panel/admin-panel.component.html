@@ -12,10 +12,10 @@
         </div>
         <div  class="col-9">
             <div class="row">
-                <div style="min-height: 7vh;    border-bottom: 1px solid #222e3c" class="col-12">
-                    <i class="far fa-comment-alt"></i>
-                    <i class="far fa-bell"></i>
-                    <p>Welcome admin,{{user.Username | firstLetterOfNameUppercase }} </p>
+                <div style="min-height: 7vh;    border-bottom: 1px solid #222e3c" class="col-12 d-flex flex-row-reverse">
+                    <i class="far fa-comment-alt pt-4"></i>
+                    <i style="margin-right: 1em;" class="far fa-bell pt-4"></i>
+                    <p style="margin-right: 2em;" class="pt-3">Welcome, admin {{user.Username | firstLetterOfNameUppercase }} </p>
                 </div>
                 <div class="col-12 adminDashboard">
                     <router-outlet></router-outlet>

@@ -9,6 +9,6 @@ import { ApiService } from 'src/app/shared/services/api.service';
 export class ProductsService extends ApiService {
 
   constructor(http : HttpClient) {
-    super(http,apis.jsons.products)
+    super(http,apis.server.products)
    }
 }

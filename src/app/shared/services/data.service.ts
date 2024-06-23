@@ -15,11 +15,17 @@ export class DataService {
   private flattProductCategoriesSubject = new BehaviorSubject<any[]>([]);
   flattProductCategories$ = this.flattProductCategoriesSubject.asObservable();
 
+  private flattCategoriesWithNoChldrenSubject = new BehaviorSubject<any[]>([]);
+  flattCategoriesWithNoChldrenSubject$ = this.flattCategoriesWithNoChldrenSubject.asObservable();
+
   private loadFlattProductCategories(): void {
     this.productCategoriesService.getAll().subscribe({
       next: (data) => {
         const flatCategories = this.flattenProductCategories(data.data);
         this.flattProductCategoriesSubject.next(flatCategories);
+
+        const flattCategoriesWithNoChildren = this.filterFlattCategoriesWithNoChildren(data.data);
+        this.flattCategoriesWithNoChldrenSubject.next(flattCategoriesWithNoChildren);
       },
       error: (err) => {
         console.log(err);
@@ -29,6 +35,10 @@ export class DataService {
  
   getFlattProductCategories(): Observable<any[]> {
     return this.flattProductCategories$;
+  }
+
+  getFlattCategoriesWithNoChildren(): Observable<any[]> {
+    return this.flattCategoriesWithNoChldrenSubject$;
   }
 
   flattenProductCategories(categories:any):any[]{
@@ -46,6 +56,23 @@ export class DataService {
     });
   
     return flatList;
+  }
+
+  filterFlattCategoriesWithNoChildren(categories: any[]): any[] {
+    let categoriesWithNoChildren: any[] = [];
+    categories.forEach((category: any) => {
+      if (!category.children || category.children.length === 0) {
+        categoriesWithNoChildren.push({
+          id: category.id,
+          name: category.name,
+          parentId: category.parentId
+        });
+      }
+      else{
+        categoriesWithNoChildren = categoriesWithNoChildren.concat(this.filterFlattCategoriesWithNoChildren(category.children));
+      }
+    });
+    return categoriesWithNoChildren;
   }
 
   subscribeToRefresh(): void {

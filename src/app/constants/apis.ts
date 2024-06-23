@@ -8,6 +8,8 @@ export const apis = {
     },
     server:{
         users:"users",
-        productCategories:"productCategories"
+        productCategories:"productCategories",
+        products:"products",
+        files:"files"
     }
 }
