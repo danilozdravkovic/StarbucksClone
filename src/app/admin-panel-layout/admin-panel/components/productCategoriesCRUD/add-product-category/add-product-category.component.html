@@ -2,31 +2,30 @@
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12">
+                <div class="col-8">
+                    <h2 class="mt-5 text-center">Add new product category</h2>
                     <div >
-                            <form [formGroup]="editProductCategoryForm" class="d-flex flex-column">
+                            <form [formGroup]="addProductCategoryForm" class="d-flex flex-column mt-5">
                                 <mat-form-field class="formField">
                                     <mat-label>Category Name</mat-label>
                                     <input  matInput required formControlName="name">
                                 </mat-form-field>
                                 <mat-form-field class="formField">
                                     <mat-label>Parent</mat-label>
-                                    <select matNativeControl required formControlName="parent">
+                                    <select matNativeControl  formControlName="parent">
                                       <option [value]="null">No parent</option>
                                       <ng-container *ngFor="let category of flattCategories">
-                                        <ng-container *ngIf="category.id!=categoryToEdit.id">
-
                                             <option  [value]="category.id">{{category.name}}</option>
                                         </ng-container>
-                                      </ng-container>
+                                 
                                     </select>
                                   </mat-form-field>
 
 
                                 <div class="d-flex justify-content-center mt-5 signInButton">
                                     <button type="button" data-mdb-button-init data-mdb-ripple-init (click)="sendData()"
-                                    [disabled]="editProductCategoryForm.invalid"
-                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Change category</button>
+                                    [disabled]="addProductCategoryForm.invalid"
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Add category</button>
                                 </div>
 
                             </form>
@@ -36,3 +35,4 @@
         </div>
     </div>
 </section>
+

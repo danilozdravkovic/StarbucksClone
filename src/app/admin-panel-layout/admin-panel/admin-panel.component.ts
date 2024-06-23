@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-panel.component.css']
 })
 export class AdminPanelComponent {
+  user:any;
 
+  ngOnInit():void{
+    let user = localStorage.getItem("user");
+    if(user){
+      this.user=JSON.parse(user);
+    }
+  }
 }

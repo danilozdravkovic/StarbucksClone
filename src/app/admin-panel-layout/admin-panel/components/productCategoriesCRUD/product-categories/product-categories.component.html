@@ -15,7 +15,7 @@
                       <tr>
                         <td [ngStyle]="{'padding-left': level * 20 + 'px'}">{{ category.name }}</td>
                         <td><p style="width: 0.7em; cursor: pointer;" (click)="edit(category.id)">Edit</p></td>
-                        <td><p style="width: 0.7em;">Delete</p></td>
+                        <td><p style="width: 0.7em; cursor: pointer;" (click)="delete(category.id)">Delete</p></td>
                       </tr>
                       <ng-container *ngIf="category.children.length > 0">
                         <ng-container *ngTemplateOutlet="recursiveTable; context:{ $implicit: category.children, level: level + 1 }"></ng-container>
@@ -27,6 +27,9 @@
                 </tbody>
               </table>
               
+        </div>
+        <div class="col-12">
+          <app-add-product-category></app-add-product-category>
         </div>
     </div>
 </div>

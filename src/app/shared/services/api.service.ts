@@ -23,7 +23,11 @@ export abstract class ApiService {
   protected apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : config.SERVER;
 
   getAll() : Observable<any>{
-    return this.http.get(this.apiPrefix +this.apiPath);
+    return this.http.get(this.apiPrefix +this.apiPath).pipe(
+      tap(()=>{
+        
+      }) 
+    );
   }
 
   getOne(id:number) : Observable<any>{
@@ -39,7 +43,11 @@ export abstract class ApiService {
   }
 
   post(dataToSend:any) : Observable<any>{
-    return this.http.post(this.apiPrefix+this.apiPath,dataToSend);
+    return this.http.post(this.apiPrefix+this.apiPath,dataToSend).pipe(
+      tap(()=>{
+        this._refreshNeeded$.next();
+      }) 
+    );
   }
 
   put(id:number,dataToSend:any) : Observable<any>{
@@ -48,6 +56,13 @@ export abstract class ApiService {
         this._refreshNeeded$.next();
       }) 
     );
+  }
 
+  delete(id:number) : Observable<any>{
+    return this.http.delete(this.apiPrefix+this.apiPath+"/"+id).pipe(
+      tap(()=>{
+        this._refreshNeeded$.next();
+      }) 
+    );
   }
 }

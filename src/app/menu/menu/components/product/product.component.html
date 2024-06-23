@@ -29,7 +29,7 @@
                                 <div #dynamicDiv class="{{size.name}}-size cupSize"
                                     (click)="isActive(dynamicDiv,size.additionallCalories,productToDisplay.sizes)">
                                 </div>
-                                <p>{{size.name.substring(0,1).toUpperCase()}}{{size.name.substring(1)}}</p>
+                                <p>{{size.name | firstLetterOfNameUppercase}}</p>
                                 <p>{{size.size}} fl oz</p>
                             </div>
                         </ng-container>

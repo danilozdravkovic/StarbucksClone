@@ -2,6 +2,7 @@ import {  Component, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProductCategoriesService } from 'src/app/menu/services/product-categories.service';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-product-category',
@@ -11,18 +12,21 @@ import { ProductCategoriesService } from 'src/app/menu/services/product-categori
 export class ProductCategoryComponent {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data:any ,private productCategoriesService : ProductCategoriesService,
-  public dialogRef: MatDialogRef<ProductCategoryComponent>) {
+  public dialogRef: MatDialogRef<ProductCategoryComponent>,private dataService: DataService) {
   }
 
   flattCategories:any[] = [];
   categoryToEdit : any = "";
 
   ngOnInit():void {
+    this.dataService.getFlattProductCategories().subscribe(categories => {
+      this.flattCategories = categories;
+    });
+
     this.productCategoriesService.getOne(this.data.id).subscribe({
       next:(data)=>{
         this.fillForm(data);
         this.categoryToEdit=data;
-        console.log(data);
       },
       error:(err)=>{
         console.log(err);
@@ -30,31 +34,12 @@ export class ProductCategoryComponent {
       
     });
   
-    this.flattCategories=this.flattenCategories(this.data.categories);
-    console.log(this.flattCategories);
   }
 
-
-  flattenCategories(categories:any):any[]{
-    let flatList: any[] = [];
-    categories.forEach((category:any) => {
-      flatList.push({
-        id: category.id,
-        name: category.name,
-        parentId:category.parentId
-      });
-  
-      if (category.children) {
-        flatList = flatList.concat(this.flattenCategories(category.children));
-      }
-    });
-  
-    return flatList;
-  }
 
   editProductCategoryForm = new FormGroup({
     name:new FormControl("",Validators.required),
-    parent:new FormControl("",Validators.required)
+    parent:new FormControl("")
   });
 
   fillForm(data:any):void{

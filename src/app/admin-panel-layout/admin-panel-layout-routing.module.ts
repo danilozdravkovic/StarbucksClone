@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ProductsComponent } from './admin-panel/components/products/products.component';
-import { ProductCategoriesComponent } from './admin-panel/components/product-categories/product-categories.component';
+import { ProductCategoriesComponent } from './admin-panel/components/productCategoriesCRUD/product-categories/product-categories.component';
 
 const routes: Routes = [
   {

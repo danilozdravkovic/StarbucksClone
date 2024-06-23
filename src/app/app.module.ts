@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 import { MainLayoutModule } from './main-layout/main-layout.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MainInterceptor } from './shared/interceptors/main.interceptor';
+import { authGuard } from './shared/guards/auth.guard';
 
 
 
@@ -44,7 +45,8 @@ const routes : Routes = [
   },
   {
     path:"adminPanel",
-    loadChildren: ()=> import("./admin-panel-layout/admin-panel-layout.module").then(m=>m.AdminPanelLayoutModule)
+    loadChildren: ()=> import("./admin-panel-layout/admin-panel-layout.module").then(m=>m.AdminPanelLayoutModule),
+    canActivate:[authGuard]
   },
   {
     path:"**",

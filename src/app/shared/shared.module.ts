@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LogoutComponent } from './components/logout/logout.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-uppercase.pipe';
 
 
 
@@ -23,7 +24,8 @@ import {MatDialogModule} from '@angular/material/dialog';
   declarations: [
     PageNotFoundComponent,
     AuthFormComponent,
-    LogoutComponent
+    LogoutComponent,
+    FirstLetterOfNameUppercasePipe
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatPaginatorModule,
     LogoutComponent,
-    MatDialogModule
+    MatDialogModule,
+    FirstLetterOfNameUppercasePipe
   ]
 })
 export class SharedModule { }
