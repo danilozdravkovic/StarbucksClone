@@ -19,17 +19,17 @@ export class ProductComponent implements OnInit {
   caloriesToDisplay : number=0;
 
   ngOnInit() : void{
-  //   const productId : number= +this.route.snapshot.paramMap.get('id')!;
-  //   this.productsService.getOne(productId).subscribe(product =>{
-  //     if(product){
-  //       this.productToDisplay=product;
-  //       this.caloriesToDisplay=product.calories;
-  //       this.calories=product.calories;
-  //     }
-  //     else{
-  //       this.router.navigate(['**'])
-  //     }
-  // });
+    const productId : number= +this.route.snapshot.paramMap.get('id')!;
+    this.productsService.getOne(productId).subscribe(product =>{
+      if(product){
+        this.productToDisplay=product;
+        this.caloriesToDisplay=product.calories;
+        this.calories=product.calories;
+      }
+      else{
+        this.router.navigate(['**'])
+      }
+  });
     }
 
     ngAfterViewInit(){

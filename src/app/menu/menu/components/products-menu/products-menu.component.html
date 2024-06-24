@@ -2,7 +2,7 @@
     <div class="row">
         <div class=" col-12 col-lg-3 ml-5">
             <div class="row">
-                <ng-container *ngFor="let category of categories">
+                <ng-container *ngFor="let category of originalCategories">
                     <div class="col-12">
                         <h2 class="h5">{{category.name}}</h2>
                         <ul>
@@ -16,15 +16,15 @@
         </div>
         <div class=" col-12 col-lg-9">
             <div class="row">
-                <ng-container *ngFor="let categoryOrProduct of paginatedCategories">
-                    <h2 class="mt-3">{{categoryOrProduct.name}}</h2>
-                    <ng-container *ngFor="let child of categoryOrProduct.childCategories">
+                <ng-container *ngFor="let category of categoriesWithProducts">
+                    <h2 class="mt-3">{{category.name}}</h2>
+                    <ng-container *ngFor="let child of category.children">
                     <h3 class="mt-5">{{child.name}}</h3>
-                        <ng-container *ngFor="let product of child.childProducts">
+                        <ng-container *ngFor="let product of child.products">
                             <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column mt-3 ">
                                 <a [routerLink]="['product', product.id]">
                                     <div class="productImg ">
-                                        <img  src="/assets/img/products/{{product.src}}" alt="{{product.name}}"/>
+                                        <img  src="http://localhost:5156/posts/{{product.imageSrc}}" alt="{{product.name}}"/>
                                     </div>
                                     <p class="text-center productName mt-2">{{product.name}}</p>
                                 </a>

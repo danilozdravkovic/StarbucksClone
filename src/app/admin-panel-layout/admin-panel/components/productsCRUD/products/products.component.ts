@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductsService } from 'src/app/menu/services/products.service';
 import { DeleteProductComponent } from '../delete-product/delete-product.component';
 import { auto } from '@popperjs/core';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
   selector: 'app-products',
@@ -41,14 +42,13 @@ export class ProductsComponent {
   }
 
    edit(id: number): void {
-  //   this.dialog.open(ProductCategoryComponent, {
-  //     width: auto,
-  //     height: auto,
-  //     data: {
-  //       id: id,
-  //       categories: this.categories
-  //     }
-  //   });
+    this.dialog.open(ProductComponent, {
+      width: '50em',
+      height: '45em',
+      data: {
+        id: id,
+      }
+    });
    }
 
   delete(id: number): void {

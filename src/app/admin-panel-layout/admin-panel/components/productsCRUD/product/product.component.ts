@@ -1,37 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProductsService } from 'src/app/menu/services/products.service';
 import { DataService } from 'src/app/shared/services/data.service';
 import { FileService } from 'src/app/shared/services/file.service';
 
 @Component({
-  selector: 'app-add-product',
-  templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
-export class AddProductComponent {
-
-  constructor(private fileService: FileService, private dataService:DataService,private productsService : ProductsService) {
+export class ProductComponent {
+  constructor(private fileService: FileService, private dataService:DataService,private productsService : ProductsService,
+    @Inject(MAT_DIALOG_DATA) public data:any ,public dialogRef: MatDialogRef<ProductComponent>
+  ) {
 
   }
   categoriesWithNoChildren?: any[];
-
+  currentProduct:any;
   ngOnInit(): void {
     this.dataService.getFlattCategoriesWithNoChildren().subscribe(categories => {
       this.categoriesWithNoChildren = categories;
     });
+
+    this.productsService.getOne(this.data.id).subscribe({
+      next:(data)=>{
+        console.log(data);
+        this.currentProduct=data;
+        this.fillForm(data);
+        //this.categoryToEdit=data;
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+      
+    });
   }
+
 
   selectedFile?: File;
   imageUrl: string = '';
 
-  addProductForm = new FormGroup({
+  editProductForm = new FormGroup({
     name: new FormControl("",[Validators.minLength(3),Validators.maxLength(50)]),
     category: new FormControl(""),
     calories: new FormControl("",[Validators.required,Validators.pattern('^[0-9]*$')]),
     price: new FormControl("",[Validators.required,Validators.pattern(/^-?[0-9]*(\.[0-9]+)?$/)]),
-    productImage: new FormControl("",Validators.required)
+    productImage: new FormControl("")
   });
+
+  fillForm(data:any):void{
+    this.editProductForm.get("name")?.setValue(data.name);
+    this.editProductForm.get("category")?.setValue(data.categoryId);
+    this.editProductForm.get("price")?.setValue(data.price);
+    this.editProductForm.get("calories")?.setValue(data.calories);
+    //this.editProductForm.get("productImage")?.setValue(this.selectedFile);
+ }
+
+    
 
   uploadImage(event: Event) {
     const fileInput = event.target as HTMLInputElement;
@@ -59,29 +85,29 @@ export class AddProductComponent {
   }
 
   prepareDataToSend() {
-    let formValue = this.addProductForm.value;
+    let formValue = this.editProductForm.value;
     return {
       name:formValue.name,
       categoryId:formValue.category,
       calories:formValue.calories,
       initialPrice:formValue.price,
-      imageSrc:this.imageUrl
+      imageSrc:this.imageUrl==""?this.currentProduct.imageSrc:this.imageUrl
+      
     }
   }
 
   sendData() : void{
     let dataToSend = this.prepareDataToSend();
     console.log(dataToSend);
-    this.productsService.post(dataToSend).subscribe({
+    this.productsService.put(this.data.id,dataToSend).subscribe({
       next:(data)=>{
         console.log(data);
-        this.addProductForm.reset();
       },
       error:(err)=>{
         console.log(err.error);
       }
     });
+
+    this.dialogRef.close();
   }
-
 }
-

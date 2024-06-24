@@ -3,13 +3,13 @@
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-8">
-                    <h2 class="mt-5 text-center">Add new product</h2>
+                    <h2 class="mt-5 text-center">Edit product</h2>
                     <div>
-                        <form [formGroup]="addProductForm" class="d-flex flex-column mt-5">
+                        <form [formGroup]="editProductForm" class="d-flex flex-column mt-5">
                             <mat-form-field class="formField">
                                 <mat-label>Product Name</mat-label>
                                 <input matInput required formControlName="name">
-                                <mat-error *ngIf="addProductForm.value.name">Name must be between 3 and 50 characters long.</mat-error>
+                                <mat-error *ngIf="editProductForm.value.name">Name must be between 3 and 50 characters long.</mat-error>
                             </mat-form-field>
                             <mat-form-field class="formField">
                                 <mat-label>Category</mat-label>
@@ -23,20 +23,20 @@
                             <mat-form-field class="formField">
                                 <mat-label>Calories</mat-label>
                                 <input matInput required formControlName="calories">
-                                <mat-error *ngIf="addProductForm.value.calories">Calories must be whole positive number.</mat-error>
+                                <mat-error *ngIf="editProductForm.value.calories">Calories must be whole positive number.</mat-error>
                             </mat-form-field>
                             <mat-form-field class="formField">
                                 <mat-label>Price</mat-label>
                                 <input matInput required formControlName="price">
-                                <mat-error *ngIf="addProductForm.value.price">Price must be positive decimal number.</mat-error>
+                                <mat-error *ngIf="editProductForm.value.price">Price must be positive decimal number.</mat-error>
                             </mat-form-field>
 
-                            <input (change)="uploadImage($event)" required type="file" formControlName="productImage" />
+                            <input (change)="uploadImage($event)" type="file" formControlName="productImage" />
 
                             <div class="d-flex justify-content-center mt-5 signInButton">
                                 <button type="button" data-mdb-button-init data-mdb-ripple-init (click)="sendData()"
-                                    [disabled]="addProductForm.invalid"
-                                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Add
+                                    [disabled]="editProductForm.invalid"
+                                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Change
                                     product</button>
                             </div>
 
