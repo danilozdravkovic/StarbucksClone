@@ -4,3 +4,11 @@ nav {
     padding: 0px;
 }
 
+.linkBtn{
+    border-radius: 50px ;
+    display:inline-block;
+    border-style: solid;
+    border-width: 1px;
+    padding : 0.2em 1em 0.2em 1em;
+    margin-right: 1em;
+}

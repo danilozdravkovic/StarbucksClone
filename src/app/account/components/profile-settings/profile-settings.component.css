@@ -1,0 +1,19 @@
+span{
+    color:#00754a
+}
+.formField{
+    width: 90%;
+    margin: 0px auto;
+}
+.formField button{
+    border:none;
+    background-color: transparent;
+    color: #00000094;
+}
+
+@media screen and (max-width:450px) {
+    .termsOfUse {
+        margin-top: 5em !important;
+    }
+}
+  

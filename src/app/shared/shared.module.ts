@@ -16,6 +16,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LogoutComponent } from './components/logout/logout.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-uppercase.pipe';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -38,7 +39,8 @@ import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-upp
     MatCheckboxModule,
     MatIconModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   exports:[
     AuthFormComponent,
@@ -52,7 +54,8 @@ import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-upp
     MatPaginatorModule,
     LogoutComponent,
     MatDialogModule,
-    FirstLetterOfNameUppercasePipe
+    FirstLetterOfNameUppercasePipe,
+    MatSnackBarModule
   ]
 })
 export class SharedModule { }

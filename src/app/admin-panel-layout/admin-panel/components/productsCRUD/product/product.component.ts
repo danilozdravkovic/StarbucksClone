@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProductsService } from 'src/app/menu/services/products.service';
@@ -16,6 +16,11 @@ export class ProductComponent {
   ) {
 
   }
+
+  @ViewChild('productFile', { static: false }) fileInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('productFileLabel', { static: false }) fileLabel!: ElementRef<HTMLLabelElement>;
+  labelVal: string = '';
+
   categoriesWithNoChildren?: any[];
   currentProduct:any;
   ngOnInit(): void {
@@ -34,6 +39,26 @@ export class ProductComponent {
         console.log(err);
       }
       
+    });
+  }
+
+  ngAfterViewInit() {
+    const input = this.fileInput.nativeElement;
+    const label = this.fileLabel.nativeElement;
+
+    input.addEventListener('change', (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      let fileName = '';
+
+      if (target.files && target.files.length > 0) {
+        fileName = target.files[0].name;
+      }
+
+      if (fileName) {
+        label.innerHTML = fileName;
+      } else {
+        label.innerHTML = 'No file chosen';
+      }
     });
   }
 
@@ -98,7 +123,6 @@ export class ProductComponent {
 
   sendData() : void{
     let dataToSend = this.prepareDataToSend();
-    console.log(dataToSend);
     this.productsService.put(this.data.id,dataToSend).subscribe({
       next:(data)=>{
         console.log(data);

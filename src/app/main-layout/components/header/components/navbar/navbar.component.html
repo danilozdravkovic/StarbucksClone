@@ -13,8 +13,13 @@
           </ng-container>
         </ul>
         <ng-container *ngIf="currentUser; else noLoggedInUser">
+          <div>
+            <a class="linkBtn" routerLink="/main/account/profileSettings" >Profile settings</a>
+          </div>
           <ng-container *ngIf="currentUser.Role=='Admin'">
-            <a routerLink="../adminPanel">Admin panel</a>
+            <div>
+              <a class="linkBtn" routerLink="../adminPanel" >Admin panel</a>
+            </div>
           </ng-container>
           <app-logout></app-logout>
         </ng-container>

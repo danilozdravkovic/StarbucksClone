@@ -16,7 +16,7 @@
         </div>
         <div class=" col-12 col-lg-9">
             <div class="row">
-                <ng-container *ngFor="let category of categoriesWithProducts">
+                <ng-container *ngFor="let category of paginatedCategories">
                     <h2 class="mt-3">{{category.name}}</h2>
                     <ng-container *ngFor="let child of category.children">
                     <h3 class="mt-5">{{child.name}}</h3>

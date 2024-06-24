@@ -15,8 +15,8 @@ export class ProductsMenuComponent implements OnInit {
   constructor(private productCategoriesService: ProductCategoriesService,
     private productsService: ProductsService
   ) { }
-  originalCategories: any = [];
-  products:any=[];
+  originalCategories: IProductCategoryPrint[] = [];
+  products: IProduct[]=[];
   categoriesWithProducts:any=[];
   // categories: IProductCategoryPrint[] = [];
   // categoriesWithProducts: any[] = [];
@@ -44,6 +44,7 @@ export class ProductsMenuComponent implements OnInit {
       next: (productData) => {
         this.products = productData.data;
         this.categoriesWithProducts = this.getCategoriesWithProducts(this.originalCategories, this.products);
+        this.totalItems=this.categoriesWithProducts.length
         this.categoriesWithProductsToBeFiltered=this.categoriesWithProducts;
         this.paginateData();
       },
@@ -153,17 +154,15 @@ export class ProductsMenuComponent implements OnInit {
   // }
   //function filters categories and their products to show just selected category
   filterData(id: string | number): void {
-    console.log(id);
     let selectedCategory = this.categoriesWithProductsToBeFiltered.filter((x: any) => x.id == id);
     this.categoriesWithProducts=selectedCategory;
-  //   let selectedCategory = this.categoriesWithProductsToBeFiltered.filter((x: any) => x.id == id);
-  //   this.paginatedCategories = selectedCategory;
+    this.paginatedCategories = selectedCategory;
     //this code sets paginators properties so that final child categories can't be paginated because of recursion in html
     //it just shows to user like there is for example 3 item and 3 per page.Items and per page will always be the same
     //i will refactor this whole code when i implement back, because there is no recursion for categories in this version of code
-  //   this.totalItems = selectedCategory[0].childCategories.length;
-  //   this.perPage = selectedCategory[0].childCategories.length;
-  //   this.currentPage = 0;
+    this.totalItems = selectedCategory[0].children.length;
+    this.perPage = selectedCategory[0].children.length;
+    this.currentPage = 0;
   }
 }
 

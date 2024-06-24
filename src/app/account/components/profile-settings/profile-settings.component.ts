@@ -1,30 +1,54 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../services/user.service';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { IRegisterUser } from '../../interfaces/i-register-user';
-import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-@Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
-})
-export class RegisterComponent {
-  constructor(private userService : UserService,private router: Router, private snackBar : MatSnackBar){}
-  hide:boolean = true;
 
-  registerForm = new FormGroup({
+@Component({
+  selector: 'app-profile-settings',
+  templateUrl: './profile-settings.component.html',
+  styleUrls: ['./profile-settings.component.css']
+})
+export class ProfileSettingsComponent {
+  constructor(private userService : UserService, private snackBar: MatSnackBar){}
+  user:any;
+
+  editUserForm = new FormGroup({
     firstName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20)]),
     lastName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(50)]),
     username:new FormControl("",[Validators.required,Validators.pattern('^(?=.{3,20}$)(?![_.])[a-zA-Z0-9._]+(?<![_.])$')]),
     email:new FormControl("",[Validators.required,Validators.email]),
-    password:new FormControl("",[Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$')]),
-    termsAndPrivacy:new FormControl("",Validators.required),
-  },{validators : this.checkboxRequiredValidator});
+    password:new FormControl("",[Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$')]),
+  });
+
+  ngOnInit():void{
+    let currentUser = localStorage.getItem("user");
+    if(currentUser){
+      let currentUserId=JSON.parse(currentUser).Id;
+      this.userService.getOne(currentUserId).subscribe({
+        next:(data)=>{
+          this.user=data;
+          this.fillForm(this.user);
+        },
+        error:(err)=>{
+          console.log(err);
+        }
+      })
+    }
+  }
+
+  hide:boolean = true;
+
+  fillForm(data:any):void{
+    this.editUserForm.get("username")?.setValue(data.username);
+    this.editUserForm.get("firstName")?.setValue(data.firstName);
+    this.editUserForm.get("lastName")?.setValue(data.lastName);
+    this.editUserForm.get("email")?.setValue(data.email);
+ }
 
   prepareDataToSend() : IRegisterUser{
-    let formValue = this.registerForm.value;
+    let formValue = this.editUserForm.value;
     return {
       firstName:formValue.firstName,
       lastName:formValue.lastName,
@@ -34,17 +58,15 @@ export class RegisterComponent {
     }
   }
 
-  checkboxRequiredValidator(formGroup: AbstractControl): ValidationErrors | null {
-    const termsAndPrivacyControl = formGroup.get('termsAndPrivacy');
-    return termsAndPrivacyControl && termsAndPrivacyControl.value ? null : { termsAndPrivacyRequired: true };
-  }
-
   sendData() : void{
     let dataToSend = this.prepareDataToSend();
-    this.userService.post(dataToSend).subscribe({
+    let userId = this.user.id;
+    this.userService.put(userId,dataToSend).subscribe({
       next:(data)=>{
-        console.log(data);
-        this.router.navigate(["/main/account/signin"]);
+        this.snackBar.open("Data successfully changed", "Close", {
+          duration: 5000,
+          panelClass: ['success-snackbar']
+        });
       },
       error:(err)=>{
         if (err.status === 422) {

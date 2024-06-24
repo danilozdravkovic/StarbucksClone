@@ -32,8 +32,6 @@ export class ProductsComponent {
     this.productsService.getAll().subscribe({
       next: (data) => {
         this.products = data.data;
-        console.log(this.products);
-
       },
       error: (err) => {
         console.log(err);

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/menu/services/products.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IProduct } from 'src/app/menu/interfaces/i-product';
 
 
 @Component({
@@ -12,9 +13,10 @@ export class ProductComponent implements OnInit {
 
   constructor(private productsService:ProductsService,
               private route: ActivatedRoute,
-              private router:Router) {}
+              private router:Router,
+              private cdr: ChangeDetectorRef) {}
   
-  productToDisplay : any;
+  productToDisplay:any;
   calories: number = 0;
   caloriesToDisplay : number=0;
 
@@ -34,13 +36,14 @@ export class ProductComponent implements OnInit {
 
     ngAfterViewInit(){
       const selectedSize = document.getElementsByClassName("cupSize")[0];
-       this.isActive(selectedSize,this.productToDisplay.sizes[0].additionallCalories,this.productToDisplay.sizes);
+      this.isActive(selectedSize,this.productToDisplay.sizes[0].additionalCalories,this.productToDisplay.sizes);
+      this.cdr.detectChanges();
      }
 
      
 
 //function first removes all active links from cupSize divs and then checks on witch div is clicked so it can give it active class
-  isActive(div:HTMLDivElement | Element,additionallCalories:number,allSizes: any[]):void{
+  isActive(div:HTMLDivElement | Element,additionalCalories:number,allSizes: any[]):void{
     let divs =document.getElementsByClassName("cupSize");
     let divsArray = Array.from(divs);
     let allSizesNames: string[] = [];
@@ -56,7 +59,7 @@ export class ProductComponent implements OnInit {
     for(let sizeName of allSizesNames){
       let activeSizeName =  sizeName+"-size-active";
       let defaultSizeName= sizeName+"-size"
-      this.checkIfElementContainsClass(div,defaultSizeName,activeSizeName,additionallCalories);
+      this.checkIfElementContainsClass(div,defaultSizeName,activeSizeName,additionalCalories);
     }
   }
 
@@ -65,10 +68,10 @@ export class ProductComponent implements OnInit {
     element.classList.remove(classToRemove);
   }
 //function checks if clicked div has expected default class and if does it gives div active class 
-  checkIfElementContainsClass(div:HTMLDivElement | Element,classToCheck:string,classToAdd:string,additionallCalories:number):void{
+  checkIfElementContainsClass(div:HTMLDivElement | Element,classToCheck:string,classToAdd:string,additionalCalories:number):void{
     if(div.classList.contains(classToCheck) ){
       div.classList.add(classToAdd);
-      this.caloriesToDisplay=this.calories+additionallCalories;
+      this.caloriesToDisplay=this.calories+additionalCalories;
     }
   }
 }

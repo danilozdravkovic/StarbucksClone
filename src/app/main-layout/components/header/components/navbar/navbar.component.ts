@@ -39,14 +39,11 @@ export class NavbarComponent implements OnInit {
     this.navbarService.getAll().subscribe({ 
       next : (data) =>{
         this.navbarItems=data;
-        console.log(this.currentUser);
       },
       error:(err) =>{
         console.log(err);
       }
     });
-
-    console.log(this.currentUser);
   }
 
 

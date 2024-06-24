@@ -59,7 +59,6 @@ export class ProductCategoryComponent {
   
   sendData() : void{
      let dataToSend = this.prepareDataToSend();
-     console.log(dataToSend);
     this.productCategoriesService.put(this.categoryToEdit.id,dataToSend).subscribe({
       next:(data)=>{
         console.log(data);

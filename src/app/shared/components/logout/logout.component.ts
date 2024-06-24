@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/account/services/user.service';
 
 @Component({
@@ -9,14 +10,15 @@ import { UserService } from 'src/app/account/services/user.service';
 export class LogoutComponent {
 
   
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService,private router : Router) {
   
   }
 
   logUserOut():void {
-    console.log("sdad");
     this.userService.logUserOut().subscribe({
-      next : (data) =>{},
+      next : (data) =>{
+        this.router.navigate(["main/menu"]);
+      },
       error:(err) =>{
         console.log(err);
       }

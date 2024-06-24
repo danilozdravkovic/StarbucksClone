@@ -31,7 +31,8 @@
                                 <mat-error *ngIf="editProductForm.value.price">Price must be positive decimal number.</mat-error>
                             </mat-form-field>
 
-                            <input (change)="uploadImage($event)" type="file" formControlName="productImage" />
+                            <input (change)="uploadImage($event)" required type="file" class="inputFile" id="productFile" #productFile formControlName="productImage" />
+                            <label class="d-flex justify-content-center" style="cursor: pointer;" for="productFile"><span #productFileLabel>Choose file</span></label>
 
                             <div class="d-flex justify-content-center mt-5 signInButton">
                                 <button type="button" data-mdb-button-init data-mdb-ripple-init (click)="sendData()"
