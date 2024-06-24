@@ -18,7 +18,6 @@ export class AddProductComponent {
   @ViewChild('fileLabel', { static: false }) fileLabel!: ElementRef<HTMLLabelElement>;
 
   categoriesWithNoChildren?: any[];
-  labelVal: string = '';
   ngOnInit(): void {
     this.dataService.getFlattCategoriesWithNoChildren().subscribe(categories => {
       this.categoriesWithNoChildren = categories;
@@ -99,6 +98,9 @@ export class AddProductComponent {
       next:(data)=>{
         console.log(data);
         this.addProductForm.reset();
+        const label = this.fileLabel.nativeElement;
+        label.innerHTML = 'No file chosen';
+        
       },
       error:(err)=>{
         console.log(err.error);

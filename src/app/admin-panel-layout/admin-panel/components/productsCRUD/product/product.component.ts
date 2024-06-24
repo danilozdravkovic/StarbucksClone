@@ -126,6 +126,8 @@ export class ProductComponent {
     this.productsService.put(this.data.id,dataToSend).subscribe({
       next:(data)=>{
         console.log(data);
+        const label = this.fileLabel.nativeElement;
+        label.innerHTML = 'No file chosen';
       },
       error:(err)=>{
         console.log(err.error);
