@@ -26,7 +26,11 @@
                   <ng-container *ngTemplateOutlet="recursiveTable; context:{ $implicit: categories, level: 1 }"></ng-container>
                 </tbody>
               </table>
-              
+              <mat-paginator [length]="totalItems"
+              [pageSize]="perPage"
+              [pageIndex]="currentPage"
+              (page)="pageChanged($event)">
+           </mat-paginator>
         </div>
         <div class="col-12">
           <app-add-product-category></app-add-product-category>

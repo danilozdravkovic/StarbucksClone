@@ -22,11 +22,25 @@ export abstract class ApiService {
 
   protected apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : config.SERVER;
 
-  getAll() : Observable<any>{
-    return this.http.get(this.apiPrefix +this.apiPath).pipe(
-      tap(()=>{
+  getAll(perPage?:number,page?:number) : Observable<any>{
+    let query = `${this.apiPrefix}${this.apiPath}`;
+    const params = [];
+    
+    if (perPage !== undefined) {
+      params.push(`perPage=${perPage}`);
+    }
+    if (page !== undefined) {
+      params.push(`page=${page}`);
+    }
+  
+    if (params.length > 0) {
+      query += '?' + params.join('&');
+    }
+  
+    return this.http.get(query).pipe(
+      tap(() => {
         
-      }) 
+      })
     );
   }
 

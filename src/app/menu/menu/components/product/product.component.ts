@@ -25,6 +25,7 @@ export class ProductComponent implements OnInit {
     this.productsService.getOne(productId).subscribe(product =>{
       if(product){
         this.productToDisplay=product;
+        console.log(this.productToDisplay.sizes.length);
         this.caloriesToDisplay=product.calories;
         this.calories=product.calories;
       }

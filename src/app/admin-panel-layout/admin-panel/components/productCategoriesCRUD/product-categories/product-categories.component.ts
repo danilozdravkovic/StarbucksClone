@@ -4,6 +4,7 @@ import { ProductCategoryComponent } from '../product-category/product-category.c
 import { MatDialog } from '@angular/material/dialog';
 import { auto } from '@popperjs/core';
 import { DeleteProductCategoryComponent } from '../delete-product-category/delete-product-category.component';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-product-categories',
@@ -17,6 +18,10 @@ export class ProductCategoriesComponent {
    {
   }
   categories : any;
+
+  totalItems = 0;
+  perPage = 2;
+  currentPage = 0;
  
   ngOnInit() : void {
     this.productCategoriesService.refreshNeeded.subscribe({
@@ -31,9 +36,10 @@ export class ProductCategoriesComponent {
   }
 
   getAllProductCategories(){
-    this.productCategoriesService.getAll().subscribe({
+    this.productCategoriesService.getAll(this.perPage,this.currentPage+1).subscribe({
       next: (data) => {
         this.categories=data.data;
+        this.totalItems=data.totalCount;
        
       },
       error: (err) => {
@@ -60,6 +66,16 @@ export class ProductCategoriesComponent {
       data:{
         id:id
       }
-    })
+    });
+  }
+
+  pageChanged(event: PageEvent) {
+    this.currentPage = event.pageIndex;
+    this.perPage = event.pageSize;
+    this.loadData();
+  }
+
+  loadData(){
+    this.categories=this.getAllProductCategories();
   }
 }

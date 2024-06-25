@@ -14,3 +14,9 @@ table {
     text-align: left;
     background-color: #f2f2f2;
   }
+
+  mat-paginator{
+    margin-top:3em;
+    background-color: #f5f7fb;
+    width: 70%;
+  }

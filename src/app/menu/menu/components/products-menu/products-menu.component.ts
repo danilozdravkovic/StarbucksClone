@@ -11,7 +11,7 @@ import { ProductsService } from 'src/app/menu/services/products.service';
   templateUrl: './products-menu.component.html',
   styleUrls: ['./products-menu.component.css']
 })
-export class ProductsMenuComponent implements OnInit {
+export class ProductsMenuComponent {
   constructor(private productCategoriesService: ProductCategoriesService,
     private productsService: ProductsService
   ) { }
