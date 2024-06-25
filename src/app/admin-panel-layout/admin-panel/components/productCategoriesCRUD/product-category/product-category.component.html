@@ -14,7 +14,7 @@
                                     <select matNativeControl formControlName="parent">
                                       <option [value]="null">No parent</option>
                                       <ng-container *ngFor="let category of flattCategories">
-                                        <ng-container *ngIf="category.id!=categoryToEdit.id">
+                                        <ng-container *ngIf="shouldIncludeCategory(category)">
 
                                             <option  [value]="category.id">{{category.name}}</option>
                                         </ng-container>

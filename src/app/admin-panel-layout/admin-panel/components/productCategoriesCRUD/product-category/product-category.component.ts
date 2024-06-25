@@ -25,8 +25,8 @@ export class ProductCategoryComponent {
 
     this.productCategoriesService.getOne(this.data.id).subscribe({
       next:(data)=>{
-        this.fillForm(data);
         this.categoryToEdit=data;
+        this.fillForm(data);
       },
       error:(err)=>{
         console.log(err);
@@ -70,4 +70,26 @@ export class ProductCategoryComponent {
 
     this.dialogRef.close();
   }
+
+//these functions filter categories in that way so user can't choose child category to be its parent parent category.
+//this only applies to first parent category with id null
+  getAllDescendantIds(category: any): number[] {
+    let ids:any = [];
+    if (category.children) {
+      category.children.forEach((child: any) => {
+        ids.push(child.id, ...this.getAllDescendantIds(child));
+      });
+    }
+    return ids;
+  }
+
+  // Add this function to filter categories
+  shouldIncludeCategory(category: any): boolean {
+    if (!this.categoryToEdit || this.categoryToEdit.parentId !== null) {
+      return true;
+    }
+    const descendantIds = this.getAllDescendantIds(this.categoryToEdit);
+    return category.id !== this.categoryToEdit.id && !descendantIds.includes(category.id);
+  }
+
 }
