@@ -12,6 +12,8 @@ import { MainLayoutModule } from './main-layout/main-layout.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MainInterceptor } from './shared/interceptors/main.interceptor';
 import { authGuard } from './shared/guards/auth.guard';
+import { CartComponent } from './cart/cart/cart.component';
+import { CartModule } from './cart/cart.module';
 
 
 
@@ -20,6 +22,10 @@ const routes : Routes = [
     path:"",
     redirectTo: "main",
     pathMatch:"full"
+  },
+  {
+    path:"cart",
+    component: CartComponent
   },
   {
     path:"main",
@@ -66,7 +72,8 @@ const routes : Routes = [
     RouterModule.forRoot(routes),
     SharedModule,
     MainLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    CartModule
   ],
   providers: [
     {

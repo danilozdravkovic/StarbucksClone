@@ -17,6 +17,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-uppercase.pipe';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { LogoComponent } from './components/logo/logo.component';
 
 
 
@@ -26,7 +27,8 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     PageNotFoundComponent,
     AuthFormComponent,
     LogoutComponent,
-    FirstLetterOfNameUppercasePipe
+    FirstLetterOfNameUppercasePipe,
+    LogoComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     LogoutComponent,
     MatDialogModule,
     FirstLetterOfNameUppercasePipe,
-    MatSnackBarModule
+    MatSnackBarModule,
+    LogoComponent
   ]
 })
 export class SharedModule { }

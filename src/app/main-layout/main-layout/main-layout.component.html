@@ -1,3 +1,13 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+    <div class="container-fluid" id="cart-wrapper" *ngIf="isMenuPage">
+        <div class="row d-flex justify-content-around" style="height: 100%;">
+            <div class="col-7 col-sm-5 col-md-3 text-center pt-4">
+                <p style="color: white !important;">Home delivery available. Order now!</p>
+            </div>
+            <div class="col-4 col-md-2 text-center pt-4">
+                <a routerLink="../cart" style="color: white !important;"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>

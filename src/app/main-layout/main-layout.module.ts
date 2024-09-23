@@ -5,7 +5,6 @@ import { MainLayoutRoutingModule } from './main-layout-routing.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LogoComponent } from './components/header/components/logo/logo.component';
 import { NavbarComponent } from './components/header/components/navbar/navbar.component';
 import { SvgIconsComponent } from './components/footer/components/svg-icons/svg-icons.component';
 import { LinksSectionComponent } from './components/footer/components/links-section/links-section.component';
@@ -18,7 +17,6 @@ import { SharedModule } from '../shared/shared.module';
     MainLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    LogoComponent,
     NavbarComponent,
     SvgIconsComponent,
     LinksSectionComponent,

@@ -1,0 +1,10 @@
+#cart-wrapper {
+    background-color: #1e3932;
+    position: fixed;
+    bottom: 0;
+    height: 5em;
+}
+
+.fa-shopping-basket{
+    font-size: 2em;
+}
