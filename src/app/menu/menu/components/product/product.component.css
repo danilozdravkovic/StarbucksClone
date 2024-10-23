@@ -67,6 +67,14 @@ h2 {
     cursor: pointer;
 }
 
+.orderButton{
+    position: fixed;
+    right: 6em;
+    bottom: 6em;
+    width: 8em;
+    border-radius: 20px;
+}
+
 @media screen and (max-width:992px) {
     .product-container{
         margin: 0px auto;

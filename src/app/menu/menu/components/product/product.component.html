@@ -3,11 +3,13 @@
         <div class="col-10 col-sm-6 col-lg-11 col-xxl-9 product-container">
             <div class="row d-flex justify-content-around">
                 <div class="col-12 col-lg-4 col-xl-3">
-                    <img src="http://localhost:5156/posts/{{productToDisplay.imageSrc}}" alt="{{productToDisplay.name}}" />
+                    <ng-container *ngIf="productToDisplay?.imageSrc">
+                        <img src="http://localhost:5156/posts/{{productToDisplay.imageSrc}}" alt="{{productToDisplay.name}}" />
+                      </ng-container>
                 </div>
                 <div class="col-12 col-lg-5 col-xl-4 d-flex flex-column pt-5 product-text-container">
-                    <h1 class="text-white">{{productToDisplay.name}}</h1>
-                    <ng-container *ngIf="productToDisplay.calories">
+                    <h1 class="text-white">{{productToDisplay?.name}}</h1>
+                    <ng-container *ngIf="productToDisplay?.calories">
                         <p style="color: #ffffffb3; font-size: 1.5em;">{{caloriesToDisplay}} calories</p>
                     </ng-container>
                 </div>
@@ -17,7 +19,7 @@
 </div>
 <div class="container-fluid">
     <div class="row flexCenter">
-        <ng-container *ngIf="productToDisplay.sizes.length">
+        <ng-container *ngIf="productToDisplay?.sizes.length">
             <div class="col-12 col-sm-10 col-lg-4 sizeOptions ">
                 <div class="row flexCenter">
                     <div class="col-12 col-sm-10 mb-4">
@@ -26,7 +28,7 @@
                     <div class="col-12 col-sm-10 d-flex flex-row justify-content-center">
                         <ng-container *ngFor="let size of productToDisplay.sizes">
                             <div class="col-3 col-sm-2 col-lg-3 col-x-2 text-center">
-                                <div #dynamicDiv class="{{size.name}}-size cupSize"
+                                <div #dynamicDiv class="{{size.name}}-size cupSize" data-id="{{size.id}}"
                                     (click)="isActive(dynamicDiv,size.additionalCalories,productToDisplay.sizes)">
                                 </div>
                                 <p>{{size.name | firstLetterOfNameUppercase}}</p>
@@ -37,7 +39,7 @@
                 </div>
             </div>
         </ng-container>
-        <ng-container *ngIf="productToDisplay.includedAddIns">
+        <ng-container *ngIf="productToDisplay?.includedAddIns.length">
             <div class="col-12 col-sm-10 col-lg-4 includedAddIns">
                 <div class="row flexCenter">
                     <div class="col-12 col-sm-10 mb-4">
@@ -51,5 +53,9 @@
                 </div>
             </div>
         </ng-container>
+        <div class="d-flex justify-content-center mt-3">
+            <!-- <button type="button" data-mdb-button-init data-mdb-ripple-init 
+                class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white">Add To Cart</button> -->
+        </div>
     </div>
 </div>
