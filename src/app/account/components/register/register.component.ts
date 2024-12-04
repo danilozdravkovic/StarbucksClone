@@ -43,7 +43,6 @@ export class RegisterComponent {
     let dataToSend = this.prepareDataToSend();
     this.userService.post(dataToSend).subscribe({
       next:(data)=>{
-        console.log(data);
         this.router.navigate(["/main/account/signin"]);
       },
       error:(err)=>{

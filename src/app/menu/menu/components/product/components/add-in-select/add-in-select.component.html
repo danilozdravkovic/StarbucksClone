@@ -1,12 +1,12 @@
-<form [formGroup]="addInForm">
+<div [formGroup]="form">
     <ng-container *ngFor="let addIn of addIns">
-        <ng-container *ngIf="addIn.children && hasChildrenForSelect(addIn.children); else addInHasNoChildren">
+        <ng-container *ngIf="hasChildrenForSelect(addIn.children); else addInWithPumps">
             <mat-form-field style="width: 100%;">
                 <mat-label style="color: #00754a;">{{addIn.name}}</mat-label>
-                <mat-select formControlName="{{addIn.id}}"  id="{{addIn.name}}ID" class="addInSelect">
+                <mat-select formControlName="{{addIn.id}}">
                     <ng-container *ngFor="let subchild of addIn.children">
-                        <ng-container *ngIf="!subchild.children">
-                            <ng-container *ngIf="subchildHasNoPump(subchild)">
+                        <ng-container *ngIf="!subchild.children && subchildHasNoPump(subchild)">
+                            <ng-container>
                                 <mat-option [value]="subchild.id">{{subchild.name}}</mat-option>
                             </ng-container>
                         </ng-container>
@@ -14,21 +14,23 @@
                 </mat-select>
             </mat-form-field>
         </ng-container>
-        <app-add-in-select [addIns]="addIn.children" [parentName]="addIn.name"></app-add-in-select>
-        <ng-template #addInHasNoChildren>
-            <ng-container *ngIf="!subchildHasNoPump(addIn)">
-                <div class="addInWithPumpWrapper">
-                    <p class="parentName">{{parentName}}</p>
-                    <div class="d-flex justify-content-between" data-id="{{addIn.id}}">
-                        <p class="addInName" style="margin-top: 3px;">{{addIn.name}}</p>
-                        <div class="d-flex flex-row-reverse" style="width: 30%;">
-                            <i class="fas fa-plus" (click)="incrementPump(addIn)"></i>
-                            <input formControlName="{{addIn.id}}"  type="text" class="addInPumps"/>
-                            <i class="fas fa-minus" (click)="decrementPump(addIn)"></i>
+        <ng-template #addInWithPumps>
+            <ng-container *ngFor="let subchild of addIn.children">
+                <ng-container *ngIf="!subchildHasNoPump(subchild)">
+                    <div class="addInWithPumpWrapper">
+                        <p class="parentName">{{addIn.name}}</p>
+                        <div class="d-flex justify-content-between" >
+                            <p class="addInName" style="margin-top: 3px;">{{subchild.name}}</p>
+                            <div class="d-flex flex-row-reverse" style="width: 30%;">
+                                <i class="fas fa-plus" (click)="incrementPump(subchild)"></i>
+                                <input formControlName="{{subchild.id}}_pump" readonly type="text" class="addInPumps"/>
+                                <i class="fas fa-minus" (click)="decrementPump(subchild)"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ng-container>
             </ng-container>
         </ng-template>
     </ng-container>
-</form>
+    
+</div>

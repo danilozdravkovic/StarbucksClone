@@ -45,17 +45,18 @@
                     <div class="col-12 col-sm-10 mb-4">
                         <h2>What's included</h2>
                     </div>
-                    <div class="col-12 col-sm-10 d-flex flex-row justify-content-center">
-                        <form style="width: 100%;">
-                            <app-add-in-select [addIns]="productToDisplay.includedAddIns"></app-add-in-select>
+                        <form [formGroup]="addInsForm">
+                            <app-add-in-select
+                            [addIns]="productToDisplay.includedAddIns"
+                            [form]="addInsForm">
+                            </app-add-in-select>
+                            <button type="button" (click)="submitForm()" data-mdb-button-init data-mdb-ripple-init 
+                                    class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white">
+                                    Add To Cart
+                            </button>
                         </form>
-                    </div>
                 </div>
             </div>
         </ng-container>
-        <div class="d-flex justify-content-center mt-3">
-            <!-- <button type="button" data-mdb-button-init data-mdb-ripple-init 
-                class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white">Add To Cart</button> -->
-        </div>
     </div>
 </div>

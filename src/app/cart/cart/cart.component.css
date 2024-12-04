@@ -1,4 +1,4 @@
-#leftSection {
+#formSection {
     background-color: #1e3932;
     min-height: 100vh;
 }
@@ -47,3 +47,34 @@ button.inactive {
     background-color: transparent;
     color:white;
 }
+
+#cartProductsHolder{
+    background-color: #f9f9f9;
+}
+
+.productImg{
+    width: 8em;
+    height: 8em;
+    margin: 0px auto;
+}
+
+.productImg img {
+    width: 100%;
+    border-radius:50%;
+}
+
+.cartItem{
+    background-color: white;
+    box-shadow:  0px 0px .5px 0px #00000024, 0px 1px 1px 0px #0000003d;
+    border-radius: 12px;
+}
+
+.dottedUnderline{
+    background-image: -webkit-repeating-radial-gradient(center center, currentColor, currentColor 1px, #0000 1px, #0000 100%);
+    background-position: 0 75%;
+    background-repeat: repeat-x;
+    background-size: 5px 5px;
+    min-height: 2em;
+    opacity: .3;
+}
+

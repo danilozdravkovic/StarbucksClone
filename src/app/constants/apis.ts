@@ -10,6 +10,7 @@ export const apis = {
         users:"users",
         productCategories:"productCategories",
         products:"products",
-        files:"files"
+        files:"files",
+        cartLines:"cartLines"
     }
 }

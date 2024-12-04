@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-5" id="leftSection">
+        <div class="col-5" id="formSection">
             <div class="mt-4 ml-4 d-flex flex-row">
                 <app-logo></app-logo>
                 <a routerLink="../main/menu" class="text-white pt-4">
@@ -9,13 +9,13 @@
                 </a>
             </div>
             <div id="cartForm">
-                <h1 class="h3 text-white">Review order ()</h1>
+                <h1 class="h3 text-white">Review order ({{cartItems?.length}})</h1>
                 <p style="color: #d4e9e2;">Ready in around 5-10 minutes</p>
                 <form [formGroup]="cartForm" style="width: 90%;">
                     <mat-form-field class="formField" style="width: 100%;">
                         <mat-label>Address</mat-label>
-                        <input class="text-white" matInput formControlName="address">
-                        <mat-error *ngIf="">First name must be between 3 and 20 characters long.</mat-error>
+                        <input class="text-white " matInput formControlName="address">
+                        <mat-error *ngIf="cartForm.value.address">First name must be between 3 and 20 characters long.</mat-error>
                     </mat-form-field>
                     <span style="color:#ffffffb3">Pickup options</span>
                     <div class="buttonWrapper mt-2">
@@ -41,13 +41,63 @@
                     <div class="d-flex justify-content-center mt-3">
                         <button type="button" data-mdb-button-init data-mdb-ripple-init 
                             [disabled]="cartForm.invalid"
-                            class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white">Order</button>
+                            class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white"
+                            (click)="addOrder()"
+                            >Order
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-7">
-            
+        <div class="col-7" id="cartProductsHolder">
+            <div class="row d-flex  justify-content-center">
+                <ng-container *ngFor="let item of cartItems">
+                    <div class="col-7  mt-3 cartItem">
+                        <div class="row mt-3">
+                            <div class="col-4 productImg">
+                                <img  src="http://localhost:5156/posts/{{item.productImage}}" alt="{{item.productName}}"/>
+                            </div>
+                            <div class="col-6">
+                                <p style="font-size: 1.5em; font-weight: 400;">{{item.productName}}</p>
+                                <ul>
+                                    <ng-container *ngFor="let addIn of item.addIns">
+                                        <li><p>{{addIn.addInName}} {{addIn.pump?'X '+addIn.pump:''}}</p></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                            <div class="col-2 d-flex align-items-end flex-column">
+                                <p style="font-size: 20px; font-weight: 600;">${{item.productPrice}}</p>
+                                <i class="fa fa-trash-o mt-auto mb-3" style="cursor: pointer;" aria-hidden="true" (click)="removeItemFromOdred(item.cartLineId)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="cartItems?.length; else emptyCart">
+                    <div class="col-7  mt-3 cartItem">
+                        <div class="m-3 d-flex" >
+                            <div class="float-left" style="display: inline-block;" >
+                                <p style="font-size: 1.5em; font-weight: 600; display: inline;">Total</p>
+                            </div>
+                            <div class="dottedUnderline float-left" style="width: 90%;"></div>
+                            <div class="float-left" style="display: inline-block;">
+                                <p style="font-size: 1.5em; font-weight: 600; display: inline;">${{fullPrice}}</p>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #emptyCart>
+                   <svg height="189" width="176" viewBox="0 0 176 189" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none">
+                        <path d="M134.63 119.88l-10.044-7.714 9.46-7.155c.788-.596.944-1.72.348-2.51h-2.976l-10.873 8.225c-.944.714-.95 2.132-.01 2.853l11.91 9.146c.785.603 1.91.455 2.514-.33.602-.786.455-1.912-.33-2.515M69.792 111.305l-10.597-8.138h-4.147c-.158.666.072 1.393.65 1.837l10.043 7.713-9.458 7.154c-.79.6-.946 1.724-.348 2.514.597.79 1.722.946 2.512.348l11.336-8.574c.944-.715.95-2.132.01-2.853"
+                            fill="#00AF66" fill-opacity=".43"
+                        >
+
+                        </path>
+                    </g>
+                   </svg>
+                </ng-template>
+            </div>
         </div>
     </div>
 </div>

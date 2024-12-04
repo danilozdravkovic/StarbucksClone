@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/account/services/user.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,12 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent {
-  isMenuPage: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,private userService: UserService) {
     this.router.events.subscribe(() => {
       // Check if the current route is the menu page 
       this.isMenuPage = this.router.url.includes('menu');
     });
+  }
+
+  isMenuPage: boolean;
+  isUserLoggedIn: boolean;
+
+  ngOnInit():void {
+    this.userService.loggedIn$.subscribe((isLoggedIn) => {
+      this.isUserLoggedIn = isLoggedIn;
+    });
+
+    // Initialize the login state
+    this.isUserLoggedIn = localStorage.getItem('user') !== null;
   }
 }
