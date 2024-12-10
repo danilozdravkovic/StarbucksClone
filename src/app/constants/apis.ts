@@ -11,6 +11,7 @@ export const apis = {
         productCategories:"productCategories",
         products:"products",
         files:"files",
-        cartLines:"cartLines"
+        cartLines:"cartLines",
+        orders:"orders"
     }
 }

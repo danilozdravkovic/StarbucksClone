@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterLink, RouterModule } from '@angular/router';
+import { MainLayoutModule } from '../main-layout/main-layout.module';
 
 
 
@@ -14,7 +15,8 @@ import { RouterLink, RouterModule } from '@angular/router';
     CommonModule,
     SharedModule,
     RouterModule,
-    RouterLink
+    RouterLink,
+    MainLayoutModule
   ]
 })
 export class CartModule { }

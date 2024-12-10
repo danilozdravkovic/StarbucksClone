@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-5" id="formSection">
+        <div class="col-5" id="formSection" style="height: 100vh;">
             <div class="mt-4 ml-4 d-flex flex-row">
                 <app-logo></app-logo>
                 <a routerLink="../main/menu" class="text-white pt-4">
@@ -12,15 +12,10 @@
                 <h1 class="h3 text-white">Review order ({{cartItems?.length}})</h1>
                 <p style="color: #d4e9e2;">Ready in around 5-10 minutes</p>
                 <form [formGroup]="cartForm" style="width: 90%;">
-                    <mat-form-field class="formField" style="width: 100%;">
-                        <mat-label>Address</mat-label>
-                        <input class="text-white " matInput formControlName="address">
-                        <mat-error *ngIf="cartForm.value.address">First name must be between 3 and 20 characters long.</mat-error>
-                    </mat-form-field>
                     <span style="color:#ffffffb3">Pickup options</span>
-                    <div class="buttonWrapper mt-2">
+                    <div class="buttonWrapper mt-2 mb-2">
                         <button class="pickupButton" (click)="setButtonToActive('inStore')"
-                                [ngClass]="{ 'active': activeButton === 'inStore', 'inactive': activeButton !== 'inStore' }"
+                                [ngClass]="{ 'active': pickupActiveButton === 'inStore', 'inactive': pickupActiveButton !== 'inStore' }"
                         >
                             <svg aria-hidden="true" class="valign-middle block mx-auto mb1" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="width: 24px; height: 24px; overflow: visible; fill: currentcolor;">
                                 <path d="M22.584 1c.273 0 .5.2.543.46l.007.09v20.9c0 .273-.2.5-.46.543l-.09.007H5.564a.55.55 0 01-.09-1.093l.09-.007h7.8V2.1h-7.65v2.7c0 .273-.2.5-.461.543l-.09.007a.55.55 0 01-.542-.46l-.008-.09V1.55c0-.273.2-.5.461-.543L5.164 1h17.42zM5 12.95c1.396 0 2.576 1.785 3.22 4.066l.066.247.099.412c.107.497.165.952.165 1.325 0 2.39-7.1 2.39-7.1 0 0-.31.04-.679.117-1.087l.051-.25.099-.411C2.34 14.865 3.554 12.95 5 12.95zm0 1.1c-.7 0-1.638 1.436-2.154 3.241l-.062.228-.094.39c-.092.425-.14.805-.14 1.091 0 .306 1.05.693 2.45.693 1.4 0 2.45-.387 2.45-.693 0-.229-.03-.518-.09-.836l-.048-.244-.093-.39c-.502-1.922-1.49-3.48-2.219-3.48zM22.033 2.1l-7.57-.001v19.8l7.57.001V2.1zM11.7 7.374c.273 0 .5.2.542.46l.008.09v8a.55.55 0 01-1.093.089l-.007-.09v-8a.55.55 0 01.55-.55zm4.5 0c.273 0 .5.2.542.46l.008.09v8a.55.55 0 01-1.093.089l-.007-.09v-8a.55.55 0 01.55-.55zm-11.221.1a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm0 1a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"></path>
@@ -28,7 +23,7 @@
                             <p style="margin: 0px;">In store</p>
                     </button>
                     <button class="pickupButton" (click)="setButtonToActive('delivery')"
-                            [ngClass]="{ 'active': activeButton === 'delivery', 'inactive': activeButton !== 'delivery' }"
+                            [ngClass]="{ 'active': pickupActiveButton === 'delivery', 'inactive': pickupActiveButton !== 'delivery' }"
                     >
                         <svg aria-hidden="true" class="valign-middle block mx-auto mb1" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="width: 24px; height: 24px; overflow: visible; fill: currentcolor;">
                             <path d="M10.98 11.57c.559 0 1.09.244 1.455.667.222.259.425.533.606.822l.173.294 1.62 2.905c.084.15.136.317.154.487l.007.13.003 2.09-.01.137c-.02.142-.062.277-.124.4v1.218a1.3 1.3 0 01-.756 1.181l3.442-.001a.55.55 0 01.09 1.093l-.09.007H1.05a.55.55 0 01-.09-1.093l.09-.007 1.856.001a1.301 1.301 0 01-.75-1.048l-.007-.133v-1.49l.006-.073a2.018 2.018 0 01-.248-.81l-.008-.178v-1.288c0-.178.037-.353.11-.514l.06-.119 1.68-2.924c.215-.374.457-.73.724-1.069.307-.39.76-.633 1.25-.677l.164-.008h5.093zm.169 8.629H5.864v.52a1.3 1.3 0 01-.756 1.182h6.798a1.301 1.301 0 01-.75-1.048l-.007-.133v-.521zm-7.9-.116v.637a.2.2 0 00.147.193l.053.007h1.115a.2.2 0 00.193-.147l.007-.053v-.521l-.834.001c-.24 0-.468-.041-.681-.117zm10.515.114l-.035.003-1.48-.001v.52a.2.2 0 00.147.194l.053.007h1.115a.2.2 0 00.193-.147l.007-.053v-.523zM10.98 12.67H5.887a.702.702 0 00-.551.267 7.706 7.706 0 00-.437.613l-.196.322-1.681 2.924-.017.041-.006.044v1.288c0 .478.36.871.822.925l.109.006h9.8a.19.19 0 00.152-.08l.012-.029.005-.061-.004-2.054-.006-.042-.016-.04-.503-.903H5.489a.55.55 0 01-.09-1.092l.09-.007 7.268-.001-.504-.903a5.637 5.637 0 00-.471-.712l-.18-.221a.82.82 0 00-.504-.276l-.118-.009zM22.45 1c.273 0 .5.2.543.46l.007.09v20.9c0 .273-.2.5-.46.543l-.09.007H20.2a.55.55 0 01-.543-.46l-.007-.09-.001-4.304-.07-.029-.084-.052-2.852-2.14h-.568a.55.55 0 01-.09-1.093l.09-.007h3.574V9.55H15a.55.55 0 01-.543-.46L14.45 9V6c0-.273.2-.5.46-.543L15 5.45l.869-.001 3.781-3.308V1.55c0-.273.2-.5.46-.543L20.2 1h2.25zm-.55 1.1h-1.15v19.8h1.15V2.1zm-2.251 13.825h-1.173l1.173.88v-.88zM19.45 6.55h-3.9v1.9h3.9v-1.9zm.2-3.08l-2.262 1.979h2.262V3.47z">
@@ -38,9 +33,35 @@
                     <p style="margin: 0px;">Delivery</p>
                     </button>
                     </div>
+                    <mat-form-field *ngIf="pickupActiveButton==='delivery'" class="formField mt-3" style="width: 100%;">
+                        <mat-label>Address</mat-label>
+                        <input placeholder="Bergen Pkwy 102" class="text-white " matInput formControlName="address">
+                        <mat-error *ngIf="cartForm.value.address">Address must start with uppercase and include number</mat-error>
+                    </mat-form-field>
+
+                    <span style="color:#ffffffb3; margin-top:20em">Payment options</span>
+                    <div class="buttonWrapper mt-2 mb-2">
+                        <button class="pickupButton" (click)="setButtonToActive('cash')"
+                                [ngClass]="{ 'active': paymentActiveButton === 'cash', 'inactive': paymentActiveButton !== 'cash' }"
+                        >
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            <p style="margin: 0px;">Cash</p>
+                    </button>
+                    <button class="pickupButton" (click)="setButtonToActive('card')"
+                            [ngClass]="{ 'active': paymentActiveButton === 'card', 'inactive': paymentActiveButton !== 'card' }"
+                    >
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        <p style="margin: 0px;">Card</p>
+                    </button>
+                    </div>
+                    <mat-form-field *ngIf="paymentActiveButton==='card'" class="formField mt-3" style="width: 100%;">
+                        <mat-label>Card number</mat-label>
+                        <input maxlength="19"  placeholder="xxxx-xxxx-xxxx-xxxx" class="text-white " matInput formControlName="cardNumber">
+                        <mat-error *ngIf="cartForm.value.cardNumber">Invalid format</mat-error>
+                    </mat-form-field>
                     <div class="d-flex justify-content-center mt-3">
                         <button type="button" data-mdb-button-init data-mdb-ripple-init 
-                            [disabled]="cartForm.invalid"
+                            [disabled]="cartForm.invalid || cartItems?.length===0"
                             class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white"
                             (click)="addOrder()"
                             >Order
@@ -50,7 +71,7 @@
             </div>
         </div>
         <div class="col-7" id="cartProductsHolder">
-            <div class="row d-flex  justify-content-center">
+            <div class="row d-flex  justify-content-center" style="min-height: 100vh;">
                 <ng-container *ngFor="let item of cartItems">
                     <div class="col-7  mt-3 cartItem">
                         <div class="row mt-3">
@@ -87,15 +108,50 @@
                     </div>
                 </ng-container>
                 <ng-template #emptyCart>
-                   <svg height="189" width="176" viewBox="0 0 176 189" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="none">
-                        <path d="M134.63 119.88l-10.044-7.714 9.46-7.155c.788-.596.944-1.72.348-2.51h-2.976l-10.873 8.225c-.944.714-.95 2.132-.01 2.853l11.91 9.146c.785.603 1.91.455 2.514-.33.602-.786.455-1.912-.33-2.515M69.792 111.305l-10.597-8.138h-4.147c-.158.666.072 1.393.65 1.837l10.043 7.713-9.458 7.154c-.79.6-.946 1.724-.348 2.514.597.79 1.722.946 2.512.348l11.336-8.574c.944-.715.95-2.132.01-2.853"
-                            fill="#00AF66" fill-opacity=".43"
-                        >
-
-                        </path>
-                    </g>
-                   </svg>
+                   <div class="d-flex flex-column justify-content-start" style="width: 50%; margin-top: 10em;">
+                    <svg class="d-inline-flex" height="189" width="176" viewBox="0 0 176 189" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M134.63 119.88l-10.044-7.714 9.46-7.155c.788-.596.944-1.72.348-2.51h-2.976l-10.873 8.225c-.944.714-.95 2.132-.01 2.853l11.91 9.146c.785.603 1.91.455 2.514-.33.602-.786.455-1.912-.33-2.515M69.792 111.305l-10.597-8.138h-4.147c-.158.666.072 1.393.65 1.837l10.043 7.713-9.458 7.154c-.79.6-.946 1.724-.348 2.514.597.79 1.722.946 2.512.348l11.336-8.574c.944-.715.95-2.132.01-2.853"
+                                fill="#00AF66" fill-opacity=".43"
+                            >
+                            </path>
+                            <path d="M165.026 156.422c-.87-1.413-2.065-2.605-3.48-3.476 1.415-.87 2.61-2.064 3.48-3.476.87 1.412 2.065 2.605 3.48 3.476-1.415.87-2.61 2.063-3.48 3.476m9.038-5.046c-4.125 0-7.468-3.338-7.468-7.455 0-2.092-3.14-2.092-3.14 0 0 4.118-3.343 7.456-7.47 7.456-2.092 0-2.092 3.14 0 3.14 4.127 0 7.47 3.338 7.47 7.454 0 2.093 3.14 2.093 3.14 0 0-4.116 3.343-7.454 7.468-7.454 2.093 0 2.093-3.14 0-3.14"
+                                fill="#08AE65" fill-opacity=".43"    
+                            >
+                            </path>
+                            <path d="M19.701 112.897c-1.935-4.023-5.204-7.288-9.232-9.224 4.027-1.934 7.297-5.2 9.233-9.224 1.94 4.023 5.207 7.288 9.236 9.224-4.03 1.935-7.297 5.2-9.235 9.223m17.767-11.16c-8.743.002-15.83-7.075-15.83-15.8 0-2.582-3.87-2.582-3.87 0 0 8.725-7.088 15.802-15.832 15.802-2.58 0-2.58 3.87 0 3.87 8.744 0 15.832 7.076 15.832 15.802 0 2.58 3.87 2.58 3.87 0 0-8.727 7.087-15.803 15.83-15.803 2.58 0 2.58-3.87 0-3.87"
+                                fill="#08AE65"
+                            >
+                            </path>
+                            <path d="M53.63 185.35l3.226-62.042h77.187l3.226 62.042H53.63zm83.022-80.96c-.07-1.34-1.18-2.39-2.52-2.39l-16.6.165c-.99.01-1.784.82-1.774 1.81.01.992.82 1.787 1.81 1.777l15.555-.155.734 14.124H57.043l.734-14.124 17.53.156c.99.01 1.8-.787 1.808-1.778.01-.99-.787-1.8-1.777-1.81L56.783 102c-1.357 0-2.464 1.05-2.535 2.388l-4.244 81.638c-.082 1.583 1.18 2.91 2.764 2.91h85.363c1.585 0 2.848-1.326 2.766-2.91l-4.244-81.636z"
+                                fill="#00AF66"
+                            >
+                            </path>
+                            <path d="M115.153 30.23c-.742.007-1.362.57-1.44 1.308l-5 47.71-.36.076c-7.223 1.49-14.67 1.5-21.894.03l-.374-.074-5.083-47.702c-.078-.737-.697-1.298-1.438-1.305l-.476-.004.17-1.532.956-.13c.662-.09 1.18-.616 1.254-1.28l.435-3.874 31.31-.035.445 3.866c.076.662.59 1.19 1.252 1.28l.86.117.017 1.543-.637.005zm3.526-2.607c-.003-.11-.016-.218-.04-.324-.134-.555-.503-1.018-1.04-1.255-.125-.056-.257-.093-.393-.11l-.778-.108-.45-3.883c-.122-.772-.738-1.323-1.463-1.43l-.212-.014-33.49.037c-.097 0-.193.01-.287.03-.654.13-1.175.623-1.35 1.252-.024.088-.04.18-.048.272l-.43 3.778-.776.104c-.172.024-.34.078-.492.16-.48.257-.842.71-.97 1.39l-.453 4.028c-.097.86.57 1.614 1.437 1.622l.793.006 5.058 47.472c.067.632.537 1.148 1.16 1.275l1.42.288c7.61 1.547 15.455 1.535 23.063-.033l1.408-.29c.623-.13 1.09-.645 1.157-1.277l4.975-47.477.796-.006c.807-.007 1.456-.668 1.447-1.475l-.044-4.034z"
+                                fill="#4A4A4A"
+                            >
+                            </path>
+                            <path d="M116.597 130.692c0 12.665-10.283 22.93-22.97 22.93s-22.97-10.265-22.97-22.93c0-.99-.803-1.794-1.794-1.794-.99 0-1.793.803-1.793 1.794 0 14.647 11.89 26.518 26.557 26.518 14.667 0 26.557-11.87 26.557-26.518 0-.99-.803-1.794-1.794-1.794-.99 0-1.793.803-1.793 1.794z"
+                                fill="#00AF66" fill-rule="nonzero"
+                            >
+                            </path>
+                            <path d="M97.333 58.396c5.218-.007 9.45-4.276 9.436-9.558.002-5.265-4.235-9.532-9.45-9.536-5.22.01-9.448 4.29-9.438 9.56.002 5.278 4.236 9.54 9.45 9.534"
+                                fill="#248040"
+                            >
+                            </path>
+                            <path d="M64.12 18.477C73.005 8.52 86.502 2.95 100.208 3.845c23.28 1.523 40.35 21.478 40.35 46.057 0 14.14-7.427 27.964-20.17 41.003-.692.708-.68 1.844.03 2.536.708.693 1.843.68 2.536-.028 13.336-13.646 21.192-28.27 21.192-43.51 0-26.403-18.464-47.985-43.704-49.636-14.812-.968-29.38 5.046-38.998 15.822-.66.74-.596 1.873.143 2.532.74.66 1.873.596 2.533-.143z"
+                                fill="#00AF66" fill-rule="nonzero" opacity=".43"
+                            >
+                            </path>
+                            <path d="M93.748 110.7c-1.414-1.133-2.99-2.46-4.692-3.972-4.863-4.322-9.727-9.24-14.263-14.66-12.89-15.396-20.596-31.673-20.596-48.05 0-6.1 1.457-11.96 4.224-17.3.457-.88.113-1.962-.767-2.418-.88-.456-1.96-.112-2.417.768-3.028 5.846-4.626 12.27-4.626 18.95 0 17.362 8.053 34.37 21.432 50.353 4.658 5.565 9.644 10.606 14.63 15.04 1.75 1.552 3.373 2.92 4.832 4.09.513.41.97.768 1.365 1.07.24.185.407.31.5.378.568.42 1.33.465 1.945.117.09-.05.256-.147.494-.287.39-.23.842-.503 1.352-.817 1.452-.894 3.077-1.944 4.838-3.143 5.027-3.424 10.145-7.363 15.055-11.764.738-.66.8-1.795.138-2.533-.66-.737-1.795-.8-2.532-.138-4.782 4.288-9.776 8.13-14.68 11.47-1.713 1.168-3.292 2.188-4.7 3.055-.254.157-.494.303-.718.438-.25-.196-.523-.41-.814-.645z"
+                                fill="#00AF66" fill-rule="nonzero"
+                            >
+                            </path>
+                        </g>
+                       </svg>
+                       <h1 class="d-inline-flex mt-3 mb-3">Start your next order</h1>
+                       <p class="d-inline-flex" style="color: #00000094; font-size:20px">As you add menu items, they'll appear here. You'll have a chance to review before placing your order.</p>
+                   </div>
                 </ng-template>
             </div>
         </div>

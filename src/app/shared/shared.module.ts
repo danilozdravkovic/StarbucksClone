@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-uppercase.pipe';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { LogoComponent } from './components/logo/logo.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 
@@ -28,7 +29,8 @@ import { LogoComponent } from './components/logo/logo.component';
     AuthFormComponent,
     LogoutComponent,
     FirstLetterOfNameUppercasePipe,
-    LogoComponent
+    LogoComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -58,7 +60,8 @@ import { LogoComponent } from './components/logo/logo.component';
     MatDialogModule,
     FirstLetterOfNameUppercasePipe,
     MatSnackBarModule,
-    LogoComponent
+    LogoComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }
