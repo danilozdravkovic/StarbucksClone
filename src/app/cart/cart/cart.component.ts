@@ -143,7 +143,18 @@ export class CartComponent {
         }
       }
     });
-    
+  }
 
+  toggleFavorite(item: any): void {
+    item.isFavorite = !item.isFavorite;
+    let productId = item.cartLineId;
+    this.cartLineService.toggleProductIsFavourite(productId).subscribe({
+      next:(data)=>{
+
+      },
+      error:(err)=>{
+
+      }
+    });
   }
 }

@@ -71,7 +71,7 @@
             </div>
         </div>
         <div class="col-7" id="cartProductsHolder">
-            <div class="row d-flex  justify-content-center" style="min-height: 100vh;">
+            <div class="row d-flex  justify-content-center" >
                 <ng-container *ngFor="let item of cartItems">
                     <div class="col-7  mt-3 cartItem">
                         <div class="row mt-3">
@@ -88,6 +88,15 @@
                             </div>
                             <div class="col-2 d-flex align-items-end flex-column">
                                 <p style="font-size: 20px; font-weight: 600;">${{item.productPrice}}</p>
+                                <div class="heart-icon" (click)="toggleFavorite(item)">
+                                    <i
+                                      class="fa"
+                                      [class.fa-heart]="item.isFavorite"
+                                      [class.fa-heart-o]="!item.isFavorite"
+                                      style="cursor: pointer; color: red;"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </div>
                                 <i class="fa fa-trash-o mt-auto mb-3" style="cursor: pointer;" aria-hidden="true" (click)="removeItemFromOdred(item.cartLineId)"></i>
                             </div>
                         </div>

@@ -1,16 +1,70 @@
 <div class="container mb-5">
     <div class="row">
-        <div class="col-10 col-md-6 col-lg-4">
-            <h3 class="mt-3 mb-3">Previous</h3>
-            <img src="/assets/img/gifs/moon-phases.webp"/>
-            <h4>When history repeats itself</h4>
-            <p>Previous orders will appear here to quickly order again</p>
-            <ng-container *ngIf="currentUser; else noLoggedInUser">
-                <app-logout></app-logout>
-              </ng-container>
-              <ng-template #noLoggedInUser>
-                <app-auth-form></app-auth-form>
-              </ng-template>
-        </div>
+        <ng-container *ngIf="currentUser; else noLoggedInUser">
+            <ng-container *ngIf="orders.length; else noOrders">
+                <div class="table-container">
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Products</th>
+                                <th>Add-Ins</th>
+                                <th>Order Time</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let order of orders">
+                                <tr>
+                                    <td>#{{order.orderId}}</td>
+                                    <td>
+                                        <ul class="product-list">
+                                            <ng-container *ngFor="let product of order.products; let i = index">
+                                                <li class="highlight">{{i + 1}}) {{product.name}}</li>
+                                            </ng-container>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul class="add-in-list">
+                                            <ng-container *ngFor="let product of order.products let i= index">
+                                                <p>{{i+1}})</p>
+                                                <ng-container *ngFor="let addIn of product.addIns">
+                                                    <ng-container *ngIf="addIn.pump; else addInWithoutPump">
+                                                        <li>{{addIn.addInName}} ({{addIn.pump}} pumps)</li>
+                                                    </ng-container>
+                                                    <ng-template #addInWithoutPump>
+                                                        <li>{{addIn.addInName}}</li>
+                                                    </ng-template>
+                                                </ng-container>
+                                            </ng-container>
+                                        </ul>
+                                    </td>
+                                    <td>{{order.createdAt | date: 'dd/MM/yyyy'}}</td>
+                                    <td>{{order.address}}</td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                  </div>
+            </ng-container>
+        </ng-container>
     </div>
 </div>
+
+
+
+<ng-template #noLoggedInUser>
+    <ng-container *ngTemplateOutlet="noOrders">
+
+    </ng-container>
+    <app-auth-form></app-auth-form>
+</ng-template>
+
+<ng-template #noOrders>
+    <div class="col-10 col-md-6 col-lg-4">
+        <h3 class="mt-3 mb-3">Previous</h3>
+        <img src="/assets/img/gifs/moon-phases.webp"/>
+        <h4>When history repeats itself</h4>
+        <p>Previous orders will appear here to quickly order again.</p>
+    </div>
+</ng-template>
