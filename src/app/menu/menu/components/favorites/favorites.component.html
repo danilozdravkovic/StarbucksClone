@@ -1,16 +1,62 @@
 <div class="container mb-5">
-    <div class="row">
-        <div class="col-10 col-md-6 col-lg-4">
-            <h3 class="mt-3 mb-3">Previous</h3>
-            <img src="/assets/img/gifs/fav-tapes.webp"/>
-            <h4 class="mt-5">Save your favorite mixes</h4>
-            <p>Use the heart to save customizations. Your favorites will appear here to order again.</p>
-            <ng-container *ngIf="currentUser; else noLoggedInUser">
-                <app-logout></app-logout>
-              </ng-container>
-              <ng-template #noLoggedInUser>
-                <app-auth-form></app-auth-form>
-              </ng-template>
-        </div>
-    </div>
+  <div class="row">
+      <ng-container *ngIf="currentUser; else noLoggedInUser">
+          <ng-container *ngIf="favouriteProducts.length; else noProducts">
+            <div class="favorites-container mt-5">
+              <button 
+                class="arrow-button left-arrow" 
+                *ngIf="favouriteProducts.length > productsPerPage && currentIndex != 0" 
+                (click)="previousSlide()">
+                &#8249;
+              </button>
+              <div class="products-wrapper">
+                <div class="product-card" *ngFor="let product of visibleProducts">
+                  <img src="http://localhost:5156/posts/{{product.productImage}}" alt="{{ product.productName }}" class="product-image" />
+                  <div class="product-info">
+                    <h3 class="product-name">{{ product.productName }}</h3>
+                    <p class="product-size">Size: {{ product.productSize }}</p>
+                    <div class="add-ins">
+                      <h4>Add-Ins:</h4>
+                      <ul>
+                        <li *ngFor="let addIn of product.addIns">
+                          {{ addIn.addInName }}
+                          <span *ngIf="addIn.pump"> - {{ addIn.pump }} pumps</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="add-to-cart-button" (click)="addToCart(product)">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <button 
+                class="arrow-button right-arrow" 
+                *ngIf="favouriteProducts.length > productsPerPage && maxIndex != currentIndex" 
+                (click)="nextSlide()">
+                &#8250;
+              </button>
+            </div>
+            
+          </ng-container>
+      </ng-container>
+  </div>
 </div>
+
+
+
+<ng-template #noLoggedInUser>
+  <ng-container *ngTemplateOutlet="noProducts">
+
+  </ng-container>
+  <app-auth-form></app-auth-form>
+</ng-template>
+
+<ng-template #noProducts>
+  <div class="col-10 col-md-6 col-lg-4">
+      <h3 class="mt-3 mb-3">Favorites</h3>
+      <img src="/assets/img/gifs/fav-tapes.webp"/>
+      <h4 class="mt-3">Save your favorite mixes</h4>
+      <p>Use the heart to save customizations. Your favorites will appear here to order again</p>
+  </div>
+</ng-template>

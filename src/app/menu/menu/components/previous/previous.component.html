@@ -1,8 +1,20 @@
 <div class="container mb-5">
     <div class="row">
         <ng-container *ngIf="currentUser; else noLoggedInUser">
-            <ng-container *ngIf="orders.length; else noOrders">
-                <div class="table-container">
+            <div class="mt-4">
+                <mat-form-field style="width: 25%; margin-right: 3em;">
+                    <mat-label>Filter by date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date" [(ngModel)]="dateFrom">
+                      <input matEndDate placeholder="End date" [(ngModel)]="dateTo" (dateChange)="filterOrders()">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+                  <button class="btn btn-success btn-block btn-sm gradient-custom-4 text-white" (click)="clearFilters()">Clear Filters</button>
+              </div>
+            <ng-container *ngIf="orders?.length; else noOrders">
+                <div>
                     <table class="orders-table">
                         <thead>
                             <tr>
@@ -11,6 +23,7 @@
                                 <th>Add-Ins</th>
                                 <th>Order Time</th>
                                 <th>Address</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,13 +52,20 @@
                                             </ng-container>
                                         </ul>
                                     </td>
-                                    <td>{{order.createdAt | date: 'dd/MM/yyyy'}}</td>
+                                    <td>{{order.createdAt | date: 'dd/MM/yyyy hh:mm:ss a'}}</td>
                                     <td>{{order.address}}</td>
+                                    <td><button class="btn btn-success btn-block btn-sm gradient-custom-4 text-white">Reorder</button></td>
                                 </tr>
                             </ng-container>
                         </tbody>
                     </table>
                   </div>
+                    <mat-paginator 
+                        [length]="totalItems"
+                        [pageSize]="perPage"
+                        [pageIndex]="currentPage"
+                        (page)="pageChanged($event)">
+                    </mat-paginator>
             </ng-container>
         </ng-container>
     </div>

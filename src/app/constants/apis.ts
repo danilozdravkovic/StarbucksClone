@@ -12,6 +12,7 @@ export const apis = {
         products:"products",
         files:"files",
         cartLines:"cartLines",
-        orders:"orders"
+        orders:"orders",
+        orderLines:"orderLines"
     }
 }

@@ -118,7 +118,7 @@ export class CartComponent {
           panelClass: ['success-snackbar']
         });
         setTimeout(() => {
-          this.router.navigate(["main/menu"]);
+          this.router.navigate(["main/menu/previous"]);
         }, 2000);
       },
       error:(err)=>{

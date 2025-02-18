@@ -19,6 +19,8 @@ import { FirstLetterOfNameUppercasePipe } from './pipes/first-letter-of-name-upp
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { LogoComponent } from './components/logo/logo.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -44,7 +46,9 @@ import { LoaderComponent } from './components/loader/loader.component';
     MatIconModule,
     MatPaginatorModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports:[
     AuthFormComponent,
@@ -61,7 +65,13 @@ import { LoaderComponent } from './components/loader/loader.component';
     FirstLetterOfNameUppercasePipe,
     MatSnackBarModule,
     LogoComponent,
-    LoaderComponent
+    LoaderComponent,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
+  providers:[
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class SharedModule { }
