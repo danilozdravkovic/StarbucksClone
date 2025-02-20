@@ -39,7 +39,6 @@ export class AddProductCategoryComponent {
     let dataToSend = this.prepareDataToSend();
     this.productCategoriesService.post(dataToSend).subscribe({
       next:(data)=>{
-        console.log(data);
         this.addProductCategoryForm.reset();
       },
       error:(err)=>{

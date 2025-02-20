@@ -69,7 +69,6 @@ export class AddProductComponent {
       this.fileService.post(formData).subscribe(
         {
           next: (data) => {
-            console.log(data);
             // this.imageUrl = `http://localhost:5156/temp/${data.file}`;
             this.imageUrl=data.file;
           },
@@ -96,7 +95,6 @@ export class AddProductComponent {
     let dataToSend = this.prepareDataToSend();
     this.productsService.post(dataToSend).subscribe({
       next:(data)=>{
-        console.log(data);
         this.addProductForm.reset();
         const label = this.fileLabel.nativeElement;
         label.innerHTML = 'No file chosen';

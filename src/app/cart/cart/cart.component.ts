@@ -96,7 +96,6 @@ export class CartComponent {
   removeItemFromOdred(itemId:number):void{
     this.cartLineService.delete(itemId).subscribe({
       next:(data)=>{
-        console.log(data);
       },
       error:(err)=>{
         console.log(err);
@@ -147,8 +146,8 @@ export class CartComponent {
 
   toggleFavorite(item: any): void {
     item.isFavorite = !item.isFavorite;
-    let productId = item.cartLineId;
-    this.cartLineService.toggleProductIsFavourite(productId).subscribe({
+    let toggleFavObj = {"productId":item.cartLineId,"tableName":"CartLine"}
+    this.cartLineService.toggleProductIsFavourite(toggleFavObj).subscribe({
       next:(data)=>{
 
       },

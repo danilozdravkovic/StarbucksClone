@@ -13,8 +13,8 @@ export class CartLineService extends ApiService {
     super(http,apis.server.cartLines)
    }
 
-  toggleProductIsFavourite(id:number) : Observable<any>{
-    return this.http.patch(this.apiPrefix+this.apiPath+"/"+id,null).pipe(
+  toggleProductIsFavourite(toggleFavObj:any) : Observable<any>{
+    return this.http.patch(this.apiPrefix+this.apiPath+"/",toggleFavObj).pipe(
       tap(()=>{
       }) 
     );

@@ -19,7 +19,6 @@ export class DeleteProductCategoryComponent {
     let id=this.data.id;
     this.productCategoriesService.delete(id).subscribe({
       next:(data)=>{
-        console.log(data);
       },
       error:(err)=>{
         console.log(err);

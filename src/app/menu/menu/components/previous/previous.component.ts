@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/account/services/user.service';
 import { OrderService } from 'src/app/cart/services/order.service';
 
@@ -13,7 +14,8 @@ export class PreviousComponent {
 
   constructor(
     private userService: UserService,
-    private orderService : OrderService
+    private orderService : OrderService,
+    private snackBar : MatSnackBar
   ){}
 
   currentUser = localStorage.getItem("user");
@@ -27,9 +29,16 @@ export class PreviousComponent {
   dateTo: Date | undefined = undefined;
 
   ngOnInit () : void {
-
+    this.orderService.refreshNeeded.subscribe({
+      next: () => {
+        this.getUserOrders();
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
     this.getUserOrders();
-    
+
     this.userService.loggedIn$.subscribe(isLoggedIn => {
       if (isLoggedIn) {
         const userJson = localStorage.getItem("user");
@@ -45,8 +54,8 @@ export class PreviousComponent {
   getUserOrders() : void {
     this.orderService.getAll(this.perPage,this.currentPage+1,this.dateFrom,this.dateTo).subscribe({
       next:(data)=>{
-        console.log(data);
         this.orders=data.data;
+        console.log(this.orders);
         this.totalItems=data.totalCount;
       },
       error:(err)=>{
@@ -71,9 +80,28 @@ export class PreviousComponent {
       this.orders=this.getUserOrders();
     }
   }
+
   clearFilters():void{
     this.dateFrom = undefined;
     this.dateTo = undefined;
     this.getUserOrders();
+  }
+
+  reorder(order:any){
+    console.log(order);
+    this.orderService.reorder(order.orderId).subscribe({
+      next:()=>{
+        this.snackBar.open("Reorder successful! Expect your order soon.", "Close", {
+          duration: 5000,
+          panelClass: ['success-snackbar']
+        });
+      },
+      error:()=>{
+        this.snackBar.open("An error occurred. Please try again.", "Close", {
+          duration: 5000,
+          panelClass: ['error-snackbar']
+        });
+      }
+    })
   }
 }

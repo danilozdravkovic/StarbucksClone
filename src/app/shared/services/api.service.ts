@@ -14,7 +14,7 @@ export abstract class ApiService {
     @Inject("apiPath") protected apiPath : string
   ) { }
 
-  private _refreshNeeded$ = new Subject<void>();
+   _refreshNeeded$ = new Subject<void>();
 
   get refreshNeeded(){
     return this._refreshNeeded$;

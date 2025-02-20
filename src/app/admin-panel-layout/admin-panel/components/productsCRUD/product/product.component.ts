@@ -30,7 +30,6 @@ export class ProductComponent {
 
     this.productsService.getOne(this.data.id).subscribe({
       next:(data)=>{
-        console.log(data);
         this.currentProduct=data;
         this.fillForm(data);
         //this.categoryToEdit=data;
@@ -97,7 +96,6 @@ export class ProductComponent {
       this.fileService.post(formData).subscribe(
         {
           next: (data) => {
-            console.log(data);
             // this.imageUrl = `http://localhost:5156/temp/${data.file}`;
             this.imageUrl=data.file;
           },
@@ -125,7 +123,6 @@ export class ProductComponent {
     let dataToSend = this.prepareDataToSend();
     this.productsService.put(this.data.id,dataToSend).subscribe({
       next:(data)=>{
-        console.log(data);
         const label = this.fileLabel.nativeElement;
         label.innerHTML = 'No file chosen';
       },

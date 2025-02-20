@@ -24,6 +24,7 @@ img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
+    min-height: 500px;
     flex-shrink: 0;
     overflow: hidden;
     display: flex;
@@ -31,6 +32,7 @@ img {
     align-items: center;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
   }
   
   .product-card:hover {
@@ -108,10 +110,33 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    width: 60%;
   }
   
   .add-to-cart-button:hover {
     background: #005b36;
+  }
+
+  .remove-from-favorites-button{
+    background: #932d19;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 60%;
+  }
+
+  .remove-from-favorites-button:hover {
+    background: #6a1103;
+  }
+
+  .action-buttons{
+    position:absolute;
+    bottom: 0;
   }
   
   
