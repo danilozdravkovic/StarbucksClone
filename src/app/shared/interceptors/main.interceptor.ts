@@ -17,7 +17,9 @@ export class MainInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const token = localStorage.getItem("token");
 
-    this.loaderService.show();
+    setTimeout(() => {
+      this.loaderService.show(); 
+    });
 
     const newRequest = token ? request.clone({
       setHeaders: {

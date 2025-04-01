@@ -52,7 +52,7 @@ export class PreviousComponent {
   }
 
   getUserOrders() : void {
-    this.orderService.getAll(this.perPage,this.currentPage+1,this.dateFrom,this.dateTo).subscribe({
+    this.orderService.getAll(this.perPage,this.currentPage+1,this.dateFrom,this.dateTo,true).subscribe({
       next:(data)=>{
         this.orders=data.data;
         console.log(this.orders);

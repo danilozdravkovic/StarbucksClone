@@ -22,7 +22,7 @@ export class CartComponent {
 
   pickupActiveButton: string = "inStore";
   paymentActiveButton: string = "cash"
-  cartItems:any[];
+  cartItems:any[]=[];
   fullPrice:number;
   order:IOrder={
     address:'',

@@ -12,6 +12,7 @@ import { AddProductCategoryComponent } from './admin-panel/components/productCat
 import { AddProductComponent } from './admin-panel/components/productsCRUD/add-product/add-product.component';
 import { DeleteProductComponent } from './admin-panel/components/productsCRUD/delete-product/delete-product.component';
 import { ProductComponent } from './admin-panel/components/productsCRUD/product/product.component';
+import { OrdersComponent } from './admin-panel/components/orders/orders.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductComponent } from './admin-panel/components/productsCRUD/product/
     AddProductCategoryComponent,
     AddProductComponent,
     DeleteProductComponent,
-    ProductComponent
+    ProductComponent,
+    OrdersComponent
   ],
   imports: [
     CommonModule,

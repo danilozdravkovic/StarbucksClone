@@ -22,7 +22,7 @@ export abstract class ApiService {
 
   protected apiPrefix : string = this.apiPath.endsWith(".json") ? config.LOCAL : config.SERVER;
 
-  getAll(perPage?:number,page?:number,dateFrom?:Date,dateTo?:Date) : Observable<any>{
+  getAll(perPage?:number,page?:number,dateFrom?:Date,dateTo?:Date,isForUserOnly?:boolean) : Observable<any>{
     let query = `${this.apiPrefix}${this.apiPath}`;
     const params = [];
     
@@ -37,6 +37,9 @@ export abstract class ApiService {
     }
     if(dateTo !== undefined){
       params.push(`dateTo=${dateTo.toISOString()}`);
+    }
+    if(isForUserOnly !== undefined){
+      params.push(`isForUserOnly=${isForUserOnly}`);
     }
   
     if (params.length > 0) {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductsService } from 'src/app/menu/services/products.service';
 import { DeleteProductComponent } from '../delete-product/delete-product.component';
@@ -13,7 +13,8 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class ProductsComponent {
   constructor(private productsService: ProductsService,
-    private dialog: MatDialog) {
+              private dialog: MatDialog
+            ) {
   }
   products: any;
 

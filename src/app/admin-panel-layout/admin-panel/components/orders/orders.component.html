@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Ordered At</th>
+                    <th>Buyer</th>
+                    <th>Email</th>
+                    <th>Price</th>
+                    <th>Address</th>
+                    <th>Paid with</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                    <ng-container *ngFor="let order of orders">
+                      <tr>
+                        <td style="width: 8em;">{{order.orderId}}</td>
+                        <td>{{order.createdAt | date: 'dd/MM/yyyy hh:mm:ss a'}}</td>
+                        <td>{{order.userName}}</td>
+                        <td>{{order.userEmail}}</td>
+                        <td>{{order.totalPrice}}$</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.paymentOption}}</td>
+                      </tr>    
+                    </ng-container>
+    
+                </tbody>
+              </table>
+              <mat-paginator [length]="totalItems"
+              [pageSize]="perPage"
+              [pageIndex]="currentPage"
+              (page)="pageChanged($event)">
+           </mat-paginator>
+        </div>
+    </div>
+</div>

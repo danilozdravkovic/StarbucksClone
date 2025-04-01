@@ -9,7 +9,7 @@
                 </a>
             </div>
             <div id="cartForm">
-                <h1 class="h3 text-white">Review order ({{cartItems?.length}})</h1>
+                <h1 class="h3 text-white">Review order ({{cartItems.length}})</h1>
                 <p style="color: #d4e9e2;">Ready in around 5-10 minutes</p>
                 <form [formGroup]="cartForm" style="width: 90%;">
                     <span style="color:#ffffffb3">Pickup options</span>
@@ -61,7 +61,7 @@
                     </mat-form-field>
                     <div class="d-flex justify-content-center mt-3">
                         <button type="button" data-mdb-button-init data-mdb-ripple-init 
-                            [disabled]="cartForm.invalid || cartItems?.length===0"
+                            [disabled]="cartForm.invalid || cartItems.length===0"
                             class="orderButton btn btn-success btn-block btn-lg gradient-custom-4 text-white"
                             (click)="addOrder()"
                             >Order

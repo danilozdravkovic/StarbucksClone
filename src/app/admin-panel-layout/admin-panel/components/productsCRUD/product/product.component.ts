@@ -23,6 +23,7 @@ export class ProductComponent {
 
   categoriesWithNoChildren?: any[];
   currentProduct:any;
+  
   ngOnInit(): void {
     this.dataService.getFlattCategoriesWithNoChildren().subscribe(categories => {
       this.categoriesWithNoChildren = categories;
