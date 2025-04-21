@@ -59,7 +59,6 @@ export class FavoritesComponent {
     this.orderLinesService.getAll().subscribe({
       next:(data)=>{
         this.favouriteProducts=data.data;
-        console.log(this.favouriteProducts);
         this.updateVisibleProducts();
         this.maxIndex = this.favouriteProducts.length - this.productsPerPage;
       },

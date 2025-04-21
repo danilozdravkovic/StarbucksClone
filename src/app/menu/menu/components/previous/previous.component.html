@@ -42,14 +42,19 @@
                                         <ul class="add-in-list">
                                             <ng-container *ngFor="let product of order.products let i= index">
                                                 <p>{{i+1}})</p>
-                                                <ng-container *ngFor="let addIn of product.addIns">
-                                                    <ng-container *ngIf="addIn.pump; else addInWithoutPump">
-                                                        <li>{{addIn.addInName}} ({{addIn.pump}} pumps)</li>
+                                                <ng-container *ngIf="product.addIns.length > 0; else noAddIns">
+                                                    <ng-container *ngFor="let addIn of product.addIns">
+                                                        <ng-container *ngIf="addIn.pump; else addInWithoutPump">
+                                                            <li>{{addIn.addInName}} ({{addIn.pump}} pumps)</li>
+                                                        </ng-container>
+                                                        <ng-template #addInWithoutPump>
+                                                            <li>{{addIn.addInName}}</li>
+                                                        </ng-template>
                                                     </ng-container>
-                                                    <ng-template #addInWithoutPump>
-                                                        <li>{{addIn.addInName}}</li>
-                                                    </ng-template>
                                                 </ng-container>
+                                                <ng-template #noAddIns>
+                                                    <li>/</li>
+                                                </ng-template>
                                             </ng-container>
                                         </ul>
                                     </td>

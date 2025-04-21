@@ -61,7 +61,7 @@ export class ProductComponent implements OnInit{
     
 
   ngAfterViewChecked():void{
-    if (this.productToDisplay && !this.isViewInitialized) {
+    if (this.productToDisplay?.sizes.length > 0 && !this.isViewInitialized) {
           const selectedSize = document.getElementsByClassName("cupSize")[0];
           this.isActive(selectedSize, this.productToDisplay.sizes[0].additionalCalories, this.productToDisplay.sizes);
           this.isViewInitialized = true; 

@@ -55,7 +55,6 @@ export class PreviousComponent {
     this.orderService.getAll(this.perPage,this.currentPage+1,this.dateFrom,this.dateTo,true).subscribe({
       next:(data)=>{
         this.orders=data.data;
-        console.log(this.orders);
         this.totalItems=data.totalCount;
       },
       error:(err)=>{
